@@ -1,3 +1,7 @@
+/**
+ * The pirithList indexes/order should not be changed - filename and names can be changed
+ * New pirith need to be added at the end of the list
+ */
 export const pirithList = [ // order, desc, author, length, count, isStarred, isLoop
     ['02-saranagamanam', 0, 'සරණාගමනං', 'ariyadhamma', '1:41'],
     ['03-dasasikkhapadani', 1, 'දස සික්ඛාපදානි', 'ariyadhamma', '1:48'],
@@ -30,6 +34,19 @@ export const pirithList = [ // order, desc, author, length, count, isStarred, is
     ['30-atanatiya-suttam-1', 28, 'ආටානාටිය සුත්තං 1', 'ariyadhamma', '41:02'],
     ['32-atanatiya-suttam-2', 29, 'ආටානාටිය සුත්තං 2', 'ariyadhamma', '48:55'],
     ['35-tesattati-nyana-parittam', 30, 'තෙසැත්තෑ ඤාණ පරිත්තං', 'ariyadhamma', '58:26'],
+
+    ['50-angulimala', 31, 'අංගුලිමාල පරිත්තං', 'ariyadhamma', '2:03'],
+    ['51-atavisi', 32, 'අටවිසි පරිත්තං', 'ariyadhamma', '2:08'],
+    ['52-wattaka', 33, 'වට්ටක පරිත්තං', 'ariyadhamma', '2:01'],
+    ['53-jaya-mangala-attha-gatha', 34, 'ජය මංගල අට්ඨ ගාථා', 'ariyadhamma', '4:46'],
+    ['54-narasiha-gatha', 35, 'නරසීහ ගාථා', 'ariyadhamma', '3:21'],
+    ['55-maha-jaya-mangala-gatha', 36, 'මහා ජයමංගල ගාථා', 'ariyadhamma', '5:34'],
+    ['56-jaya-parittam', 37, 'ජය පරිත්තං', 'ariyadhamma', '3:22'],
+    ['57-jvara-parittam', 38, 'ජ්වර පරිත්තං', 'ariyadhamma', '15:52'],
+    ['58-antharaya-nivarana-parittam', 39, 'අන්තරාය නිවාරණ පරිත්තං', 'ariyadhamma', '0:53'],
+    ['59-jinapanjara-parittam', 40, 'ජිනපඤ්ජර පරිත්තං', 'ariyadhamma', '6:10'],
+    ['60-bojjhanga-parittam', 41, 'බොජ්ඣංග පරිත්තං', 'ariyadhamma', '3:18'],
+    ['60-dasa-disa-parittam', 42, 'දස දිසා පරිත්තං', 'ariyadhamma', '1:30'],
 ]
 
 const authorList = {
