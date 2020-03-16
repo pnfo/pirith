@@ -15,10 +15,10 @@
             </v-list-item-icon>
             <v-list-item-content>{{ $vuetify.theme.dark ? 'Light Mode' : 'Dark Mode' }}</v-list-item-content>
           </v-list-item>
-          <v-list-item link to="/about" disabled>
+          <!--<v-list-item link to="/about" disabled>
             <v-list-item-icon><v-icon>mdi-cog</v-icon></v-list-item-icon>
             <v-list-item-content>Settings</v-list-item-content>
-          </v-list-item>
+          </v-list-item>-->
           <v-list-item v-for="(info, ind) in menuLinks" link :href="info[0]" :key="ind">
             <v-list-item-icon><v-icon color="accent">{{ 'mdi-' + info[1] }}</v-icon></v-list-item-icon>
             <v-list-item-content>{{ info[2] }}</v-list-item-content>
@@ -29,8 +29,8 @@
       <v-spacer></v-spacer>
       <v-toolbar-title id="title-bar-text">සෙත් පිරිත්</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon :color="showStarred ? 'accent' : 'primary--text'" @click="showStarred = !showStarred">
-        <v-icon>mdi-star</v-icon>
+      <v-btn icon to="/about" disabled>
+        <v-icon>mdi-cog</v-icon>
       </v-btn>
     </v-app-bar>
 

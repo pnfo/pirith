@@ -1,6 +1,10 @@
 <template>
   <div class="home">
+    <playlist-editor :playlists="playlists" :cur-pl-ind.sync="curPlInd"></playlist-editor>
     <v-list :dense="true">
+
+      <draggable v-model="curPl.list" handle=".drag-handle" @end="dragEnded">
+
       <v-list-item v-for="(pInd, lInd) in curPl.list" :key="pInd" class="d-flex"
         :selected="curPirith == pInd + 1">
 
@@ -28,26 +32,41 @@
             </v-radio-group></v-list-item></v-list>
           </v-menu>
 
-          <v-btn icon disabled>
-            <v-icon v-if="curPlInd == 0">mdi-playlist-plus</v-icon>
-            <v-icon v-if="curPlInd != 0">mdi-delete</v-icon>
+          <v-menu v-if="curPlInd == 0" offset-y :disabled="playlists.length == 0">
+            <template v-slot:activator="{ on }">
+              <v-btn icon v-on="on">
+                <v-icon>mdi-playlist-plus</v-icon>
+              </v-btn>
+            </template>
+            <v-list dense>
+              <v-list-item v-for="[name, plInd] in playlists.map((p, i) => [p.name, i]).slice(1)" :key="plInd" 
+                @click="isInPlaylist(plInd, pInd) ? deleteFromPlaylist(plInd, pInd) : addToPlaylist(plInd, pInd)">
+                <v-list-item-title>{{ name }}</v-list-item-title>
+                <v-list-item-icon><v-icon v-if="isInPlaylist(plInd, pInd)" color="success">mdi-check</v-icon></v-list-item-icon>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+          
+          <v-btn v-else icon @click="deleteFromPlaylist(curPlInd, pInd)" color="error">
+            <v-icon>mdi-delete</v-icon>
           </v-btn>
 
-          <v-btn icon disabled>
-            <v-icon>mdi-swap-vertical</v-icon>
+          <v-btn class="drag-handle" icon>
+            <v-icon >mdi-drag-horizontal-variant</v-icon>
           </v-btn>
         </div>
 
       </v-list-item>
+      </draggable>
     </v-list>
     
     <v-sheet class="text-center bottom-sheet" v-if="curPirith">
       <v-card id="text" v-if="curText.length && showText">
-        <v-simple-table dense>
+        <v-simple-table dense style="table-layout: fixed">
           <tbody class="text-rows">
-            <tr :class="['text-row', textRowClass(ri)]" v-for="(row, ri) in curText" :key="ri">
-              <td class="part pali">{{ row[0] }}</td>
-              <td class="part sinh info--text">{{ row[1] }}</td>
+            <tr v-for="(row, ri) in curTextSubset" :key="ri" :class="['text-row', { present: row.oi == curTextIndex } ]">
+              <td class="part pali px-2">{{ row.pali }}</td>
+              <td class="part sinh px-2 info--text" v-if="row.sinh" :rowspan="row.span">{{ row.sinh }}</td>
             </tr>
           </tbody>
         </v-simple-table>
@@ -74,27 +93,29 @@
 
 .text-row .pali { font-size: 1.1rem; word-break: break-word; text-align: right; }
 .text-row .sinh { font-size: 1.1rem; text-align: left; }
-.text-row .part { min-width: 100px; }
+.text-row .part { width: 50% }
 
-.theme--light .text-row.present { background-color: blanchedalmond;  }
-.theme--dark .text-row.present { background-color: #54473c;  }
+.theme--light .present .pali { background-color: blanchedalmond;  }
+.theme--dark .present .pali { background-color: #54473c;  }
 
 .theme--light .v-list-item[selected] { background-color: rgb(228, 214, 183); }
 .theme--dark .v-list-item[selected] { background-color: #44372c;; }
 
 .bottom-sheet { position: fixed; bottom: 0; width: 100%; max-width: 800px; left: 50%; transform: translateX(-50%);}
+.drag-handle { cursor: move; cursor: grab; cursor: -moz-grab; cursor: -webkit-grab; }
 </style>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import draggable from 'vuedraggable'
+import PlaylistEditor from '@/components/PlaylistEditor.vue'
 import { pirithList, setupMediaSession } from '@/pirith-list.js'
 import { pirithData } from '@/pirith-data.js'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    PlaylistEditor, draggable,
   },
   data: function() {
       return {
@@ -102,7 +123,7 @@ export default {
         pirithList,
         curPlInd: 0,
         playlists: [
-          { name: 'all', list: [] }
+          { name: 'සියලු‍ පිරිත්', list: [] }
         ],
         playMetrics: [],
         curPirith: 0, // pInd + 1 of the currently playing
@@ -119,13 +140,21 @@ export default {
     playingInfo: function() { return this.curPirith ? this.pirithList[this.curPirith - 1] : [] },
     playingSrc: function() { return this.playingInfo[0] ? `audio/${this.playingInfo[0]}.mp3` : '' },
     curTextIndex: function() {
-        const total = this.curText.reduce((acc, row) => acc + row[0].length, 0);
+        const total = this.curText.reduce((acc, row) => acc + row.pali.length, 0);
         const elapsedTotal = total * this.elapsedRatio;
         for (let i = 0, sum = 0; i < this.curText.length; i++) {
-            sum = sum + this.curText[i][0].length;
+            sum = sum + this.curText[i].pali.length;
             if (sum >= elapsedTotal) return i;
         }
         return this.curText.length - 1;
+    },
+    curTextSubset() { // returns max 10 text rows
+      let startInd = 0, endInd = this.curText.length
+      if (this.curText.length > 10) {
+        startInd = Math.max(0, this.curTextIndex - 5) // 6 is the max rowspan, so -5
+        endInd = Math.min(this.curText.length, this.curTextIndex + 4)
+      }
+      return this.curText.slice(startInd, endInd).map((row, i) => { return {...row, oi: startInd + i} })
     },
     curPl: function() { return this.playlists[this.curPlInd] },
   },
@@ -140,7 +169,24 @@ export default {
   },
 
   methods: {
-    audio: function() { return document.getElementById('audio') },
+    dragEnded(e) { // swap repeats
+      console.log(`dragged from ${e.oldIndex} to ${e.newIndex}`)
+      const or = this.curPl.repeats[e.oldIndex], nr = this.curPl.repeats[e.newIndex]
+      this.$set(this.curPl.repeats, e.oldIndex, nr)
+      this.$set(this.curPl.repeats, e.newIndex, or)
+    },
+    isInPlaylist(plInd, pInd) {
+      return this.playlists[plInd].list.indexOf(pInd) != -1
+    },
+    addToPlaylist(plInd, pInd) {
+      this.playlists[plInd].list.push(pInd)
+      this.playlists[plInd].repeats.push(1)
+    },
+    deleteFromPlaylist(plInd, pInd) {
+      const lInd = this.playlists[plInd].list.indexOf(pInd) // must not be -1
+      this.playlists[plInd].list.splice(lInd, 1)
+      this.playlists[plInd].repeats.splice(lInd, 1)
+    },
     incrementMetrics(pInd) { 
       this.$set(this.playMetrics, pInd, this.playMetrics[pInd] + 1) 
       this.curCount++
@@ -212,7 +258,7 @@ export default {
     this.playMetrics = JSON.parse(localStorage.getItem('playMetrics'))
 
     // initialize the 'all' playlist to be the pirithList
-    if (!this.playlists) this.playlists = [ { name: 'all', list: [], repeats: [] } ]
+    if (!this.playlists) this.playlists = [ { name: 'සියලු‍ පිරිත්', list: [], repeats: [] } ]
     if (!this.playMetrics) this.playMetrics = []
 
     pirithList.forEach(info => { // check if need to add more
@@ -222,9 +268,6 @@ export default {
         this.playMetrics.push(0) // metrics kept in sync with 'all' playlist
       }
     });
-    //this.playlists[0].list = [...pirithList.keys()]
-    // load custom playlists and playcounts from local storage
-    //this.playMetrics = this.playlists[0].list.map(_ => 0) // init to 0
     
     document.addEventListener('pause', this.pirithPaused, true)
     document.addEventListener('ended', this.pirithEnded, true)
