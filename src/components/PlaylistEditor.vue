@@ -1,7 +1,7 @@
 <template>
   <v-container class="pb-0">
     <div class="d-flex justify-center">
-      <v-icon color="accent">mdi-playlist-music</v-icon>
+      <v-icon color="info">mdi-playlist-music</v-icon>
 
       <template v-if="isEdit">
         <v-text-field dense placeholder="ලැයිස්තු නම" class="flex-grow-1 mx-4" counter="25" 
@@ -81,9 +81,9 @@
       },
       deletePlaylist() {
         this.isEdit = false
-        this.playlists.splice(this.curPlInd, 1)
+        this.playlists.splice(this.curPlInd, 1);
         this.curPlInd = 0
-        changeCurPl()
+        this.changeCurPl()
       },
 
     },
