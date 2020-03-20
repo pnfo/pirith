@@ -16,7 +16,7 @@
 
       <template v-else>
         <v-select dense :items="playlists.map((p,i)=>({text: p.name, value: i}))" style="max-width: 300px" class="mx-4"
-            v-model="curPlInd" @change="changeCurPl">
+            v-model="curPlInd">
         </v-select>
 
         <v-btn icon dense @click="startEditName">
@@ -35,57 +35,54 @@
 </template>
 
 <script>
-  export default {
-    name: 'PlaylistEditor',
-    props: {
-      playlists: Array,
-      curPlInd: Number,
-    },
-    data: function() {
-      return {
-        isEdit: false,
-        editedName: '',
-        rules: [
-          v => !!v || 'වාදන ලැයිස්තු නමක් අවශ්‍යයි',
-          v => v.length >= 5 || 'වාදන ලැයිස්තු නමේ අවම දිග අකුරු 5',
-          v => v.length <= 25 || 'වාදන ලැයිස්තු නමේ උපරිම දිග අකුරු 25',
-          v => this.curPlNames.indexOf(v) == -1 || 'මේ‍ නමින් ලැයිස්තුවක් දැනටම ඇත',
-        ],
-      }
-    },
-    computed: {
-      curPlNames() { return this.playlists.map(p => p.name) }
-    },
-    
-    methods: {
-      startEditName() {
-        this.isEdit = true
-        this.editedName = this.playlists[this.curPlInd].name
-      },
-      commitEditName() {
-        if (this.rules.some(rule => rule(this.editedName) !== true)) return // some rule failed
-        this.isEdit = false
-        this.playlists[this.curPlInd].name = this.editedName
-      },
-      changeCurPl() {
-        this.$emit('update:curPlInd', this.curPlInd)
-      },
+import { mapState } from 'vuex'
 
-      addNewPlaylist() {
-        this.isEdit = false // we could be in edit mode so disable it
-        let nextAvail = 1
-        while(this.curPlNames.indexOf(`වාදන ලැයිස්තු ${nextAvail}`) != -1) nextAvail++
-        this.playlists.push({ name: `වාදන ලැයිස්තු ${nextAvail}`, list: [], repeats: [] })
-        this.curPlInd = this.playlists.length - 1
-        this.changeCurPl()
-      },
-      deletePlaylist() {
-        this.isEdit = false
-        this.playlists.splice(this.curPlInd, 1);
-        this.curPlInd = 0
-        this.changeCurPl()
-      },
-
+export default {
+  name: 'PlaylistEditor',
+  props: {  },
+  data: function() {
+    return {
+      isEdit: false,
+      editedName: '',
+      rules: [
+        v => !!v || 'වාදන ලැයිස්තු නමක් අවශ්‍යයි',
+        v => v.length >= 5 || 'වාදන ලැයිස්තු නමේ අවම දිග අකුරු 5',
+        v => v.length <= 25 || 'වාදන ලැයිස්තු නමේ උපරිම දිග අකුරු 25',
+        v => this.curPlNames.indexOf(v) == -1 || 'මේ‍ නමින් ලැයිස්තුවක් දැනටම ඇත',
+      ],
+    }
+  },
+  computed: {
+    ...mapState(['playlists']),
+    curPlInd: {
+      get () { return this.$store.state.curPlInd  },
+      set (value) { this.$store.commit('setPlInd', value) }
     },
-  }
+    curPlNames() { return this.playlists.map(p => p.name) },
+  },
+  
+  methods: {
+    startEditName() {
+      this.isEdit = true
+      this.editedName = this.playlists[this.curPlInd].name
+    },
+    commitEditName() {
+      if (this.rules.some(rule => rule(this.editedName) !== true)) return // some rule failed
+      this.isEdit = false
+      this.$store.commit('setPlaylistName', this.editedName)
+    },
+
+    addNewPlaylist() {
+      this.isEdit = false // we could be in edit mode so disable it
+      this.$store.commit('addNewPlaylist')
+      this.$store.commit('setPlInd', this.playlists.length - 1)
+    },
+    deletePlaylist() {
+      this.isEdit = false
+      this.$store.commit('deletePlaylist')
+      this.$store.commit('setPlInd', 0)
+    },
+
+  },
+}
 </script>

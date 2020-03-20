@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <playlist-editor :playlists="playlists" :cur-pl-ind.sync="curPlInd"></playlist-editor>
+    <playlist-editor></playlist-editor>
 
     <v-list :dense="true">
-      <draggable v-model="curPl.list" handle=".drag-handle" @end="dragEnded">
+      <draggable v-model="curPlList" handle=".drag-handle" @end="dragEnded">
 
-      <v-list-item v-for="(pInd, lInd) in curPl.list" :key="pInd" class="d-flex"
+      <v-list-item v-for="({pInd, repeats}, lInd) in curPlList" :key="pInd" class="d-flex"
         :selected="curPirith == pInd + 1">
 
         <div class="d-flex align-center flex-grow-1" @click="playPausePirith(pInd + 1)" style="min-width: 0;">
@@ -19,12 +19,12 @@
         <div class="d-flex align-center">
           <v-menu left offset-x>
             <template v-slot:activator="{ on }">
-              <v-btn icon :color="curPl.repeats[lInd] > 1 ? 'accent' : ''" v-on="on">
+              <v-btn icon :color="repeats > 1 ? 'accent' : ''" v-on="on">
                 <v-icon>mdi-repeat</v-icon>
               </v-btn>
             </template>
 
-            <v-list><v-list-item><v-radio-group v-model="curPl.repeats[lInd]" column>
+            <v-list><v-list-item><v-radio-group :value="repeats" @change="nr => changeRepeats({lInd, nr})" column>
               <v-radio v-for="n in [1, 3, 7, 21, 108]" :key="n" :label="n.toString()" :value="n"></v-radio>
             </v-radio-group></v-list-item></v-list>
           </v-menu>
@@ -37,14 +37,14 @@
             </template>
             <v-list dense>
               <v-list-item v-for="[name, plInd] in playlists.map((p, i) => [p.name, i]).slice(1)" :key="plInd" 
-                @click="isInPlaylist(plInd, pInd) ? deleteFromPlaylist(plInd, pInd) : addToPlaylist(plInd, pInd)">
+                @click="isInPlaylist(plInd, pInd) ? deleteFromPlaylist({plInd, lInd}) : addToPlaylist({plInd, pInd})">
                 <v-list-item-title>{{ name }}</v-list-item-title>
                 <v-list-item-icon><v-icon v-if="isInPlaylist(plInd, pInd)" color="success">mdi-check</v-icon></v-list-item-icon>
               </v-list-item>
             </v-list>
           </v-menu>
           
-          <v-btn v-else icon @click="deleteFromPlaylist(curPlInd, pInd)" color="error">
+          <v-btn v-else icon @click="deleteFromPlaylist({plInd: curPlInd, lInd})" color="error">
             <v-icon>mdi-delete</v-icon>
           </v-btn>
 
@@ -57,7 +57,7 @@
       </draggable>
     </v-list>
     
-    <AudioTextControl v-show="curPirith" :curPirith.sync="curPirith" :playMetrics="playMetrics" :curPl="curPl"></AudioTextControl>
+    <AudioTextControl v-show="curPirith"></AudioTextControl>
   </div>
 </template>
 
@@ -79,6 +79,7 @@ import draggable from 'vuedraggable'
 import PlaylistEditor from '@/components/PlaylistEditor.vue'
 import AudioTextControl from '@/components/AudioTextControl.vue'
 import { pirithList } from '@/pirith-list.js'
+import { mapState, mapGetters, mapMutations } from 'vuex'
 
 export default {
   name: 'Home',
@@ -88,70 +89,41 @@ export default {
   data: function() {
       return {
         pirithList,
-        curPlInd: 0,
-        playlists: [
-          { name: 'සියලු‍ පිරිත්', list: [] }
-        ],
-        playMetrics: [], // updated by AudioTextControl
-        curPirith: 0, // pInd + 1 of the currently playing
       }
   },
   
   computed: {
-    curPl: function() { return this.playlists[this.curPlInd] },
-  },
-
-  watch: { // save the watched data to storage
-    curPlInd() { localStorage.setItem('curPlInd', this.curPlInd.toString()) },
-    playlists: { 
-      deep: true,
-      handler() { localStorage.setItem('playlists', JSON.stringify(this.playlists)) } 
-    },
-    playMetrics() { localStorage.setItem('playMetrics', JSON.stringify(this.playMetrics)) },
+    ...mapState(['curPirith', 'curPlInd', 'playlists']),
+    ...mapGetters(['curPl']),
+    curPlList: { // use this in draggable without directly mutating the state
+      get() { return this.curPl.list },
+      set(newList) { this.$store.commit('reorderPl', newList) },
+    }
   },
 
   methods: {
+    ...mapMutations(['addToPlaylist', 'deleteFromPlaylist', 'changeRepeats']),
     dragEnded(e) { // swap repeats
       console.log(`dragged from ${e.oldIndex} to ${e.newIndex}`)
-      const or = this.curPl.repeats[e.oldIndex], nr = this.curPl.repeats[e.newIndex]
-      this.$set(this.curPl.repeats, e.oldIndex, nr)
-      this.$set(this.curPl.repeats, e.newIndex, or)
     },
     isInPlaylist(plInd, pInd) {
-      return this.playlists[plInd].list.indexOf(pInd) != -1
-    },
-    addToPlaylist(plInd, pInd) {
-      this.playlists[plInd].list.push(pInd)
-      this.playlists[plInd].repeats.push(1)
-    },
-    deleteFromPlaylist(plInd, pInd) {
-      const lInd = this.playlists[plInd].list.indexOf(pInd) // must not be -1
-      this.playlists[plInd].list.splice(lInd, 1)
-      this.playlists[plInd].repeats.splice(lInd, 1)
+      return this.playlists[plInd].list.findIndex(e => e.pInd == pInd) != -1
     },
 
-    playPausePirith: async function(key) { // by user action
-      this.curPirith = this.curPirith == key ? 0 : key
+    playPausePirith: function(key) { // by user action
+      this.$store.commit('setCurPirith', this.curPirith == key ? 0 : key)
     },
   },
 
-  mounted: function() { // initialization
-    // load from storage if available
-    this.curPlInd = parseInt(localStorage.getItem('curPlInd') || 0)
-    this.playlists = JSON.parse(localStorage.getItem('playlists'))
-    this.playMetrics = JSON.parse(localStorage.getItem('playMetrics'))
-
-    // initialize the 'all' playlist to be the pirithList
-    if (!this.playlists) this.playlists = [ { name: 'සියලු‍ පිරිත්', list: [], repeats: [] } ]
-    if (!this.playMetrics) this.playMetrics = []
-
-    pirithList.forEach(info => { // check if need to add more
-      if (this.playlists[0].list.indexOf(info[1]) < 0) { // new pirith
-        this.playlists[0].list.push(info[1]) // add to 'all' playlist
-        this.playlists[0].repeats.push(1)
-        this.playMetrics.push(0) // metrics kept in sync with 'all' playlist
-      }
-    });
+  mounted: function() {}, // optional initialization
+  
+  watch: { 
+    // save the playlist changes to storage - ideally should be in the store
+    // However in store would have to duplicate the code multiple times
+    playlists: {
+      deep: true,
+      handler() { localStorage.setItem('playlists', JSON.stringify(this.playlists)) } 
+    },
   },
 }
 </script>

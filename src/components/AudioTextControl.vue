@@ -42,14 +42,11 @@
 <script>
   import { pirithList, setupMediaSession } from '@/pirith-list.js'
   import { pirithData } from '@/pirith-data.js'
+  import { mapState, mapGetters } from 'vuex'
 
   export default {
     name: 'AudioTextControl',
-    props: {
-      curPirith: Number,
-      playMetrics: Array,
-      curPl: Object,
-    },
+    props: { },
     data: function() {
       return {
         pirithList,
@@ -62,6 +59,11 @@
       }
     },
     computed: {
+      ...mapGetters(['curPl']),
+      curPirith: {
+        get () { return this.$store.state.curPirith  },
+        set (value) { this.$store.commit('setCurPirith', value) }
+      },
       curTextIndex() {
         const total = this.curText.reduce((acc, row) => acc + row.pali.length, 0);
         const elapsedTotal = total * this.elapsedRatio;
@@ -81,10 +83,8 @@
       },
       playingInfo() { return this.curPirith ? this.pirithList[this.curPirith - 1] : [] },
       playingSrc() { return this.playingInfo[0] ? `audio/${this.playingInfo[0]}.mp3` : '' },
-      curRepeats() { 
-        const lInd = this.curPl.list.indexOf(this.curPirith - 1)
-        return this.curPl.repeats[lInd]
-      },
+      lInd() { return this.curPl.list.findIndex(e => e.pInd == (this.curPirith - 1)) },
+      curRepeats() { return this.lInd < 0 ? 0 : this.curPl.list[this.lInd].repeats },
     },
 
     watch: {
@@ -95,17 +95,14 @@
     },
     
     methods: {
-      incrementMetrics(pInd) { 
-        this.$set(this.playMetrics, pInd, this.playMetrics[pInd] + 1) 
+      incrementMetrics(pInd) {
+        this.$store.commit('incrementMetrics', pInd)
         this.curCount++
       },
       textRowClass: function(ind) { 
         if (this.curTextIndex < ind) return 'past'
         if (this.curTextIndex == ind) return 'present'
         return 'future'
-      },
-      changeCurPirith() {
-        this.$emit('update:curPirith', this.curPirith)
       },
 
       updatePirith: function() { // update display
@@ -125,10 +122,9 @@
         // if not repeats are defined then go to next pirith even if not a proper play
         if (this.curRepeats > 1 && this.curCount < this.curRepeats) return this.curPirith // repeat
         // go to next pirith in the list
-        const lInd = this.curPl.list.indexOf(this.curPirith - 1)
-        if (lInd + 1 >= this.curPl.list.length) return 0 // playlist finished - nothing to play
+        if (this.lInd + 1 >= this.curPl.list.length) return 0 // playlist finished - nothing to play
         this.curCount = 0
-        return this.pirithList[this.curPl.list[lInd + 1]][1] + 1
+        return this.pirithList[this.curPl.list[this.lInd + 1].pInd][1] + 1
       },
       // event handler
       pirithPaused: function() { // pause and seeking (ending also fires this - so comapre currentTime to duration)
@@ -143,7 +139,6 @@
           this.isCounting = false
         }
         this.curPirith = this.getNextPirithToPlay()
-        this.changeCurPirith()
         this.updatePirith()
       },
       timeUpdated: function() {
@@ -156,7 +151,7 @@
           const curLabel = data.labels[i]
           this.curText = data.text[i];
           this.elapsedRatio = Math.min(1, (currentTime - curLabel[0]) / (curLabel[1] - curLabel[0]) );
-          console.log(currentTime)
+          //console.log(currentTime)
       },
     },
 
