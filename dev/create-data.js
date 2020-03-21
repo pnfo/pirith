@@ -138,16 +138,19 @@ function processPirith(pirithName, pInd) {
 
 function writeStaticPage(pirithName, pInd, labels, text, paliSent, sinhSent) {
     const renderedText = text.map((rows, ind) => {
-        const textE = CED(`text-rows`).append(rows.map(row => CED('text-row').append(
-            [CED('pali part').text(row.pali), CED('sinh part').text(row.sinh)])));
-        const labelE = CED('label').append(textE)
-            .attr('label-start', labels[ind][0])
+        const labelE = CE('table', 'label').attr('label-start', labels[ind][0])
             .attr('label-end', labels[ind][1]);
+
+        labelE.append(CE('tbody', 'text-rows').append(
+            rows.map(row => CE('tr', 'text-row').append(
+                [CE('td', 'pali part').text(row.pali), CE('td', 'sinh part').text(row.sinh).attr('rowspan', row.span)]))));
+
         if (paliSent.length) {
-            labelE.append(CED('sentences').append(
-                CED('pali-sent').text(paliSent[ind]), 
-                CED('sinh-sent').text(sinhSent[ind])));
+            labelE.append(CE('tfoot', 'sentences').append(CE('tr', 'sentence').append(
+                CE('td', 'pali part').text(paliSent[ind]), 
+                CE('td', 'sinh part').text(sinhSent[ind]))));
         }
+
         return labelE;
     });
     const audio = $('<audio controls autoplay></audio>').attr('src', `../audio/${pirithName}.mp3`);

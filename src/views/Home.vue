@@ -11,9 +11,9 @@
         <div class="d-flex align-center flex-grow-1" @click="playPausePirith(pInd + 1)" style="min-width: 0;">
           <span class="pirith-number pr-1">{{ pInd + 1 }}</span>
           <span class="pirith-name pr-1 flex-grow-1">{{ pirithList[pInd][2] }}</span>
-          <span class="pirith-duration pr-1 d-none d-sm-flex text--secondary">
+          <a class="pirith-duration pr-1 d-none d-sm-flex text--secondary" :href="getStaticPageHref(pInd)">
             {{ '(' + pirithList[pInd][4] + ')' }}
-          </span>
+          </a>
         </div>
         
         <div class="d-flex align-center">
@@ -79,6 +79,7 @@ import draggable from 'vuedraggable'
 import PlaylistEditor from '@/components/PlaylistEditor.vue'
 import AudioTextControl from '@/components/AudioTextControl.vue'
 import { pirithList } from '@/pirith-list.js'
+import { pirithData } from '@/pirith-data.js'
 import { mapState, mapGetters, mapMutations } from 'vuex'
 
 export default {
@@ -113,6 +114,10 @@ export default {
     playPausePirith: function(key) { // by user action
       this.$store.commit('setCurPirith', this.curPirith == key ? 0 : key)
     },
+    getStaticPageHref(pInd) {
+      const name = pirithList[pInd][0]
+      return pirithData[name] ? `/pages/${name}.html` : ''
+    }
   },
 
   mounted: function() {}, // optional initialization

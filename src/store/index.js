@@ -4,6 +4,12 @@ import { pirithList } from '@/pirith-list.js'
 
 Vue.use(Vuex)
 
+const initialPlaylists = [
+  { name: 'සියලු‍ පිරිත්', list: [] },
+  { name: 'තුන් සූත්‍රය', list: [{ pInd: 6, repeats: 1 }, { pInd: 7, repeats: 1 }, { pInd: 8, repeats: 1 }] },
+  { name: 'ගැබිණි මවුවරුන් සඳහා', list: [{ pInd: 31, repeats: 7 }, { pInd: 39, repeats: 1 }] },
+]
+
 function initFromStorage() {
   // load from storage if available
   const curPirith = parseInt(localStorage.getItem('curPirith') || 0) // pInd + 1 of the currently playing
@@ -13,7 +19,7 @@ function initFromStorage() {
   // playlist format was changed - hence clean and recreate playlist if storage version is not 2
   let playlists = JSON.parse(localStorage.getItem('playlists'))
   const version = parseInt(localStorage.getItem('version') || 0)
-  if (version != 3 || !playlists) playlists = [ { name: 'සියලු‍ පිරිත්', list: [] } ]
+  if (version != 3 || !playlists) playlists = initialPlaylists
   localStorage.setItem('version', '3')
 
   // initialize the 'all' playlist to be the pirithList

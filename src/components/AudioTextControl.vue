@@ -11,7 +11,7 @@
         </v-simple-table>
 
         <v-btn absolute dark fab small bottom right color="primary" @click="showText = false">
-          <v-icon>mdi-close</v-icon>
+          <v-icon>mdi-eye-off</v-icon>
         </v-btn>
         <v-btn fab small depressed absolute bottom left color="info" v-if="curRepeats > 1">
           <v-icon>mdi-repeat</v-icon>
@@ -19,7 +19,7 @@
       </v-card>
       
       <v-btn v-if="!showText" absolute dark fab small top right color="primary" @click="showText = true">
-          <v-icon>mdi-format-color-text</v-icon>
+          <v-icon>mdi-eye</v-icon>
       </v-btn>
       <v-progress-linear :value="curCount/curRepeats * 100" height="25" color="primary" v-if="curRepeats > 1">
         {{ curCount + '/' + curRepeats }}
