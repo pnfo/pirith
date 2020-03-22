@@ -25,7 +25,7 @@
             </template>
 
             <v-list><v-list-item><v-radio-group :value="repeats" @change="nr => changeRepeats({lInd, nr})" column>
-              <v-radio v-for="n in [1, 3, 7, 21, 108]" :key="n" :label="n.toString()" :value="n"></v-radio>
+              <v-radio v-for="n in repeatCounts" :key="n" :label="n.toString()" :value="n"></v-radio>
             </v-radio-group></v-list-item></v-list>
           </v-menu>
 
@@ -94,7 +94,7 @@ export default {
   },
   
   computed: {
-    ...mapState(['curPirith', 'curPlInd', 'playlists']),
+    ...mapState(['curPirith', 'curPlInd', 'playlists', 'repeatCounts']),
     ...mapGetters(['curPl']),
     curPlList: { // use this in draggable without directly mutating the state
       get() { return this.curPl.list },

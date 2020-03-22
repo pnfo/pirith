@@ -15,12 +15,16 @@ function initFromStorage() {
   const curPirith = parseInt(localStorage.getItem('curPirith') || 0) // pInd + 1 of the currently playing
   const curPlInd = parseInt(localStorage.getItem('curPlInd') || 0)
   const playMetrics = JSON.parse(localStorage.getItem('playMetrics')) || []
+  const repeatCounts = JSON.parse(localStorage.getItem('repeatCounts')) || [1, 3, 7, 21, 108]
 
   // playlist format was changed - hence clean and recreate playlist if storage version is not 2
   let playlists = JSON.parse(localStorage.getItem('playlists'))
-  const version = parseInt(localStorage.getItem('version') || 0)
-  if (version != 3 || !playlists) playlists = initialPlaylists
-  localStorage.setItem('version', '3')
+  const version = parseInt(localStorage.getItem('pirith-version') || 0)
+  if (version != 3 || !playlists) {
+    playlists = initialPlaylists
+    localStorage.removeItem('playlists') // incase the old item remains and it was not overwritten
+  }
+  localStorage.setItem('pirith-version', '3')
 
   // initialize the 'all' playlist to be the pirithList
   pirithList.forEach((info, pInd) => { // check if need to add more
@@ -29,7 +33,7 @@ function initFromStorage() {
       if (!playMetrics[pInd]) playMetrics[pInd] = 0 // metrics kept in sync with 'all' playlist
     }
   });
-  return { curPirith, curPlInd, playlists, playMetrics }
+  return { curPirith, curPlInd, playlists, playMetrics, repeatCounts }
 }
 
 export default new Vuex.Store({
@@ -52,6 +56,10 @@ export default new Vuex.Store({
     incrementMetrics(state, pInd) {
       Vue.set(state.playMetrics, pInd, state.playMetrics[pInd] + 1) 
       localStorage.setItem('playMetrics', JSON.stringify(state.playMetrics))
+    },
+    setRepeatCounts(state, counts) {
+      state.repeatCounts = counts
+      localStorage.setItem('repeatCounts', JSON.stringify(counts))
     },
 
     addToPlaylist(state, { plInd, pInd }) {

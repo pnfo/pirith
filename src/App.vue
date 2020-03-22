@@ -9,16 +9,6 @@
           </v-btn>
         </template>
         <v-list nav dense>
-          <v-list-item @click="$vuetify.theme.dark = !$vuetify.theme.dark"> 
-            <v-list-item-icon>
-              <v-icon>{{ 'mdi-brightness-' + ($vuetify.theme.dark ? '4' : '7') }}</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>{{ $vuetify.theme.dark ? 'Light Mode' : 'Dark Mode' }}</v-list-item-content>
-          </v-list-item>
-          <!--<v-list-item link to="/about" disabled>
-            <v-list-item-icon><v-icon>mdi-cog</v-icon></v-list-item-icon>
-            <v-list-item-content>Settings</v-list-item-content>
-          </v-list-item>-->
           <v-list-item v-for="(info, ind) in menuLinks" link :href="info[0]" :key="ind">
             <v-list-item-icon><v-icon color="accent">{{ 'mdi-' + info[1] }}</v-icon></v-list-item-icon>
             <v-list-item-content>{{ info[2] }}</v-list-item-content>
@@ -29,8 +19,11 @@
       <v-spacer></v-spacer>
       <v-toolbar-title id="title-bar-text">සෙත් පිරිත්</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon to="/about" disabled>
+      <v-btn v-if="isHome" icon to="/settings" @click="isHome = false">
         <v-icon>mdi-cog</v-icon>
+      </v-btn>
+      <v-btn v-else icon to="/" @click="isHome = true">
+        <v-icon>mdi-home</v-icon>
       </v-btn>
     </v-app-bar>
 
@@ -42,13 +35,11 @@
         මේ පිරිත් ඇතුලත් කර සැකසු අන්තර්ජාලය අනවශ්‍ය offline මෘදුකාංග <font-awesome-icon :icon="['far', 'laptop']" /> <a href="https://tipitaka.lk/library/459">පරිඝනක සඳහා</a> ලබාගන්න.<br>
         ෴෴
       </v-sheet>
-      <!--<HelloWorld/>-->
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 const menuLinks = [
   ['https://pitaka.lk/main', 'book', 'සරල ත්‍රිපිටකය'],
   ['https://pitaka.lk/dict', 'book-outline', 'පාළි-සිංහල ශබ්දකෝෂය'],
@@ -61,20 +52,16 @@ const menuLinks = [
 export default {
   name: 'App',
 
-  components: {
-    HelloWorld,
-  },
-
   data: () => ({
+    isHome: true,
     menuLinks,
-    showStarred: false,
   }),
 };
 </script>
 <style scoped>
-@font-face { src: local('###'), url('/fonts/UN-Abhaya-6-110-kern.ttf') format('truetype'); font-weight: normal; font-family: 'sinhala'; }
+@font-face { src: local('###'), url('./assets/fonts/UN-Abhaya-6-110-kern.ttf') format('truetype'); font-weight: normal; font-family: 'sinhala'; }
 /*@font-face { src: local('###'), url('./assets/fonts/AbhayaLibre-SemiBold.ttf') format('truetype'); font-weight: bold; font-family: 'sinhala'; }*/
-@font-face { src: local('###'), url('/fonts/UN-Alakamanda-4-95.ttf') format('truetype'); font-weight: normal; font-family: 'styled'; }
+@font-face { src: local('###'), url('./assets/fonts/UN-Alakamanda-4-95.ttf') format('truetype'); font-weight: normal; font-family: 'styled'; }
 
 #app {
   font-family: 'sinhala'
