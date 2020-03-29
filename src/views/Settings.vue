@@ -56,6 +56,33 @@
         </v-card>
       </v-col>
 
+       <v-col cols="12">
+        <v-card>
+          <v-card-title>
+            පිරිත් තමන්ටම කියන ආකාරය
+          </v-card-title>
+          <v-card-text>
+            <div>මේ පිරිත් ස්වාමින්වහන්සේ විසින් සජ්ඣායනා කරන්නේ ඔබට සෙත් පිණිසය. 
+              නමුත් පිරිත ඔබ විසින් ඔබටම සෙත් පිණිස සජ්ඣායනා කරගන්නා අවස්ථාවල පහත පරිදි සමහර වචන වෙනස් කර ගත යුතුය.
+              බොහෝ අවස්ථාවල එසේ වෙනස් කළ යුතු පාලි වචන වරහන් තුළ දක්වා ඇත.</div>
+            <v-simple-table dense style="table-layout: fixed">
+              <thead>
+                <tr>
+                  <th class="text-left">වචනය</th>
+                  <th class="text-left">වෙනස් කළ යුතු අයුරු</th>
+                </tr>
+              </thead>
+              <tbody class="text-rows">
+                <tr v-for="(c, i) in pronounChanges" :key="i">
+                  <td class="px-2">{{ c[0] }}</td>
+                  <td class="px-2">{{ c[1] }}</td>
+                </tr>
+              </tbody>
+            </v-simple-table>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
       <v-col cols="12">
         <v-card>
           <v-card-title>
@@ -95,6 +122,14 @@ export default {
         v => rpcTextAr(v).length <= 5 || 'උපරිම අංක 5ක් එක් කරන්න',
         v => rpcTextAr(v)[0] == 1 || 'පළමු අංකය එක විය යුතුය',
         v => Math.max(...rpcTextAr(v)) <= 100000 || 'උපරිම අංකය ලක්ෂයක් (100000) විය යුතුය',
+      ],
+      pronounChanges: [
+        ['තේ', 'මේ'],
+        ['තව', 'මම'],
+        ['ත්වං', 'මං'],
+        ['තුය්හං', 'මය්හං'],
+        ['පරික්ඛිතොසි', 'පරික්ඛිතොස්මි'], //in jinapanjara
+        ['චරාසි', 'චරාමි'], //in jinapanjara
       ],
     }
   },

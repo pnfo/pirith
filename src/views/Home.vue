@@ -116,7 +116,7 @@ export default {
     },
     getStaticPageHref(pInd) {
       const name = pirithList[pInd][0]
-      return pirithData[name] ? `/pages/${name}.html` : ''
+      return pirithData[name] ? `./pages/${name}.html` : ''
     }
   },
 

@@ -17,14 +17,15 @@
       </v-menu>
         
       <v-spacer></v-spacer>
-      <v-toolbar-title id="title-bar-text">සෙත් පිරිත්</v-toolbar-title>
+      <v-toolbar-title id="title-bar-text">{{ isSettings ? 'සැකසුම්' : 'සෙත් පිරිත්' }}</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn v-if="isHome" icon to="/settings" @click="isHome = false">
-        <v-icon>mdi-cog</v-icon>
-      </v-btn>
-      <v-btn v-else icon to="/" @click="isHome = true">
+      <v-btn v-if="isSettings" icon to="/">
         <v-icon>mdi-home</v-icon>
       </v-btn>
+      <v-btn v-else icon to="/settings">
+        <v-icon>mdi-cog</v-icon>
+      </v-btn>
+      
     </v-app-bar>
 
     <v-content>
@@ -53,13 +54,16 @@ export default {
   name: 'App',
 
   data: () => ({
-    isHome: true,
     menuLinks,
   }),
+  
+  computed: {
+    isSettings() { return this.$route.path == '/settings' },
+  },
 };
 </script>
 <style scoped>
-@font-face { src: local('###'), url('./assets/fonts/UN-Abhaya-6-110-kern.ttf') format('truetype'); font-weight: normal; font-family: 'sinhala'; }
+@font-face { src: local('###'), url('./assets/fonts/UN-Abhaya.ttf') format('truetype'); font-weight: normal; font-family: 'sinhala'; }
 /*@font-face { src: local('###'), url('./assets/fonts/AbhayaLibre-SemiBold.ttf') format('truetype'); font-weight: bold; font-family: 'sinhala'; }*/
 @font-face { src: local('###'), url('./assets/fonts/UN-Alakamanda-4-95.ttf') format('truetype'); font-weight: normal; font-family: 'styled'; }
 

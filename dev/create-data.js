@@ -135,15 +135,18 @@ function processPirith(pirithName, pInd) {
 
 
 /** STATIC PAGES */
-
+function rowToTds(row) {
+    const tds = [CE('td', 'pali part').text(row.pali)];
+    if (row.sinh) tds.push(CE('td', 'sinh part').text(row.sinh).attr('rowspan', row.span))
+    return tds
+}
 function writeStaticPage(pirithName, pInd, labels, text, paliSent, sinhSent) {
     const renderedText = text.map((rows, ind) => {
         const labelE = CE('table', 'label').attr('label-start', labels[ind][0])
             .attr('label-end', labels[ind][1]);
 
         labelE.append(CE('tbody', 'text-rows').append(
-            rows.map(row => CE('tr', 'text-row').append(
-                [CE('td', 'pali part').text(row.pali), CE('td', 'sinh part').text(row.sinh).attr('rowspan', row.span)]))));
+            rows.map(row => CE('tr', 'text-row').append(rowToTds(row)))));
 
         if (paliSent.length) {
             labelE.append(CE('tfoot', 'sentences').append(CE('tr', 'sentence').append(
