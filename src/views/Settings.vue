@@ -1,21 +1,22 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <v-row dense>
 
-      <v-col cols="12">
+      <v-col cols="12" sm="6">
         <v-card>
           <v-card-title v-if="!$vuetify.theme.dark">රාත්‍රී අඳුරු තිරය</v-card-title>
           <v-card-title v-else>දහවල් ආලෝකමත් තිරය</v-card-title>
           <v-card-subtitle>රාත්‍රී අඳුරු තිරය සහ දහවල් ආලෝකමත් තිරය අතර මාරු වෙන්න. අඳුරු තිරය රාත්‍රියේදී ඇසට පහසුය.</v-card-subtitle>
           <v-card-actions>
-            <v-btn @click="$vuetify.theme.dark = !$vuetify.theme.dark" small fab color="primary">
-              <v-icon>{{ 'mdi-brightness-' + ($vuetify.theme.dark ? '4' : '7') }}</v-icon>
+            <v-btn @click="$vuetify.theme.dark = !$vuetify.theme.dark"  outlined>
+              <v-icon class="mr-2">{{ 'mdi-brightness-' + ($vuetify.theme.dark ? '4' : '7') }}</v-icon>
+              {{ $vuetify.theme.dark ? 'ආලෝකමත් තිරය' : 'අඳුරු තිරය' }}
             </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
 
-      <v-col cols="12">
+      <v-col cols="12" sm="6">
         <v-card>
           <v-card-title>නැවත වාදනය කළ හැකි වාර ගණන්</v-card-title>
           <v-card-subtitle>එකම පිරිත නැවත නැවත වාදනය කළ හැකි වාර ගණන් පහතින් ඇතුළු කරන්න. ඒ ඒ ගණන හිස්තැනකින් (space) වෙන් කරන්න.</v-card-subtitle>
@@ -30,7 +31,7 @@
         </v-card>
       </v-col>
 
-      <v-col cols="12">
+      <v-col cols="12" sm="6">
         <v-card>
           <v-card-title>
             ඔබ විසින් පිරිත් අසන ලද වාර ගණන්
@@ -56,7 +57,7 @@
         </v-card>
       </v-col>
 
-       <v-col cols="12">
+       <v-col cols="12" sm="6">
         <v-card>
           <v-card-title>
             පිරිත් තමන්ටම කියන ආකාරය
@@ -83,19 +84,19 @@
         </v-card>
       </v-col>
 
-      <v-col cols="12">
+      <v-col cols="12" sm="6">
         <v-card>
           <v-card-title>
             මෙම මෘදුකාංග වෙබ් අඩවිය භාවිතා කිරීමේ උපදෙස්
           </v-card-title>
-          <v-card-text>
-            <iframe width="100%" src="https://www.youtube.com/embed/XFpYqlgT-a0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div>පහත බොත්තම එබීමෙන්ද පිවිසිය හැක</div>
-          </v-card-text>
+          <v-card-subtitle>පහත බොත්තම එබීමෙන් උපදෙස් අඩංගු Youtube වීඩියෝ එකට පිවිසිය හැක</v-card-subtitle>
+          <!--<v-card-text>
+            <iframe width="100%" height="400px" src="https://www.youtube.com/embed/XFpYqlgT-a0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </v-card-text>-->
           <v-card-actions>
-            <v-btn href="https://youtu.be/XFpYqlgT-a0">
+            <v-btn href="https://youtu.be/XFpYqlgT-a0" text outlined color="primary">
+              <v-icon dark color="error" class="mr-2">mdi-youtube</v-icon>
               Youtube
-              <v-icon right dark color="error">mdi-youtube</v-icon>
             </v-btn>
           </v-card-actions>
         </v-card>
