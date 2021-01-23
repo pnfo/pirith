@@ -116,7 +116,7 @@ function processPirith(pirithName, pInd) {
 
     const labels = readSplitFile(`${rootFolder}/data/${fileNum}-labels.txt`).map(line => line.split('\t').map(num => Number(num)));
     const text = readCombiFile(`${rootFolder}/data/${fileNum}-combi.txt`);
-    assert(labels.length == text.length, `labels and text lengths are different for ${pirithName}`);
+    assert(labels.length == text.length, `labels and text lengths are different for ${pirithName}. ${labels.length} != ${text.length}`);
     dataJson[pirithName] = {
         'labels': labels,
         'text': text,
@@ -127,7 +127,7 @@ function processPirith(pirithName, pInd) {
     const paliSent = readSplitFile(`${rootFolder}/data/${fileNum}.txt`);
     const sinhSent = readSplitFile(`${rootFolder}/data/${fileNum}-trans.txt`).map(line => line.length ? line : null);
     assert(!paliSent.length || (paliSent.length == labels.length && sinhSent.length == labels.length), 
-        `labels and sentence lengths are different for ${pirithName}`);
+        `labels and sentence lengths are different for ${pirithName}. pali: ${paliSent.length}, labels: ${labels.length}`);
 
     const pageSize = writeStaticPage(pirithName, pInd, labels, text, paliSent, sinhSent);
     console.log(`wrote static page for ${pirithName}, page size ${pageSize}`);

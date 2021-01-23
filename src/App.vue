@@ -44,7 +44,7 @@
 const menuLinks = [
   ['https://pitaka.lk/main', 'book', 'සරල ත්‍රිපිටකය'],
   ['https://pitaka.lk/dict', 'book-outline', 'පාළි-සිංහල ශබ්දකෝෂය'],
-  ['https://pitaka.lk/bjt', 'book-open', 'බුද්ධ ජයන්ති ත්‍රිපිටකය'],
+  ['https://tipitaka.lk/', 'book-open', 'බුද්ධ ජයන්ති ත්‍රිපිටකය'],
   ['https://pitaka.lk/books', 'book-open-variant', 'බෞද්ධ පොත් සංචිතය'],
   ['https://pitaka.lk/dhammapada', 'image-album', 'ධම්මපද කතා වස්තු'],
   ['https://www.facebook.com/pitaka.lk', 'face', 'Facebook පිටුව'],
