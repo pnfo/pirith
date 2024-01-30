@@ -36,7 +36,7 @@
 .theme--light .present .pali { background-color: blanchedalmond;  }
 .theme--dark .present .pali { background-color: #54473c;  }
 
-.bottom-sheet { position: fixed; bottom: 0; width: 100%; max-width: 800px; left: 50%; transform: translateX(-50%);}
+.bottom-sheet { position: fixed; bottom: 0; width: 100%; max-width: 800px; left: 50%; transform: translateX(-50%); z-index: 99;}
 </style>
 
 <script>

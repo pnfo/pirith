@@ -63,6 +63,7 @@ const pirithList = [ // file-name, order, name, author, length
     ['59-jinapanjara-parittam', 40, 'ජිනපඤ්ජර පරිත්තං', 'ariyadhamma', '6:10'],
     ['60-dasa-disa-parittam', 41, 'දස දිසා පරිත්තං', 'ariyadhamma', '1:30'],
     ['61-bojjhanga-parittam', 42, 'බොජ්ඣංග පරිත්තං', 'ariyadhamma', '3:18'],
+    ['62-samantha-pattana', 43, 'සමන්ත පට්ඨානය', 'ariyadhamma', '40:48'],
 ]
 const dataJson = {};
 
