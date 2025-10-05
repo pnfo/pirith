@@ -100,8 +100,8 @@ function readCombiFile(fileName) {
     if (!fs.existsSync(fileName)) return [];
     const dataStr = fs.readFileSync(fileName, {encoding: 'utf-8'});
     //console.log(data);
-    return dataStr.split('\r\n\r\n').map(group => {
-        const lines = group.split('\r\n');
+    return dataStr.split('\n\n').map(group => {
+        const lines = group.split('\n');
         return computeRowSpan(lines.map(line => {
             const [pali, sinh] = line.split('=').map(part => part.trim());
             //assert(parts.length == 2, `no = found on text line ${line} : group ${group}`);
