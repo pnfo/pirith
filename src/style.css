@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'sinhala';
+  src: local('###'), url('./assets/fonts/UN-Abhaya.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'styled';
+  src: local('###'), url('./assets/fonts/UN-Alakamanda-4-95.ttf') format('truetype');
+  font-weight: normal;
+}
+
+body {
+  font-family: 'sinhala', sans-serif;
+  @apply bg-primary-light text-main dark:bg-surface-dark dark:text-main-dark;
+}

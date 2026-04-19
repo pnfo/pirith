@@ -1,6 +1,7 @@
 /**
  * The pirithList indexes/order should not be changed - filename and names can be changed
  * New pirith need to be added at the end of the list
+ * MP3 variable bitrate audio might have sync issues with text when seeking (for long audio files constant bit rate 48kbps was used)
  */
 export const pirithList = [ // order, desc, author, length, count, isStarred, isLoop
     ['02-saranagamanam', 0, 'සරණාගමනං', 'ariyadhamma', '1:41'],
@@ -54,7 +55,7 @@ const authorList = {
     'ariyadhamma': ['නාඋයනේ අරියධම්ම ථෙරෝ', 'Nauyane Ariyadhamma Thero', [128, 256, 512]],
 }
 
-export function setupMediaSession(pInd) {
+export function setupMediaSession(pInd, audioEl) {
     if (!('mediaSession' in navigator)) {
         console.log('No mediaSession support in navigator');
         return;
@@ -67,11 +68,29 @@ export function setupMediaSession(pInd) {
         album: 'පිරිත්',
     };
     metadata.artwork = authorInfo[2].map(size => {
-        return { 
-            src: `artwork/${info[3]}-${size}.png`,
-            sizes: `${size}x${size}`, 
-            type: 'image/png' 
+        return {
+            src: `./artwork/${info[3]}-${size}.png`,
+            sizes: `${size}x${size}`,
+            type: 'image/png'
         };
     });
     navigator.mediaSession.metadata = new MediaMetadata(metadata);
+
+    if (audioEl) {
+        navigator.mediaSession.setActionHandler('play', () => audioEl.play());
+        navigator.mediaSession.setActionHandler('pause', () => audioEl.pause());
+        navigator.mediaSession.setActionHandler('seekbackward', (details) => {
+            audioEl.currentTime = Math.max(audioEl.currentTime - (details.seekOffset || 10), 0);
+        });
+        navigator.mediaSession.setActionHandler('seekforward', (details) => {
+            audioEl.currentTime = Math.min(audioEl.currentTime + (details.seekOffset || 10), audioEl.duration);
+        });
+        navigator.mediaSession.setActionHandler('seekto', (details) => {
+            if (details.fastSeek && 'fastSeek' in audioEl) {
+                audioEl.fastSeek(details.seekTime);
+            } else {
+                audioEl.currentTime = details.seekTime;
+            }
+        });
+    }
 }

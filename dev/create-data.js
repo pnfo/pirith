@@ -1,83 +1,25 @@
+import fs from 'node:fs';
+import assert from 'node:assert';
 
-const fs = require('fs');
-const assert = require('assert');
-const vkbeautify = require('vkbeautify');
-
-var jsdom = require('jsdom');
-const { JSDOM } = jsdom;
-const { window } = new JSDOM();
-const { document } = (new JSDOM('')).window;
-global.document = document;
-
-var $ = jQuery = require('jquery')(window);
-const CE = (elem, cls) => $(`<${elem}/>`).addClass(cls), 
-    CED = (cls) => CE('div', cls), CES = (cls) => CE('span', cls); // helper func
-
-const rootFolder = __dirname;
+// In ES modules, __dirname is not available directly, but import.meta.dirname works in Node 20.11+
+const rootFolder = import.meta.dirname;
 
 const prePageHtml = fs.readFileSync(`${rootFolder}/pre-page.html`, { encoding: 'utf8' });
 
-// copied from the main pirith-list.js file
-const pirithList = [ // file-name, order, name, author, length
-    ['02-saranagamanam', 0, 'සරණාගමනං', 'ariyadhamma', '1:41'],
-    ['03-dasasikkhapadani', 1, 'දස සික්ඛාපදානි', 'ariyadhamma', '1:48'],
-    ['04-samanera-panha', 2, 'සාමණේර පඤ්හො', 'ariyadhamma', '1:53'],
-    ['05-dvattimsakaraya', 3, 'ද්වත්තිංසාකාරො', 'ariyadhamma', '1:09'],
-    ['06-paccavekkhana', 4, 'පච්චවෙක්ඛණා', 'ariyadhamma', '3:24'],
-    ['07-dasadhamma', 5, 'දසධම්ම සුත්තං', 'ariyadhamma', '5:24'],
-    ['08-mahamangala', 6, 'මහා මඞ්ගල සුත්තං', 'ariyadhamma', '5:46'],
-    ['09-rathana', 7, 'රතන සුත්තං', 'ariyadhamma', '10:21'],
-    ['10-karaniya', 8, 'කරණීය මෙත්ත සුත්තං', 'ariyadhamma', '4:02'],
-    ['11-khandha-parittam', 9, 'ඛන්ධ පරිත්තං', 'ariyadhamma', '6:50'],
-    ['12-mettanisamsa', 10, 'මෙත්තානිසංස සුත්තං', 'ariyadhamma', '3:33'],
-    ['13-mittanisamsa', 11, 'මිත්තානිසංස සුත්තං', 'ariyadhamma', '3:27'],
-    ['14-mora-parittam', 12, 'මොර පරිත්තං', 'ariyadhamma', '2:25'],
-    ['15-canda-parittam', 13, 'චන්ද පරිත්තං', 'ariyadhamma', '3:26'],
-    ['16-suriya-parittam', 14, 'සූරිය පරිත්තං', 'ariyadhamma', '3:40'],
-    ['17-dhajagga-parittam', 15, 'ධජග්ග පරිත්තං', 'ariyadhamma', '11:13'],
-    ['18-kassapa-bojjhanga', 16, 'මහා කස්සප බොජ්ඣංග සුත්තං', 'ariyadhamma', '7:05'],
-    ['19-moggallana-bojjhanga', 17, 'මහා මොග්ගල්ලාන බොජ්ඣංග සුත්තං', 'ariyadhamma', '7:03'],
-    ['20-chunda-bojjhanga', 18, 'මහා චුන්ද බොජ්ඣංග සුත්තං', 'ariyadhamma', '6:53'],
-    ['21-girimananda-suttam', 19, 'ගිරිමානන්ද සුත්තං', 'ariyadhamma', '24:11'],
-    ['22-isigili-suttam', 20, 'ඉසිගිලි සුත්තං', 'ariyadhamma', '16:23'],
-    ['23-dhammacakkappavattana', 21, 'ධම්මචක්කප්පවත්තන සුත්තං', 'ariyadhamma', '24:28'],
-    ['24-mahasamaya-suttam', 22, 'මහාසමය සුත්තං', 'ariyadhamma', '30:17'],
-    ['25-alavaka-suttam', 23, 'ආළවක සුත්තං', 'ariyadhamma', '9:40'],
-    ['26-kasibharadvaja-suttam', 24, 'කසිභාරද්වාජ සුත්තං', 'ariyadhamma', '11:49'],
-    ['27-parabhava-suttam', 25, 'පරාභව සුත්තං', 'ariyadhamma', '10:00'],
-    ['28-aggika-bharadvaja-suttam', 26, 'අග්ගික භාරද්වාජ සුත්තං', 'ariyadhamma', '14:22'],
-    ['29-saccavibhanga-suttam', 27, 'සච්චවිභඞ්ග සුත්තං', 'ariyadhamma', '30:31'],
-    ['30-atanatiya-suttam-1', 28, 'ආටානාටිය සුත්තං 1', 'ariyadhamma', '41:02'],
-    ['32-atanatiya-suttam-2', 29, 'ආටානාටිය සුත්තං 2', 'ariyadhamma', '48:55'],
-    ['35-tesattati-nyana-parittam', 30, 'තෙසැත්තෑ ඤාණ පරිත්තං', 'ariyadhamma', '58:26'],
-
-    ['50-angulimala', 31, 'අංගුලිමාල පරිත්තං', 'ariyadhamma', '2:03'],
-    ['51-atavisi', 32, 'අටවිසි පරිත්තං', 'ariyadhamma', '2:08'],
-    ['52-wattaka', 33, 'වට්ටක පරිත්තං', 'ariyadhamma', '2:01'],
-    ['53-jaya-mangala-attha-gatha', 34, 'ජය මංගල අට්ඨ ගාථා', 'ariyadhamma', '4:46'],
-    ['54-narasiha-gatha', 35, 'නරසීහ ගාථා', 'ariyadhamma', '3:21'],
-    ['55-maha-jaya-mangala-gatha', 36, 'මහා ජයමංගල ගාථා', 'ariyadhamma', '5:34'],
-    ['56-jaya-parittam', 37, 'ජය පරිත්තං', 'ariyadhamma', '3:22'],
-    ['57-jvara-parittam', 38, 'ජ්වර පරිත්තං', 'ariyadhamma', '15:52'],
-    ['58-antharaya-nivarana-parittam', 39, 'අන්තරාය නිවාරණ පරිත්තං', 'ariyadhamma', '0:53'],
-    ['59-jinapanjara-parittam', 40, 'ජිනපඤ්ජර පරිත්තං', 'ariyadhamma', '6:10'],
-    ['60-dasa-disa-parittam', 41, 'දස දිසා පරිත්තං', 'ariyadhamma', '1:30'],
-    ['61-bojjhanga-parittam', 42, 'බොජ්ඣංග පරිත්තං', 'ariyadhamma', '3:18'],
-    ['62-samantha-pattana', 43, 'සමන්ත පට්ඨානය', 'ariyadhamma', '40:48'],
-]
+import { pirithList } from '../src/pirith-list.js';
 const dataJson = {};
 
-pirithList.forEach(info => processPirith(info[0], info[1]));
+pirithList.forEach(info => processPirith(info[0], info[2]));
 
 // write the data file
-fs.writeFileSync(`${rootFolder}/../src/pirith-data.js`, 
-    'export const pirithData = ' + vkbeautify.json(JSON.stringify(dataJson)), 
-    {encoding: 'utf-8'});
+fs.writeFileSync(`${rootFolder}/../src/pirith-data.js`,
+    'export const pirithData = ' + JSON.stringify(dataJson, null, 4),
+    { encoding: 'utf-8' });
 
 
 function readSplitFile(fileName) {
     if (!fs.existsSync(fileName)) return [];
-    const dataStr = fs.readFileSync(fileName, {encoding: 'utf-8'});
+    const dataStr = fs.readFileSync(fileName, { encoding: 'utf-8' });
     //console.log(data);
     return dataStr.split('\n').map(line => line.trim());
 };
@@ -98,7 +40,7 @@ function computeRowSpan(rows) { // since some sinh parts map to multiple pali pa
 
 function readCombiFile(fileName) {
     if (!fs.existsSync(fileName)) return [];
-    const dataStr = fs.readFileSync(fileName, {encoding: 'utf-8'});
+    const dataStr = fs.readFileSync(fileName, { encoding: 'utf-8' });
     //console.log(data);
     return dataStr.split('\n\n').map(group => {
         const lines = group.split('\n');
@@ -111,62 +53,72 @@ function readCombiFile(fileName) {
     });
 }
 
-function processPirith(pirithName, pInd) {
-    const fileNum = Number(pirithName.split('-')[0]);
-    if (!fs.existsSync(`${rootFolder}/data/${fileNum}-combi.txt`)) return; // dont process if no data files
+function processPirith(fileName, pirithName) {
+    const fileNum = Number(fileName.split('-')[0]);
+    if (!fs.existsSync(`${rootFolder}/data/${fileNum}-combi.txt`)) {
+        console.log(`no data files for ${fileName}`);
+        return; // dont process if no data files
+    }
 
     const labels = readSplitFile(`${rootFolder}/data/${fileNum}-labels.txt`).map(line => line.split('\t').map(num => Number(num)));
     const text = readCombiFile(`${rootFolder}/data/${fileNum}-combi.txt`);
-    assert(labels.length == text.length, `labels and text lengths are different for ${pirithName}. ${labels.length} != ${text.length}`);
-    dataJson[pirithName] = {
+    assert(labels.length == text.length, `labels and text lengths are different for ${fileName}. ${labels.length} != ${text.length}`);
+    dataJson[fileName] = {
         'labels': labels,
         'text': text,
     };
-    console.log(`processed data for ${pirithName}, num labels ${labels.length}`);
+    console.log(`processed data for ${fileName}, num labels ${labels.length}`);
 
     // write the full sentences to static pages - optional full sentences available only for first 10 pirith
     const paliSent = readSplitFile(`${rootFolder}/data/${fileNum}.txt`);
     const sinhSent = readSplitFile(`${rootFolder}/data/${fileNum}-trans.txt`).map(line => line.length ? line : null);
-    assert(!paliSent.length || (paliSent.length == labels.length && sinhSent.length == labels.length), 
-        `labels and sentence lengths are different for ${pirithName}. pali: ${paliSent.length}, labels: ${labels.length}`);
+    assert(!paliSent.length || (paliSent.length == labels.length && sinhSent.length == labels.length),
+        `labels and sentence lengths are different for ${fileName}. pali: ${paliSent.length}, labels: ${labels.length}`);
 
-    const pageSize = writeStaticPage(pirithName, pInd, labels, text, paliSent, sinhSent);
-    console.log(`wrote static page for ${pirithName}, page size ${pageSize}`);
+    const pageSize = writeStaticPage(fileName, pirithName, labels, text, paliSent, sinhSent);
+    console.log(`wrote static page for ${fileName}, page size ${pageSize}`);
 }
 
 
 /** STATIC PAGES */
-function rowToTds(row) {
-    const tds = [CE('td', 'pali part').text(row.pali)];
-    if (row.sinh) tds.push(CE('td', 'sinh part').text(row.sinh).attr('rowspan', row.span))
-    return tds
-}
-function writeStaticPage(pirithName, pInd, labels, text, paliSent, sinhSent) {
-    const renderedText = text.map((rows, ind) => {
-        const labelE = CE('table', 'label').attr('label-start', labels[ind][0])
-            .attr('label-end', labels[ind][1]);
+function writeStaticPage(fileName, pirithName, labels, text, paliSent, sinhSent) {
+    const tablesHtml = text.map((rows, ind) => {
+        const tbodyRows = rows.map(row => {
+            let rowHtml = `<td class="pali part">${row.pali}</td>`;
+            if (row.sinh) {
+                rowHtml += `\n                <td class="sinh part" rowspan="${row.span}">${row.sinh}</td>`;
+            }
+            return `<tr class="text-row">\n                ${rowHtml}\n            </tr>`;
+        }).join('\n            ');
 
-        labelE.append(CE('tbody', 'text-rows').append(
-            rows.map(row => CE('tr', 'text-row').append(rowToTds(row)))));
-
+        let tfootHtml = '';
         if (paliSent.length) {
-            labelE.append(CE('tfoot', 'sentences').append(CE('tr', 'sentence').append(
-                CE('td', 'pali part').text(paliSent[ind]), 
-                CE('td', 'sinh part').text(sinhSent[ind]))));
+            tfootHtml = `
+        <tfoot class="sentences">
+            <tr class="sentence">
+                <td class="pali part">${paliSent[ind]}</td>
+                <td class="sinh part">${sinhSent[ind]}</td>
+            </tr>
+        </tfoot>`;
         }
 
-        return labelE;
-    });
-    const audio = $('<audio controls autoplay></audio>').attr('src', `../audio/${pirithName}.mp3`);
-    const contentDiv = CED('content').append(
-        audio,
-        renderedText
-    );
+        return `
+    <table class="label" label-start="${labels[ind][0]}" label-end="${labels[ind][1]}">
+        <tbody class="text-rows">
+            ${tbodyRows}
+        </tbody>${tfootHtml}
+    </table>`;
+    }).join('');
 
-    const contentHtml = vkbeautify.xml(CED('div').append(contentDiv).html());
-    let tmplStr = prePageHtml.replace(/TITLEPLACEHOLDER/g, pirithList[pInd][2]);
-    tmplStr = tmplStr.replace(/PIRITHNAMEPLACEHOLDER/g, pirithName);
-    tmplStr = tmplStr.replace(/CONTENTPLACEHOLDER/, contentHtml)
-    fs.writeFileSync(`${rootFolder}/../public/pages/${pirithName}.html`, tmplStr);
+    const contentHtml = `
+<div class="content">
+    <audio controls="controls" autoplay="autoplay" src="../audio/${fileName}.mp3"></audio>${tablesHtml}
+</div>`;
+
+    let tmplStr = prePageHtml.replace(/TITLEPLACEHOLDER/g, pirithName);
+    tmplStr = tmplStr.replace(/PIRITHNAMEPLACEHOLDER/g, fileName);
+    tmplStr = tmplStr.replace(/CONTENTPLACEHOLDER/, contentHtml);
+
+    fs.writeFileSync(`${rootFolder}/../public/pages/${fileName}.html`, tmplStr);
     return tmplStr.length;
 }

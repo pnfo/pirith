@@ -1,88 +1,159 @@
 <template>
-  <v-container class="pb-0">
-    <div class="d-flex justify-center">
-      <v-icon color="info">mdi-playlist-music</v-icon>
+  <div class="p-4 pb-0">
+    <div class="flex justify-center items-center">
+      <ListMusicIcon class="text-primary w-6 h-6 mr-2 dark:text-stone-400" />
 
       <template v-if="isEdit">
-        <v-text-field dense placeholder="ලැයිස්තු නම" class="flex-grow-1 mx-4" counter="25" 
-            v-model="editedName" :rules="rules" style="max-width: 300px"
-            append-icon="mdi-check" @click:append="commitEditName">
-        </v-text-field>
+        <div class="flex-grow mx-2 max-w-[300px] relative">
+            <input 
+                type="text" 
+                v-model="editedName" 
+                class="w-full border border-line rounded px-2 py-1 text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow dark:bg-surface-dark-alt dark:border-line-dark dark:text-main-dark"
+                placeholder="ලැයිස්තු නම"
+                maxlength="25"
+                @keyup.enter="commitEditName"
+            />
+        </div>
 
-        <v-btn icon @click="isEdit = false">
-          <v-icon>mdi-cancel</v-icon>
-        </v-btn>
+        <button @click="commitEditName" class="p-1 text-primary hover:bg-primary-light rounded-full mr-1 transition-colors dark:text-primary dark:hover:bg-primary/30" title="Save">
+            <CheckIcon class="w-5 h-5" />
+        </button>
+        <button @click="isEdit = false" class="p-1 text-danger hover:bg-danger-light rounded-full transition-colors dark:text-danger dark:hover:bg-danger-dark/30" title="Cancel">
+            <XIcon class="w-5 h-5" />
+        </button>
       </template>
 
       <template v-else>
-        <v-select dense :items="playlists.map((p,i)=>({text: p.name, value: i}))" style="max-width: 300px" class="mx-4"
-            v-model="curPlInd">
-        </v-select>
+        <div class="flex-grow mx-2 max-w-[300px] relative">
+          <!-- Custom Dropdown Trigger (Small Control) -->
+          <button 
+            @click="toggleDropdown"
+            class="w-full border border-line rounded px-2 py-1 text-lg bg-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-left flex items-center justify-between transition-shadow dark:bg-surface-dark-alt dark:border-line-dark dark:text-main-dark"
+          >
+            <span class="truncate">{{ playlists[curPlInd].name }}</span>
+            <ChevronDownIcon class="w-4 h-4 ml-1 flex-shrink-0 text-main dark:text-muted-dark" />
+          </button>
 
-        <v-btn icon dense @click="startEditName">
-          <v-icon>mdi-pencil</v-icon>
-        </v-btn>
+          <!-- Custom Dropdown List (Larger Items) -->
+          <div v-if="isDropdownOpen" class="absolute top-full left-0 w-full mt-1 bg-surface border-2 border-line rounded shadow-xl z-50 max-h-80 overflow-y-auto dark:bg-surface-dark dark:border-line-dark">
+            <div 
+              v-for="(p, i) in playlists" 
+              :key="i"
+              @click="selectPlaylist(i)"
+              class="px-4 py-3 text-lg cursor-pointer hover:bg-primary-light transition-colors border-b border-line last:border-0 dark:border-line-dark dark:hover:bg-surface-dark-alt dark:text-main-dark"
+              :class="{'bg-primary-light text-primary font-medium dark:bg-surface-dark-alt dark:text-main-dark': i === curPlInd}"
+            >
+              {{ p.name }}
+            </div>
+          </div>
+        </div>
+
+        <button @click="startEditName" class="p-1 text-muted hover:bg-surface-alt rounded-full transition-colors dark:text-muted-dark dark:hover:bg-surface-dark-alt" title="Edit Name">
+          <PencilIcon class="w-5 h-5" />
+        </button>
       </template>
 
-      <v-btn v-if="playlists[curPlInd].list.length == 0" icon @click="deletePlaylist" color="error">
-        <v-icon>mdi-delete-sweep</v-icon>
-      </v-btn>
-      <v-btn v-else icon @click="addNewPlaylist" color="success">
-        <v-icon>mdi-folder-plus-outline</v-icon>
-      </v-btn>
+      <button v-if="playlists[curPlInd].list.length == 0" @click="deletePlaylist" class="ml-2 p-1 text-danger hover:bg-danger-light rounded-full transition-colors dark:hover:bg-danger-dark/30 dark:text-muted-dark dark:hover:text-danger" title="Delete Playlist">
+        <Trash2Icon class="w-6 h-6" />
+      </button>
+      <button v-else @click="addNewPlaylist" class="ml-2 p-1 text-primary hover:bg-primary-light rounded-full transition-colors dark:hover:bg-primary/30 dark:text-muted-dark dark:hover:text-primary" title="New Playlist">
+        <FolderPlusIcon class="w-6 h-6" />
+      </button>
     </div>
-  </v-container>
+
+    <!-- Backdrop for dropdown -->
+    <div v-if="isDropdownOpen" class="fixed inset-0 z-40" @click="closeDropdown"></div>
+  </div>
 </template>
 
-<script>
-import { mapState } from 'vuex'
+<script setup>
+import { ref, computed, watch } from 'vue'
+import { usePlayerStore } from '@/stores/player'
+import { 
+  ListMusic as ListMusicIcon, 
+  Check as CheckIcon, 
+  X as XIcon, 
+  Pencil as PencilIcon, 
+  Trash2 as Trash2Icon, 
+  FolderPlus as FolderPlusIcon,
+  ChevronDown as ChevronDownIcon
+} from 'lucide-vue-next'
 
-export default {
-  name: 'PlaylistEditor',
-  props: {  },
-  data: function() {
-    return {
-      isEdit: false,
-      editedName: '',
-      rules: [
-        v => !!v || 'වාදන ලැයිස්තු නමක් අවශ්‍යයි',
-        v => v.length >= 5 || 'වාදන ලැයිස්තු නමේ අවම දිග අකුරු 5',
-        v => v.length <= 25 || 'වාදන ලැයිස්තු නමේ උපරිම දිග අකුරු 25',
-        v => this.curPlNames.indexOf(v) == -1 || 'මේ‍ නමින් ලැයිස්තුවක් දැනටම ඇත',
-      ],
-    }
-  },
-  computed: {
-    ...mapState(['playlists']),
-    curPlInd: {
-      get () { return this.$store.state.curPlInd  },
-      set (value) { this.$store.commit('setPlInd', value) }
-    },
-    curPlNames() { return this.playlists.map(p => p.name) },
-  },
-  
-  methods: {
-    startEditName() {
-      this.isEdit = true
-      this.editedName = this.playlists[this.curPlInd].name
-    },
-    commitEditName() {
-      if (this.rules.some(rule => rule(this.editedName) !== true)) return // some rule failed
-      this.isEdit = false
-      this.$store.commit('setPlaylistName', this.editedName)
-    },
+const store = usePlayerStore()
 
-    addNewPlaylist() {
-      this.isEdit = false // we could be in edit mode so disable it
-      this.$store.commit('addNewPlaylist')
-      this.$store.commit('setPlInd', this.playlists.length - 1)
-    },
-    deletePlaylist() {
-      this.isEdit = false
-      this.$store.commit('deletePlaylist')
-      this.$store.commit('setPlInd', 0)
-    },
+const isEdit = ref(false)
+const editedName = ref('')
+const isDropdownOpen = ref(false)
 
-  },
+// Computed properties
+const playlists = computed(() => store.playlists)
+const curPlInd = computed({
+  get: () => store.curPlInd,
+  set: (val) => store.setPlInd(val)
+})
+
+// Watch activeDropdown to close if needed
+watch(() => store.activeDropdown, (newVal) => {
+  if (newVal !== 'playlist' && isDropdownOpen.value) {
+    isDropdownOpen.value = false
+  }
+})
+
+// Validation rules logic
+function validateName(name) {
+    if (!name) return false
+    if (name.length < 5) return false
+    if (name.length > 25) return false
+    // Allow saving if name hasn't changed
+    if (name === playlists.value[curPlInd.value].name) return true 
+    if (store.playlists.some((p, i) => i !== curPlInd.value && p.name === name)) return false
+    return true
+}
+
+function startEditName() {
+  isEdit.value = true
+  editedName.value = playlists.value[curPlInd.value].name
+}
+
+function commitEditName() {
+  if (!validateName(editedName.value)) {
+      alert("Invalid name: Must be 5-25 chars and unique.") 
+      return
+  }
+  isEdit.value = false
+  store.setPlaylistName(editedName.value)
+}
+
+function addNewPlaylist() {
+  isEdit.value = false
+  store.addNewPlaylist()
+  store.setPlInd(playlists.value.length - 1)
+}
+
+function deletePlaylist() {
+  isEdit.value = false
+  store.deletePlaylist()
+  store.setPlInd(0)
+}
+
+function toggleDropdown() {
+  if (isDropdownOpen.value) {
+    closeDropdown()
+  } else {
+    isDropdownOpen.value = true
+    store.setActiveDropdown('playlist')
+  }
+}
+
+function closeDropdown() {
+  isDropdownOpen.value = false
+  if (store.activeDropdown === 'playlist') {
+    store.setActiveDropdown(null)
+  }
+}
+
+function selectPlaylist(index) {
+  curPlInd.value = index
+  closeDropdown()
 }
 </script>

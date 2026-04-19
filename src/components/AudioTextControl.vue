@@ -1,164 +1,233 @@
 <template>
-  <v-sheet class="text-center bottom-sheet" >
-      <v-card id="text" v-if="curText.length && showText">
-        <v-simple-table dense style="table-layout: fixed">
-          <tbody class="text-rows">
-            <tr v-for="(row, ri) in curTextSubset" :key="ri" :class="['text-row', { present: row.oi == curTextIndex } ]">
-              <td class="part pali px-2">{{ row.pali }}</td>
-              <td class="part sinh px-2 info--text" v-if="row.sinh" :rowspan="row.span">{{ row.sinh }}</td>
-            </tr>
-          </tbody>
-        </v-simple-table>
+  <div class="fixed bottom-0 left-0 w-full z-50 flex flex-col items-center pointer-events-none">
+      <!-- Content Container -->
+      <div v-if="curText.length && showText" class="w-full max-w-[800px] bg-surface shadow-2xl border-t border-line pointer-events-auto relative rounded-t-lg overflow-hidden dark:bg-surface-dark dark:border-line-dark">
+        
+        <!-- Text Table -->
+        <div class="overflow-y-auto max-h-[60vh]">
+          <table class="w-full table-fixed border-collapse">
+            <tbody class="text-rows">
+              <tr v-for="(row, ri) in curTextSubset" :key="ri" 
+                  class="border-b border-line last:border-0 transition-colors duration-300 dark:border-line-dark"
+                  :class="{ 'bg-primary-light dark:bg-surface-dark-alt': row.oi == curTextIndex }">
+                <td class="w-1/2 px-2 py-1 text-right text-lg break-words font-sinhala leading-relaxed dark:text-main-dark">{{ row.pali }}</td>
+                <td class="w-1/2 px-2 py-1 text-left text-lg font-sinhala leading-relaxed text-primary dark:text-muted-dark" v-if="row.sinh" :rowspan="row.span">{{ row.sinh }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-        <v-btn absolute dark fab small bottom right color="primary" @click="showText = false">
-          <v-icon>mdi-eye-off</v-icon>
-        </v-btn>
-        <v-btn fab small depressed absolute bottom left color="info" v-if="curRepeats > 1">
-          <v-icon>mdi-repeat</v-icon>
-        </v-btn>
-      </v-card>
+        <!-- Controls overlay on text -->
+        <button class="absolute bottom-0 right-4 p-2 bg-primary text-white rounded-full shadow-lg hover:bg-opacity-90 transition-all z-10 dark:hover:bg-surface-dark" @click="showText = false">
+          <EyeOffIcon class="w-5 h-5" />
+        </button>
+
+        <button v-if="curRepeats > 1" class="absolute bottom-0 left-4 p-2 bg-muted text-white rounded-full shadow-lg hover:bg-opacity-90 transition-all z-10 dark:hover:bg-surface-dark">
+          <RepeatIcon class="w-5 h-5" />
+        </button>
+      </div>
       
-      <v-btn v-if="!showText" absolute dark fab small top right color="primary" @click="showText = true">
-          <v-icon>mdi-eye</v-icon>
-      </v-btn>
-      <v-progress-linear :value="curCount/curRepeats * 100" height="25" color="primary" v-if="curRepeats > 1">
-        {{ curCount + '/' + curRepeats }}
-      </v-progress-linear>
-      <audio ref="audio" controls style="width: 100%" :src="playingSrc"></audio>
-    </v-sheet>
+      <!-- Show Text Button (Floating) -->
+      <div v-if="!showText && curPirith" class="pointer-events-auto w-full max-w-[800px] relative">
+          <button class="absolute bottom-0 right-4 p-2 bg-primary text-white rounded-full shadow-lg hover:bg-opacity-90 transition-all z-10 dark:bg-surface-dark-alt dark:hover:bg-surface-dark" @click="showText = true">
+            <EyeIcon class="w-5 h-5" />
+          </button>
+      </div>
+
+      <!-- Progress Bar & Audio Player -->
+      <div class="w-full max-w-[800px] pointer-events-auto bg-surface shadow-top dark:bg-surface-dark">
+          <!-- Repeat Progress -->
+          <div v-if="curRepeats > 1" class="w-full bg-line h-6 relative dark:bg-surface-dark-alt">
+             <div class="h-full bg-primary transition-all duration-500 dark:bg-surface-dark" :style="{ width: (curCount /curRepeats * 100) + '%' }"></div>
+             <div class="absolute inset-0 flex items-center justify-center text-xs font-bold text-white drop-shadow-md shadow-black dark:text-main-dark">
+               {{ curCount + '/' + curRepeats }}
+             </div>
+          </div>
+          
+          <audio ref="audio" controls class="w-full h-12 outline-none dark:bg-surface-dark-alt" :src="playingSrc"></audio>
+      </div>
+  </div>
 </template>
 
-<style scoped>
-.text-row .pali { font-size: 1.1rem; word-break: break-word; text-align: right; }
-.text-row .sinh { font-size: 1.1rem; text-align: left; }
-.text-row .part { width: 50% }
-
-.theme--light .present .pali { background-color: blanchedalmond;  }
-.theme--dark .present .pali { background-color: #54473c;  }
-
-.bottom-sheet { position: fixed; bottom: 0; width: 100%; max-width: 800px; left: 50%; transform: translateX(-50%); z-index: 99;}
-</style>
-
-<script>
+<script setup>
+  import { ref, computed, watch, onMounted, nextTick } from 'vue'
   import { pirithList, setupMediaSession } from '@/pirith-list.js'
   import { pirithData } from '@/pirith-data.js'
-  import { mapState, mapGetters } from 'vuex'
+  import { usePlayerStore } from '@/stores/player'
+  import { Eye as EyeIcon, EyeOff as EyeOffIcon, Repeat as RepeatIcon } from 'lucide-vue-next'
 
-  export default {
-    name: 'AudioTextControl',
-    props: { },
-    data: function() {
-      return {
-        pirithList,
-        showText: true,
-        curText: [],
-        elapsedRatio: 0, // in the current text
+  const store = usePlayerStore()
+  const audio = ref(null)
 
-        isCounting: false, // unpaused continuous play (proper play)
-        curCount: 0, // num of times the current pirith was played
-      }
-    },
-    computed: {
-      ...mapGetters(['curPl']),
-      curPirith: {
-        get () { return this.$store.state.curPirith  },
-        set (value) { this.$store.commit('setCurPirith', value) }
-      },
-      curTextIndex() {
-        const total = this.curText.reduce((acc, row) => acc + row.pali.length, 0);
-        const elapsedTotal = total * this.elapsedRatio;
-        for (let i = 0, sum = 0; i < this.curText.length; i++) {
-            sum = sum + this.curText[i].pali.length;
-            if (sum >= elapsedTotal) return i;
-        }
-        return this.curText.length - 1;
-      },
-      curTextSubset() { // returns max 10 text rows
-        let startInd = 0, endInd = this.curText.length
-        if (this.curText.length > 10) {
-          startInd = Math.max(0, this.curTextIndex - 5) // 6 is the max rowspan, so -5
-          endInd = Math.min(this.curText.length, this.curTextIndex + 4)
-        }
-        return this.curText.slice(startInd, endInd).map((row, i) => { return {...row, oi: startInd + i} })
-      },
-      playingInfo() { return this.curPirith ? this.pirithList[this.curPirith - 1] : [] },
-      playingSrc() { return this.playingInfo[0] ? `audio/${this.playingInfo[0]}.mp3` : '' },
-      lInd() { return this.curPl.list.findIndex(e => e.pInd == (this.curPirith - 1)) },
-      curRepeats() { return this.lInd < 0 ? 0 : this.curPl.list[this.lInd].repeats },
-    },
+  const showText = ref(true)
+  const curText = ref([])
+  const elapsedRatio = ref(0)
+  const isCounting = ref(false)
+  const curCount = ref(1)
 
-    watch: {
-      curPirith() {
-        this.curCount = 0
-        this.updatePirith()
-      },
-    },
+  // Computed
+  const curPirith = computed({
+    get: () => store.curPirith,
+    set: (val) => store.setCurPirith(val)
+  })
+  
+  const curPl = computed(() => store.curPl)
+  
+  const curTextIndex = computed(() => {
+    const total = curText.value.reduce((acc, row) => acc + row.pali.length, 0);
+    const elapsedTotal = total * elapsedRatio.value;
+    for (let i = 0, sum = 0; i < curText.value.length; i++) {
+        sum = sum + curText.value[i].pali.length;
+        if (sum >= elapsedTotal) return i;
+    }
+    return curText.value.length - 1;
+  })
+
+  const curTextSubset = computed(() => {
+    let startInd = 0
+    let endInd = curText.value.length
+    if (curText.value.length > 10) {
+      startInd = Math.max(0, curTextIndex.value - 5)
+      endInd = Math.min(curText.value.length, curTextIndex.value + 4)
+    }
+    return curText.value.slice(startInd, endInd).map((row, i) => { return {...row, oi: startInd + i} })
+  })
+
+  const playingInfo = computed(() => curPirith.value ? pirithList[curPirith.value - 1] : [])
+  const playingSrc = computed(() => playingInfo.value[0] ? `./audio/${playingInfo.value[0]}.mp3` : '')
+  const lInd = computed(() => curPl.value.list.findIndex(e => e.pInd == (curPirith.value - 1)))
+  const curRepeats = computed(() => lInd.value < 0 ? 0 : curPl.value.list[lInd.value].repeats)
+
+  // Watchers
+  watch(curPirith, () => {
+    curCount.value = 1
+    updatePirith()
+  })
+
+  // Methods
+  function incrementMetrics(pInd) {
+    store.incrementMetrics(pInd)
+  }
+
+  function updatePirith() {
+    curText.value = []
+    const titleEl = document.getElementById('title-bar-text')
+    if (titleEl) titleEl.innerText = playingInfo.value[2] || 'සෙත් පිරිත්'
     
-    methods: {
-      incrementMetrics(pInd) {
-        this.$store.commit('incrementMetrics', pInd)
-        this.curCount++
-      },
-      textRowClass: function(ind) { 
-        if (this.curTextIndex < ind) return 'past'
-        if (this.curTextIndex == ind) return 'present'
-        return 'future'
-      },
+    if (!curPirith.value) return
 
-      updatePirith: function() { // update display
-        this.curText = []
-        document.getElementById('title-bar-text').innerText = this.playingInfo[2] || 'සෙත් පිරිත්'
-        if (!this.curPirith) return
+    nextTick(() => {
+      const pInd = curPirith.value - 1
+      if (audio.value) {
+          audio.value.play().then(() => { setupMediaSession(pInd, audio.value) }).catch(e => console.error("Play error:", e));
+      }
+      isCounting.value = true
+      console.log(`${playingInfo.value[0]} playing.`)
+    })
+  }
 
-        this.$nextTick(function() {
-          //this.$refs.audio.src = `audio/${this.playingInfo[0]}.mp3`;
-          const pInd = this.curPirith - 1 // for passing to then function
-          this.$refs.audio.play().then(function() { setupMediaSession(pInd) });
-          this.isCounting = true
-          console.log(`${this.playingInfo[0]} playing.`)
-        })
-      },
-      getNextPirithToPlay: function() {
-        // if not repeats are defined then go to next pirith even if not a proper play
-        if (this.curRepeats > 1 && this.curCount < this.curRepeats) return this.curPirith // repeat
-        // go to next pirith in the list
-        if (this.lInd + 1 >= this.curPl.list.length) return 0 // playlist finished - nothing to play
-        this.curCount = 0
-        return this.pirithList[this.curPl.list[this.lInd + 1].pInd][1] + 1
-      },
-      // event handler
-      pirithPaused: function() { // pause and seeking (ending also fires this - so comapre currentTime to duration)
-        console.log('pirith paused')
-        if (Math.abs(this.$refs.audio.currentTime - this.$refs.audio.duration) > 0.01) {
-          this.isCounting = false // do not count this
-        }
-      },
-      pirithEnded: function() {
-        if (this.isCounting) {
-          this.incrementMetrics(this.curPirith - 1)
-          this.isCounting = false
-        }
-        this.curPirith = this.getNextPirithToPlay()
-        this.updatePirith()
-      },
-      timeUpdated: function() {
-          if (!this.curPirith || !pirithData[this.playingInfo[0]] || !this.$refs.audio) return;
-          const data = pirithData[this.playingInfo[0]], currentTime = this.$refs.audio.currentTime;
-          let i = -1;
-          for (; i+1 < data.labels.length && currentTime > data.labels[i+1][0]; i++);
-          if (i < 0) return;
+  function getNextPirithToPlay() {
+    if (curRepeats.value > 1 && curCount.value <= curRepeats.value) return curPirith.value
+    if (lInd.value + 1 >= curPl.value.list.length) return 0
+    curCount.value = 1
+    return pirithList[curPl.value.list[lInd.value + 1].pInd][1] + 1
+  }
 
-          const curLabel = data.labels[i]
-          this.curText = data.text[i];
-          this.elapsedRatio = Math.min(1, (currentTime - curLabel[0]) / (curLabel[1] - curLabel[0]) );
-          //console.log(currentTime)
-      },
-    },
-
-    mounted() {
-      document.addEventListener('pause', this.pirithPaused, true)
-      document.addEventListener('ended', this.pirithEnded, true)
-      document.addEventListener('timeupdate', this.timeUpdated, true)
+  function pirithPaused() {
+    console.log('pirith paused')
+    if (audio.value && Math.abs(audio.value.currentTime - audio.value.duration) > 0.01) {
+      isCounting.value = false
     }
   }
+
+  function pirithEnded() {
+    if (isCounting.value) {
+      incrementMetrics(curPirith.value - 1)
+      isCounting.value = false
+    }
+    // Increment before checking if we should play again
+    curCount.value++
+    
+    store.setCurPirith(getNextPirithToPlay())
+    updatePirith()
+  }
+
+  function timeUpdated() {
+      if (!curPirith.value || !playingInfo.value[0] || !audio.value) return;
+      
+      const data = pirithData[playingInfo.value[0]]
+      if (!data) return;
+
+      const currentTime = audio.value.currentTime;
+      let i = -1;
+      // Note: data.labels might need checking if it exists
+      if (data.labels) {
+          for (; i+1 < data.labels.length && currentTime > data.labels[i+1][0]; i++);
+      }
+      
+      if (i < 0) return; // or handle logic if no labels
+
+      if (data.labels && data.text) {
+          const curLabel = data.labels[i]
+          curText.value = data.text[i];
+          if (curLabel) {
+             elapsedRatio.value = Math.min(1, (currentTime - curLabel[0]) / (curLabel[1] - curLabel[0]) );
+          }
+      }
+  }
+
+  function updateMediaPosition() {
+      if ('mediaSession' in navigator && 'setPositionState' in navigator.mediaSession && audio.value && !isNaN(audio.value.duration)) {
+          navigator.mediaSession.setPositionState({
+              duration: audio.value.duration,
+              playbackRate: audio.value.playbackRate || 1,
+              position: audio.value.currentTime
+          });
+      }
+
+      // Update Native Android Media Notification
+      if (window.Android && typeof window.Android.updateMediaState === 'function' && playingInfo.value && audio.value) {
+          const title = playingInfo.value[2] || 'සෙත් පිරිත්';
+          const artist = "නාඋයනේ අරියධම්ම ථෙරෝ";
+          window.Android.updateMediaState(title, artist, !audio.value.paused);
+      }
+  }
+
+  onMounted(() => {
+    // Expose to Android for lock-screen controls
+    window.vueMediaControl = (action) => {
+        if (!audio.value) return;
+        if (action === 'play') audio.value.play();
+        if (action === 'pause') audio.value.pause();
+    };
+
+    // We attach listeners to the document for global control, or to the audio element.
+    // The original code attached to document with capture=true.
+    // Ideally we should attach to the audio element, but let's keep original logic for safety
+    // if there were reasons (like other players). But here the audio element is in this component.
+    // Let's attach to audio element ref in onMounted if possible, but the original code used document...
+    // The original code:
+    // document.addEventListener('pause', this.pirithPaused, true)
+    // ...
+    // This captures ALL pause events on the page.
+    
+    // For Vue 3 ref:
+    if (audio.value) {
+        audio.value.addEventListener('pause', pirithPaused)
+        audio.value.addEventListener('ended', pirithEnded)
+        audio.value.addEventListener('timeupdate', timeUpdated)
+
+        audio.value.addEventListener('playing', updateMediaPosition)
+        audio.value.addEventListener('pause', updateMediaPosition)
+        audio.value.addEventListener('seeked', updateMediaPosition)
+        audio.value.addEventListener('ratechange', updateMediaPosition)
+        audio.value.addEventListener('durationchange', updateMediaPosition)
+    }
+  })
 </script>
+
+<style scoped>
+.shadow-top {
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+</style>
