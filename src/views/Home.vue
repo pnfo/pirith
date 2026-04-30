@@ -20,9 +20,9 @@
             <!-- Main Click Area -->
             <div class="flex-grow flex items-center min-w-0 cursor-pointer select-none" @click="playPausePirith(item.pInd + 1)">
               <span class="mr-3 font-mono text-muted w-6 text-right text-sm dark:text-muted-dark">{{ lInd + 1 }}.</span>
-              <span class="mr-2 flex-grow truncate font-medium text-lg text-main font-sinhala leading-tight dark:text-main-dark"
+              <span class="mr-2 flex-grow truncate font-medium text-lg text-main leading-tight dark:text-main-dark"
                 :class="curPirith === item.pInd + 1 ? 'text-primary dark:text-main-dark' : ''"
-              >{{ pirithList[item.pInd][2] }}</span>
+              >{{ tPali(pirithList[item.pInd][2]) }}</span>
               <a 
                 :href="`pages/${pirithList[item.pInd][0]}.html`"
                 @click.stop
@@ -50,7 +50,7 @@
                 
                 <!-- Repeat Dropdown -->
                 <div v-if="activeRepeatMenu === lInd" class="absolute right-0 top-full mt-2 w-48 bg-surface rounded-lg shadow-xl border border-line z-30 py-1 overflow-hidden dark:bg-surface-dark dark:border-line-dark">
-                   <div class="px-4 py-2 text-xs font-bold text-muted uppercase tracking-wider bg-surface-alt border-b border-line dark:bg-surface-dark-alt dark:border-line-dark dark:text-muted-dark">Repeats</div>
+                   <div class="px-4 py-2 text-xs font-bold text-muted uppercase tracking-wider bg-surface-alt border-b border-line dark:bg-surface-dark-alt dark:border-line-dark dark:text-muted-dark">{{ t('home.repeats') }}</div>
                    <button 
                      v-for="n in store.repeatCounts" 
                      :key="n"
@@ -80,7 +80,7 @@
                    
                    <!-- Add Dropdown -->
                    <div v-if="activeAddMenu === lInd" class="absolute right-0 top-full mt-2 w-64 bg-surface rounded-lg shadow-xl border border-line z-30 py-1 overflow-hidden dark:bg-surface-dark dark:border-line-dark">
-                      <div class="px-4 py-2 text-xs font-bold text-muted uppercase tracking-wider bg-surface-alt border-b border-line dark:bg-surface-dark-alt dark:border-line-dark dark:text-muted-dark">Add to Playlist</div>
+                      <div class="px-4 py-2 text-xs font-bold text-muted uppercase tracking-wider bg-surface-alt border-b border-line dark:bg-surface-dark-alt dark:border-line-dark dark:text-muted-dark">{{ t('home.addToPlaylist') }}</div>
                       <button 
                         v-for="(pl, plIdx) in store.playlists" 
                         :key="plIdx"
@@ -126,8 +126,10 @@ import { pirithList } from '@/pirith-list.js'
 import { pirithData } from '@/pirith-data.js'
 import { usePlayerStore } from '@/stores/player'
 import { Repeat as RepeatIcon, Check as CheckIcon, ListPlus as ListPlusIcon, Trash2 as Trash2Icon, GripHorizontal as GripHorizontalIcon } from 'lucide-vue-next'
+import { useI18n } from '@/locales/index.js'
 
 const store = usePlayerStore()
+const { t, tPali } = useI18n()
 
 // State for active menus (stores index of the item whose menu is open)
 const activeRepeatMenu = ref(null)

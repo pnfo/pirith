@@ -2,9 +2,9 @@ import { defineStore } from 'pinia'
 import { pirithList } from '@/pirith-list.js'
 
 const initialPlaylists = [
-  { name: 'සියලු‍ පිරිත්', list: [] },
-  { name: 'තුන් සූත්‍රය', list: [{ pInd: 6, repeats: 1 }, { pInd: 7, repeats: 1 }, { pInd: 8, repeats: 1 }] },
-  { name: 'ගැබිණි මවුවරුන් සඳහා', list: [{ pInd: 31, repeats: 7 }, { pInd: 39, repeats: 1 }] },
+  { name: 'සියලු‍ පිරිත්, All Paritta', list: [] },
+  { name: 'තුන් සූත්‍රය, Three Suttas', list: [{ pInd: 6, repeats: 1 }, { pInd: 7, repeats: 1 }, { pInd: 8, repeats: 1 }] },
+  { name: 'ගැබිණි මවුන්, Pregnant Moms', list: [{ pInd: 31, repeats: 7 }, { pInd: 39, repeats: 1 }] },
 ]
 
 function updateAndroidStatusBar(isDark) {
@@ -34,11 +34,11 @@ function initFromStorage() {
   // initialize the 'all' playlist to be the pirithList
   pirithList.forEach((info, pInd) => { // check if need to add more
     if (playlists[0].list.findIndex(e => e.pInd == pInd) < 0) { // new pirith
-      playlists[0].list.push({pInd, repeats: 1}) // add to 'all' playlist
+      playlists[0].list.push({ pInd, repeats: 1 }) // add to 'all' playlist
       if (!playMetrics[pInd]) playMetrics[pInd] = 0 // metrics kept in sync with 'all' playlist
     }
   });
-  
+
   // Apply dark mode immediately
   if (darkMode) {
     document.documentElement.classList.add('dark')
@@ -55,7 +55,7 @@ function initFromStorage() {
 
 export const usePlayerStore = defineStore('player', {
   state: () => initFromStorage(),
-  
+
   getters: {
     curPl: (state) => state.playlists[state.curPlInd],
   },
@@ -105,10 +105,10 @@ export const usePlayerStore = defineStore('player', {
       this.savePlaylists()
     },
 
-    addNewPlaylist() {
+    addNewPlaylist(prefix = 'වාදන ලැයිස්තුව') {
       let nextAvail = 1, names = this.playlists.map(p => p.name)
-      while(names.indexOf(`වාදන ලැයිස්තුව ${nextAvail}`) != -1) nextAvail++
-      this.playlists.push({ name: `වාදන ලැයිස්තුව ${nextAvail}`, list: [] })
+      while (names.indexOf(`${prefix} ${nextAvail}`) != -1) nextAvail++
+      this.playlists.push({ name: `${prefix} ${nextAvail}`, list: [] })
       this.savePlaylists()
     },
     deletePlaylist() {
@@ -119,7 +119,7 @@ export const usePlayerStore = defineStore('player', {
       this.playlists[this.curPlInd].list = newList
       this.savePlaylists()
     },
-    changeRepeats({lInd, nr}) {
+    changeRepeats({ lInd, nr }) {
       this.playlists[this.curPlInd].list[lInd].repeats = nr
       this.savePlaylists()
     },

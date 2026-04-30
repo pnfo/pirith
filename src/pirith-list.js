@@ -1,7 +1,9 @@
 /**
  * The pirithList indexes/order should not be changed - filename and names can be changed
  * New pirith need to be added at the end of the list
- * MP3 variable bitrate audio might have sync issues with text when seeking (for long audio files constant bit rate 48kbps was used)
+ * 
+ * MP3 variable bitrate audio might have sync issues with text when seeking, to fix this issue and to reduce the file size
+ * original mp3 was converted to m4a on 29/4/2026 with command --- for f in *.mp3; do afconvert -f m4af -d aach -b 24000 -c 1 "$f" "${f%.mp3}.m4a"; done
  */
 export const pirithList = [ // order, desc, author, length, count, isStarred, isLoop
     ['02-saranagamanam', 0, 'සරණාගමනං', 'ariyadhamma', '1:41'],
@@ -30,11 +32,12 @@ export const pirithList = [ // order, desc, author, length, count, isStarred, is
     ['25-alavaka-suttam', 23, 'ආළවක සුත්තං', 'ariyadhamma', '9:40'],
     ['26-kasibharadvaja-suttam', 24, 'කසිභාරද්වාජ සුත්තං', 'ariyadhamma', '11:49'],
     ['27-parabhava-suttam', 25, 'පරාභව සුත්තං', 'ariyadhamma', '10:00'],
+
     ['28-aggika-bharadvaja-suttam', 26, 'අග්ගික භාරද්වාජ සුත්තං', 'ariyadhamma', '14:22'],
     ['29-saccavibhanga-suttam', 27, 'සච්චවිභඞ්ග සුත්තං', 'ariyadhamma', '30:31'],
     ['30-atanatiya-suttam-1', 28, 'ආටානාටිය සුත්තං 1', 'ariyadhamma', '41:02'],
     ['32-atanatiya-suttam-2', 29, 'ආටානාටිය සුත්තං 2', 'ariyadhamma', '48:55'],
-    ['35-tesattati-nyana-parittam', 30, 'තෙසැත්තෑ ඤාණ පරිත්තං', 'ariyadhamma', '58:26'],
+    ['35-tesattati-nyana-parittam', 30, 'තෙසත්තති ඤාණ පරිත්තං', 'ariyadhamma', '58:26'],
 
     ['50-angulimala', 31, 'අංගුලිමාල පරිත්තං', 'ariyadhamma', '2:03'],
     ['51-atavisi', 32, 'අටවිසි පරිත්තං', 'ariyadhamma', '2:08'],
@@ -51,11 +54,11 @@ export const pirithList = [ // order, desc, author, length, count, isStarred, is
     ['62-samantha-pattana', 43, 'සමන්ත පට්ඨානය', 'ariyadhamma', '40:48'],
 ]
 
-const authorList = {
+export const authorList = {
     'ariyadhamma': ['නාඋයනේ අරියධම්ම ථෙරෝ', 'Nauyane Ariyadhamma Thero', [128, 256, 512]],
 }
 
-export function setupMediaSession(pInd, audioEl) {
+export function setupMediaSession(pInd, audioEl, titleOverride = null) {
     if (!('mediaSession' in navigator)) {
         console.log('No mediaSession support in navigator');
         return;
@@ -63,7 +66,7 @@ export function setupMediaSession(pInd, audioEl) {
     const info = pirithList[pInd]
     const authorInfo = authorList[info[3]];
     const metadata = {
-        title: info[2], // TODO needs script change 
+        title: titleOverride || info[2],
         artist: authorInfo[1],
         album: 'පිරිත්',
     };

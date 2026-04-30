@@ -9,7 +9,7 @@
                 type="text" 
                 v-model="editedName" 
                 class="w-full border border-line rounded px-2 py-1 text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow dark:bg-surface-dark-alt dark:border-line-dark dark:text-main-dark"
-                placeholder="ලැයිස්තු නම"
+                :placeholder="t('playlist.placeholder')"
                 maxlength="25"
                 @keyup.enter="commitEditName"
             />
@@ -78,8 +78,10 @@ import {
   FolderPlus as FolderPlusIcon,
   ChevronDown as ChevronDownIcon
 } from 'lucide-vue-next'
+import { useI18n } from '@/locales/index.js'
 
 const store = usePlayerStore()
+const { t } = useI18n()
 
 const isEdit = ref(false)
 const editedName = ref('')
@@ -117,7 +119,7 @@ function startEditName() {
 
 function commitEditName() {
   if (!validateName(editedName.value)) {
-      alert("Invalid name: Must be 5-25 chars and unique.") 
+      alert(t('playlist.invalidName')) 
       return
   }
   isEdit.value = false
@@ -126,7 +128,7 @@ function commitEditName() {
 
 function addNewPlaylist() {
   isEdit.value = false
-  store.addNewPlaylist()
+  store.addNewPlaylist(t('playlist.newPrefix'))
   store.setPlInd(playlists.value.length - 1)
 }
 

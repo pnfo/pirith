@@ -16,8 +16,8 @@ function setupMediaSession() {
     metadata.artwork = authorInfo[2].forEach(size => {
         return {
             src: `../artwork/ariyadhamma-${size}.png`,
-            sizes: `${size}x${size}`, 
-            type: 'image/png' 
+            sizes: `${size}x${size}`,
+            type: 'image/png'
         }
     });
     navigator.mediaSession.metadata = new MediaMetadata(metadata);

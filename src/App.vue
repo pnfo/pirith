@@ -1,9 +1,9 @@
 <template>
-  <div class="min-h-screen flex flex-col font-sinhala bg-primary-light text-main dark:bg-surface-dark dark:text-main-dark transition-colors duration-300">
+  <div :class="['min-h-screen flex flex-col bg-primary-light text-main dark:bg-surface-dark dark:text-main-dark transition-colors duration-300', locale === 'en' ? 'font-sans' : 'font-sinhala']">
     <!-- Header -->
     <header class="fixed top-0 w-full bg-primary text-white z-50 shadow-md h-12 flex items-center px-4 justify-between dark:bg-surface-dark-alt dark:border-b dark:border-line-dark">
       <!-- Menu Button -->
-      <div class="relative z-50">
+      <div class="relative z-50 flex-shrink-0">
         <button @click="toggleMenu" class="p-2 hover:bg-black/10 rounded-full transition-colors dark:hover:bg-white/10">
           <component :is="isMenuOpen ? XIcon : MenuIcon" class="w-6 h-6" />
         </button>
@@ -12,10 +12,18 @@
         <div v-if="isMenuOpen" 
              class="absolute top-full left-0 mt-2 w-72 bg-surface text-main shadow-xl rounded-lg overflow-hidden border border-line origin-top-left transition-all dark:bg-surface-dark-alt dark:text-main-dark dark:border-line-dark">
              <ul class="py-2">
+               <!-- Language Toggle -->
+               <li class="border-b border-line dark:border-line-dark">
+                 <button @click="toggleLanguage" class="w-full flex items-center px-4 py-3 hover:bg-primary-light transition-colors dark:hover:bg-surface-dark font-medium text-primary dark:text-main-dark">
+                   <GlobeIcon class="w-5 h-5 mr-3 text-accent dark:text-muted-dark" />
+                   <span class="text-base">{{ t('app.languageOption') }}</span>
+                 </button>
+               </li>
+               
                <li v-for="(info, ind) in menuLinks" :key="ind">
                  <a :href="info[0]" target="_blank" class="flex items-center px-4 py-3 hover:bg-primary-light transition-colors border-b border-line last:border-0 dark:hover:bg-surface-dark dark:border-line-dark" @click="closeMenu">
                    <component :is="getIcon(info[1])" class="w-5 h-5 mr-3 text-accent dark:text-muted-dark" />
-                   <span class="text-base">{{ info[2] }}</span>
+                   <span class="text-base">{{ t(info[2]) }}</span>
                  </a>
                </li>
              </ul>
@@ -23,12 +31,12 @@
       </div>
 
       <!-- Title -->
-      <h1 id="title-bar-text" class="text-3xl font-styled absolute left-1/2 transform -translate-x-1/2 whitespace-nowrap pointer-events-none select-none text-white dark:text-main-dark">
-        {{ isSettings ? 'සැකසුම්' : 'සෙත් පිරිත්' }}
+      <h1 id="title-bar-text" class="text-2xl flex-1 min-w-0 text-center truncate px-2 pointer-events-none select-none text-white dark:text-main-dark">
+        {{ isSettings ? t('app.settings') : t('app.title') }}
       </h1>
       
       <!-- Settings/Home Button -->
-      <div>
+      <div class="flex-shrink-0">
         <button v-if="isSettings" @click="router.push('/')" class="p-2 hover:bg-black/10 rounded-full transition-colors dark:hover:bg-white/10">
           <HomeIcon class="w-6 h-6" />
         </button>
@@ -43,9 +51,9 @@
       <router-view></router-view>
       
       <div class="text-center mt-2 px-2 mb-5 text-sm text-muted leading-relaxed dark:text-muted-dark" id="content-about">
-        මේ‍ ව්‍යායාමය නාඋයනේ අරියධම්ම හිමියන්ගේ ශ්‍රී නාමයට කෙරෙන උපහාරයක්ම වේවා. පාලි පෙළ සහ සිංහල පරිවර්තනය උපුටා ගැනීම පිරුවානා පොත් වහන්සේගෙනි. 
-        උපකාර කල සියලුදෙනාට ද පින් අයත් වේවා. යම් දෝෂයක් ගැන අපව දැනුවත් කිරීමට pathnirvana<AtSignIcon class="inline w-3 h-3 align-baseline mx-0.5" />gmail.com.<br>
-        මේ පිරිත් ඇතුලත් කර සැකසු අන්තර්ජාලය අනවශ්‍ය offline මෘදුකාංග <LaptopIcon class="inline w-3 h-3 align-baseline mx-0.5" /> <a href="https://tipitaka.lk/library/459" class="text-primary hover:underline dark:text-muted-dark">පරිඝනක සඳහා</a> ලබාගන්න.<br>
+        {{ t('app.about1') }}
+        {{ t('app.about2') }}<br>
+        {{ t('app.about3') }} <LaptopIcon class="inline w-3 h-3 align-baseline mx-0.5" /> <a href="https://tipitaka.lk/library/459" class="text-primary hover:underline dark:text-muted-dark">{{ t('app.aboutLink') }}</a>.<br>
         ෴෴
       </div>
     </main>
@@ -74,21 +82,24 @@ import {
   Facebook,
   AtSign as AtSignIcon,
   Laptop as LaptopIcon,
-  BookOpenText
+  BookOpenText,
+  Globe as GlobeIcon
 } from 'lucide-vue-next'
+import { useI18n } from '@/locales/index.js'
 
 const route = useRoute()
 const router = useRouter()
 const store = usePlayerStore()
+const { t, locale, setLocale } = useI18n()
 const isMenuOpen = ref(false)
 
 const menuLinks = [
-  ['https://open.tipitaka.lk', 'book', 'සරල ත්‍රිපිටකය'],
-  ['https://pitaka.lk/dict', 'book-outline', 'පාළි-සිංහල ශබ්දකෝෂය'],
-  ['https://tipitaka.lk/', 'book-open', 'බුද්ධ ජයන්ති ත්‍රිපිටකය'],
-  ['https://pitaka.lk/books', 'book-open-variant', 'බෞද්ධ පොත් සංචිතය'],
-  ['https://pitaka.lk/dhammapada', 'image-album', 'ධම්මපද කතා වස්තු'],
-  ['https://www.facebook.com/nirvana.marga/', 'face', 'Facebook පිටුව'],
+  ['https://open.tipitaka.lk', 'book', 'app.menu.simpleTripitaka'],
+  ['https://pitaka.lk/dict', 'book-outline', 'app.menu.dictionary'],
+  ['https://tipitaka.lk/', 'book-open', 'app.menu.buddhaJayanthi'],
+  ['https://pitaka.lk/books', 'book-open-variant', 'app.menu.bookCollection'],
+  ['https://pitaka.lk/dhammapada', 'image-album', 'app.menu.dhammapada'],
+  ['https://www.facebook.com/nirvana.marga/', 'face', 'app.menu.facebook'],
 ]
 
 const isSettings = computed(() => route.path === '/settings')
@@ -99,6 +110,11 @@ watch(() => store.activeDropdown, (newVal) => {
     isMenuOpen.value = false
   }
 })
+
+function toggleLanguage() {
+  setLocale(locale.value === 'si' ? 'en' : 'si')
+  closeMenu()
+}
 
 function toggleMenu() {
   if (isMenuOpen.value) {
@@ -129,7 +145,3 @@ function getIcon(name) {
 }
 </script>
 
-<style scoped>
-/* Ensure the font is applied */
-#title-bar-text { font-family: 'styled', serif; }
-</style>

@@ -17,10 +17,17 @@ fs.writeFileSync(`${rootFolder}/../src/pirith-data.js`,
     { encoding: 'utf-8' });
 
 
+function readTransFile(fileName) {
+    if (!fs.existsSync(fileName)) return [];
+    const dataStr = fs.readFileSync(fileName, { encoding: 'utf-8' });
+    return dataStr.split('\n\n').map(group => {
+        return group.split('\n').filter(line => line.trim().length > 0);
+    }).filter(group => group.length > 0);
+};
+
 function readSplitFile(fileName) {
     if (!fs.existsSync(fileName)) return [];
     const dataStr = fs.readFileSync(fileName, { encoding: 'utf-8' });
-    //console.log(data);
     return dataStr.split('\n').map(line => line.trim());
 };
 
@@ -62,6 +69,24 @@ function processPirith(fileName, pirithName) {
 
     const labels = readSplitFile(`${rootFolder}/data/${fileNum}-labels.txt`).map(line => line.split('\t').map(num => Number(num)));
     const text = readCombiFile(`${rootFolder}/data/${fileNum}-combi.txt`);
+    const engTrans = readTransFile(`${rootFolder}/data/${fileNum}-trans.txt`);
+
+    if (engTrans.length) {
+        if (engTrans.length === text.length) {
+            text.forEach((group, gIdx) => {
+                if (engTrans[gIdx] && engTrans[gIdx].length === group.length) {
+                    group.forEach((row, rIdx) => {
+                        row.eng = engTrans[gIdx][rIdx];
+                    });
+                } else {
+                    console.error(`Group line count mismatch in ${fileName}-trans.txt at group ${gIdx}:${engTrans[gIdx][0]}`);
+                }
+            });
+        } else {
+            console.error(`Group count mismatch in ${fileName}-trans.txt. Expected ${text.length}, got ${engTrans.length}`);
+        }
+    }
+
     assert(labels.length == text.length, `labels and text lengths are different for ${fileName}. ${labels.length} != ${text.length}`);
     dataJson[fileName] = {
         'labels': labels,
@@ -70,18 +95,18 @@ function processPirith(fileName, pirithName) {
     console.log(`processed data for ${fileName}, num labels ${labels.length}`);
 
     // write the full sentences to static pages - optional full sentences available only for first 10 pirith
-    const paliSent = readSplitFile(`${rootFolder}/data/${fileNum}.txt`);
-    const sinhSent = readSplitFile(`${rootFolder}/data/${fileNum}-trans.txt`).map(line => line.length ? line : null);
-    assert(!paliSent.length || (paliSent.length == labels.length && sinhSent.length == labels.length),
-        `labels and sentence lengths are different for ${fileName}. pali: ${paliSent.length}, labels: ${labels.length}`);
+    //const paliSent = readSplitFile(`${rootFolder}/data/${fileNum}.txt`);
+    //const sinhSent = readSplitFile(`${rootFolder}/data/${fileNum}-trans.txt`).map(line => line.length ? line : null);
+    //assert(!paliSent.length || (paliSent.length == labels.length && sinhSent.length == labels.length),
+    //    `labels and sentence lengths are different for ${fileName}. pali: ${paliSent.length}, labels: ${labels.length}`);
 
-    const pageSize = writeStaticPage(fileName, pirithName, labels, text, paliSent, sinhSent);
+    const pageSize = writeStaticPage(fileName, pirithName, labels, text);
     console.log(`wrote static page for ${fileName}, page size ${pageSize}`);
 }
 
 
 /** STATIC PAGES */
-function writeStaticPage(fileName, pirithName, labels, text, paliSent, sinhSent) {
+function writeStaticPage(fileName, pirithName, labels, text) {
     const tablesHtml = text.map((rows, ind) => {
         const tbodyRows = rows.map(row => {
             let rowHtml = `<td class="pali part">${row.pali}</td>`;
@@ -92,7 +117,7 @@ function writeStaticPage(fileName, pirithName, labels, text, paliSent, sinhSent)
         }).join('\n            ');
 
         let tfootHtml = '';
-        if (paliSent.length) {
+        /*if (paliSent.length) {
             tfootHtml = `
         <tfoot class="sentences">
             <tr class="sentence">
@@ -100,7 +125,7 @@ function writeStaticPage(fileName, pirithName, labels, text, paliSent, sinhSent)
                 <td class="sinh part">${sinhSent[ind]}</td>
             </tr>
         </tfoot>`;
-        }
+        }*/
 
         return `
     <table class="label" label-start="${labels[ind][0]}" label-end="${labels[ind][1]}">
@@ -112,7 +137,7 @@ function writeStaticPage(fileName, pirithName, labels, text, paliSent, sinhSent)
 
     const contentHtml = `
 <div class="content">
-    <audio controls="controls" autoplay="autoplay" src="../audio/${fileName}.mp3"></audio>${tablesHtml}
+    <audio controls="controls" autoplay="autoplay" src="../audio/${fileName}.m4a"></audio>${tablesHtml}
 </div>`;
 
     let tmplStr = prePageHtml.replace(/TITLEPLACEHOLDER/g, pirithName);

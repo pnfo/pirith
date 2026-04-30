@@ -10,8 +10,8 @@
               <tr v-for="(row, ri) in curTextSubset" :key="ri" 
                   class="border-b border-line last:border-0 transition-colors duration-300 dark:border-line-dark"
                   :class="{ 'bg-primary-light dark:bg-surface-dark-alt': row.oi == curTextIndex }">
-                <td class="w-1/2 px-2 py-1 text-right text-lg break-words font-sinhala leading-relaxed dark:text-main-dark">{{ row.pali }}</td>
-                <td class="w-1/2 px-2 py-1 text-left text-lg font-sinhala leading-relaxed text-primary dark:text-muted-dark" v-if="row.sinh" :rowspan="row.span">{{ row.sinh }}</td>
+                <td class="w-1/2 px-2 py-1 text-right text-lg break-words leading-relaxed dark:text-main-dark">{{ row.dispPali }}</td>
+                <td class="w-1/2 px-2 py-1 text-left text-lg leading-relaxed text-primary dark:text-muted-dark" v-if="row.dispMeaning" :rowspan="row.span">{{ row.dispMeaning }}</td>
               </tr>
             </tbody>
           </table>
@@ -44,19 +44,21 @@
              </div>
           </div>
           
-          <audio ref="audio" controls class="w-full h-12 outline-none dark:bg-surface-dark-alt" :src="playingSrc"></audio>
+          <audio ref="audio" controls class="w-full h-12 outline-none dark:bg-surface-dark-alt"></audio>
       </div>
   </div>
 </template>
 
 <script setup>
   import { ref, computed, watch, onMounted, nextTick } from 'vue'
-  import { pirithList, setupMediaSession } from '@/pirith-list.js'
+  import { pirithList, setupMediaSession, authorList } from '@/pirith-list.js'
   import { pirithData } from '@/pirith-data.js'
   import { usePlayerStore } from '@/stores/player'
   import { Eye as EyeIcon, EyeOff as EyeOffIcon, Repeat as RepeatIcon } from 'lucide-vue-next'
+  import { useI18n } from '@/locales/index.js'
 
   const store = usePlayerStore()
+  const { tPali, locale } = useI18n()
   const audio = ref(null)
 
   const showText = ref(true)
@@ -90,11 +92,18 @@
       startInd = Math.max(0, curTextIndex.value - 5)
       endInd = Math.min(curText.value.length, curTextIndex.value + 4)
     }
-    return curText.value.slice(startInd, endInd).map((row, i) => { return {...row, oi: startInd + i} })
+    return curText.value.slice(startInd, endInd).map((row, i) => { 
+      return {
+        ...row, 
+        oi: startInd + i,
+        dispPali: tPali(row.pali),
+        dispMeaning: locale.value === 'en' ? row.eng : row.sinh
+      } 
+    })
   })
 
   const playingInfo = computed(() => curPirith.value ? pirithList[curPirith.value - 1] : [])
-  const playingSrc = computed(() => playingInfo.value[0] ? `./audio/${playingInfo.value[0]}.mp3` : '')
+  const playingSrc = computed(() => playingInfo.value[0] ? `./audio/${playingInfo.value[0]}.m4a` : '')
   const lInd = computed(() => curPl.value.list.findIndex(e => e.pInd == (curPirith.value - 1)))
   const curRepeats = computed(() => lInd.value < 0 ? 0 : curPl.value.list[lInd.value].repeats)
 
@@ -112,18 +121,27 @@
   function updatePirith() {
     curText.value = []
     const titleEl = document.getElementById('title-bar-text')
-    if (titleEl) titleEl.innerText = playingInfo.value[2] || 'සෙත් පිරිත්'
+    if (titleEl) titleEl.innerText = tPali(playingInfo.value[2] || 'සෙත් පිරිත්')
     
     if (!curPirith.value) return
 
-    nextTick(() => {
-      const pInd = curPirith.value - 1
-      if (audio.value) {
-          audio.value.play().then(() => { setupMediaSession(pInd, audio.value) }).catch(e => console.error("Play error:", e));
-      }
-      isCounting.value = true
-      console.log(`${playingInfo.value[0]} playing.`)
-    })
+    const pInd = curPirith.value - 1
+    const translatedTitle = tPali(playingInfo.value[2] || 'සෙත් පිරිත්')
+    
+    if (audio.value && playingSrc.value) {
+        // Set src synchronously to keep background audio alive in WebView/Mobile
+        // Using endsWith because audio.value.src is absolute, playingSrc.value is relative
+        if (!audio.value.src.endsWith(playingSrc.value.replace('./', '/'))) {
+            audio.value.src = playingSrc.value;
+        }
+        
+        // Setup MediaSession immediately to prevent Chrome from dropping the notification
+        setupMediaSession(pInd, audio.value, translatedTitle)
+        
+        audio.value.play().catch(e => console.error("Play error:", e));
+    }
+    isCounting.value = true
+    console.log(`${playingInfo.value[0]} playing.`)
   }
 
   function getNextPirithToPlay() {
@@ -186,19 +204,28 @@
       }
 
       // Update Native Android Media Notification
-      if (window.Android && typeof window.Android.updateMediaState === 'function' && playingInfo.value && audio.value) {
-          const title = playingInfo.value[2] || 'සෙත් පිරිත්';
-          const artist = "නාඋයනේ අරියධම්ම ථෙරෝ";
-          window.Android.updateMediaState(title, artist, !audio.value.paused);
+      if (window.Android && playingInfo.value && audio.value) {
+          const title = tPali(playingInfo.value[2] || 'සෙත් පිරිත්');
+          const authorKey = playingInfo.value[3];
+          const artist = (authorList[authorKey] && authorList[authorKey][1]) ? authorList[authorKey][1] : 'නාඋයනේ අරියධම්ම ථෙරෝ';
+          
+          if (typeof window.Android.updateMediaStateFull === 'function') {
+              const dur = isNaN(audio.value.duration) ? 0 : audio.value.duration * 1000;
+              const pos = audio.value.currentTime * 1000;
+              window.Android.updateMediaStateFull(title, artist, !audio.value.paused, pos, dur);
+          } else if (typeof window.Android.updateMediaState === 'function') { // Fallback
+              window.Android.updateMediaState(title, artist, !audio.value.paused);
+          }
       }
   }
 
   onMounted(() => {
     // Expose to Android for lock-screen controls
-    window.vueMediaControl = (action) => {
+    window.vueMediaControl = (action, val) => {
         if (!audio.value) return;
         if (action === 'play') audio.value.play();
         if (action === 'pause') audio.value.pause();
+        if (action === 'seekTo') audio.value.currentTime = val;
     };
 
     // We attach listeners to the document for global control, or to the audio element.
@@ -213,6 +240,11 @@
     
     // For Vue 3 ref:
     if (audio.value) {
+        // Initialize src manually since we removed the :src binding
+        if (playingSrc.value) {
+            audio.value.src = playingSrc.value;
+        }
+
         audio.value.addEventListener('pause', pirithPaused)
         audio.value.addEventListener('ended', pirithEnded)
         audio.value.addEventListener('timeupdate', timeUpdated)
