@@ -57,6 +57,9 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKUIDeleg
         #endif
 
         player = NativePlayer(root: www) { [weak self] json in
+            #if DEBUG
+            NSLog("PIRITH event %@", json)
+            #endif
             self?.webView.evaluateJavaScript("window.__pirithNative&&window.__pirithNative(\(json))", completionHandler: nil)
         }
 
@@ -76,6 +79,13 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKUIDeleg
         self.view = view
 
         OldStorage.migrate(into: webView) { [weak self] in self?.webView.load(URLRequest(url: home)) }
+        #if DEBUG // tests without touching the screen: simctl launch <device> lk.pitaka.pirith -debugjs "<javascript>"
+        if let js = UserDefaults.standard.string(forKey: "debugjs") {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6) { [weak self] in
+                self?.webView.evaluateJavaScript(js) { result, error in NSLog("PIRITH debugjs %@ %@", String(describing: result), String(describing: error)) }
+            }
+        }
+        #endif
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent } // the header is dark green or dark grey
