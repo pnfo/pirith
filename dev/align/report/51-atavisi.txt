@@ -1,0 +1,11 @@
+51-atavisi (ariyadhamma)  mean confidence 0.66  low groups 0/10
+    group   1      0.00-   12.99  conf 0.71  Taṇhaṃkaro mahāvīro
+    group   2     12.99-   25.19  conf 0.73  Koṇḍañño janapāmokkho
+    group   3     25.19-   37.91  conf 0.70  Sobhito guṇasampanno
+    group   4     37.91-   50.78  conf 0.69  Padumuttaro sattasāro
+    group   5     50.78-   63.10  conf 0.65  Atthadassī kāruṇiko
+    group   6     63.10-   75.10  conf 0.63  Phusso varada sambuddho
+    group   7     75.10-   88.17  conf 0.71  Kakusandho satthavāho
+    group   8     88.17-  101.40  conf 0.57  Tesaṃ saccena sīlena
+    group   9    101.40-  114.31  conf 0.56  Tesaṃ saccena sīlena
+    group  10    114.31-  128.45  conf 0.61  Tesaṃ saccena sīlena

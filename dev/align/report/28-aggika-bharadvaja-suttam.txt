@@ -1,0 +1,46 @@
+28-aggika-bharadvaja-suttam (ariyadhamma)  FULL alignment (labels made from the audio)
+audio 863s, text ends at 859s, words placed 100%, mean confidence 0.58, low groups 0/44
+    group   1      0.00-    3.96  conf 0.66  Aggika bhāradvāja suttaṃ
+    group   2      3.96-   27.32  conf 0.66  Evaṃ me sutaṃ
+    group   3     27.32-   49.97  conf 0.42  Atha kho bhagavā
+    group   4     49.97-   75.33  conf 0.38  Tena kho pana samayena
+    group   5     75.33-  103.11  conf 0.50  Atha kho bhagavā
+    group   6    103.11-  128.15  conf 0.53  Addasā kho
+    group   7    128.15-  140.63  conf 0.55  Tatreva muṇḍaka
+    group   8    140.63-  167.89  conf 0.51  Evaṃ vutte
+    group   9    167.89-  182.54  conf 0.52  Nakhvāhaṃ bho gotama jānāmi
+    group  10    182.54-  203.51  conf 0.59  Sādhu me bhavaṃ gotamo
+    group  11    203.51-  216.34  conf 0.67  Tena hi brāhmaṇa
+    group  12    216.34-  235.30  conf 0.63  Evaṃ bhoti kho
+    group  13    235.30-  256.29  conf 0.54  Kodhano upanāhī ca
+    group  14    256.29-  276.60  conf 0.37  Ekajaṃ va dvījaṃ vāpi
+    group  15    276.60-  296.96  conf 0.53  Yo hanti parirundhati
+    group  16    296.96-  316.89  conf 0.53  Gāme vā yadi vā raññe
+    group  17    316.89-  336.08  conf 0.75  Yo have iṇamādāya
+    group  18    336.08-  355.60  conf 0.66  Yo ce kiñcikkhakamyatā
+    group  19    355.60-  375.03  conf 0.71  Yo attahetu parahetu
+    group  20    375.03-  393.38  conf 0.65  Yo ñātinaṃ sakhānaṃ vā
+    group  21    393.38-  412.83  conf 0.38  Yo mātaraṃ vā pitaraṃ vā
+    group  22    412.83-  432.15  conf 0.44  Yo mātaraṃ vā pitaraṃ vā
+    group  23    432.15-  450.70  conf 0.77  Yo atthaṃ pucchito santo
+    group  24    450.70-  470.17  conf 0.65  Yo katvā pāpakaṃ kammaṃ
+    group  25    470.17-  488.74  conf 0.62  Yo ve parakulaṃ gantvā
+    group  26    488.74-  509.10  conf 0.64  Yo brāhmaṇaṃ vā samaṇaṃ vā
+    group  27    509.10-  529.09  conf 0.59  Yo brāhmaṇaṃ vā samaṇaṃ vā
+    group  28    529.09-  548.26  conf 0.66  Asataṃ yodha pabrūti
+    group  29    548.26-  567.30  conf 0.68  Yo cattānaṃ samukkaṃse
+    group  30    567.30-  587.07  conf 0.53  Rosako kadariyo ca
+    group  31    587.07-  605.60  conf 0.57  Yo buddhaṃ paribhāsati
+    group  32    605.60-  633.10  conf 0.60  Yo ce anarahā santo
+    group  33    633.10-  652.13  conf 0.53  Na jaccā vasalo hoti
+    group  34    652.13-  670.71  conf 0.71  Tadamināpi jānātha
+    group  35    670.71-  689.70  conf 0.77  So yasaṃ paramaṃ patto
+    group  36    689.70-  709.27  conf 0.60  So devayānamāruyha
+    group  37    709.27-  727.14  conf 0.60  Na naṃ jāti nivāresi
+    group  38    727.14-  754.62  conf 0.55  Te va pāpesu kammesu
+    group  39    754.62-  774.67  conf 0.40  Na jaccā vasalo hoti
+    group  40    774.67-  785.66  conf 0.43  Evaṃ vutte
+    group  41    785.66-  824.19  conf 0.64  Abhikkantaṃ bho gotama
+    group  42    824.19-  834.37  conf 0.73  Evameva bhotā gotamena
+    group  43    834.37-  846.96  conf 0.66  Esāhaṃ
+    group  44    846.96-  860.03  conf 0.79  Upāsakaṃ maṃ

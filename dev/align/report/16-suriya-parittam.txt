@@ -1,0 +1,13 @@
+16-suriya-parittam (ariyadhamma)  mean confidence 0.68  low groups 0/12
+    group   1      0.00-    2.06  conf 0.57  Suriyaparittaṃ
+    group   2      2.55-   21.70  conf 0.61  Evaṃ
+    group   3     21.70-   35.49  conf 0.66  Teta kho pana samayena
+    group   4     35.49-   53.25  conf 0.66  Atha kho
+    group   5     53.25-   73.74  conf 0.68  Namo
+    group   6     73.74-   86.89  conf 0.64  Atha kho
+    group   7     86.89-  105.33  conf 0.80  Tathāgataṃ
+    group   8    106.39-  134.96  conf 0.80  Yo
+    group   9    134.96-  164.67  conf 0.70  Atha kho
+    group  10    164.67-  177.97  conf 0.69  Ekamantaṃ ṭhitaṃ kho rāhuṃ asurindaṃ
+    group  11    177.97-  196.65  conf 0.74  Kinnu
+    group  12    197.39-  217.60  conf 0.66  Sattadhā

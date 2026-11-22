@@ -1,0 +1,25 @@
+26-kasibharadvaja-suttam (ariyadhamma)  mean confidence 0.64  low groups 1/24
+    group   1      0.00-    2.56  conf 0.69  Kasībhāradvājasuttaṃ
+    group   2      2.56-   22.22  conf 0.75  Evaṃ me sutaṃ ekaṃ samayaṃ bhagavā
+    group   3     22.22-   41.79  conf 0.71  Tena kho pana samayena kasībhāradvājassa brāhmaṇas
+    group   4     41.79-   79.47  conf 0.55  Atha kho bhagavā pubbanhasamayaṃ nivāsetvā pattacī
+    group   5     79.47-  113.05  conf 0.68  Atha kho bhagavā yena parivesanā tenupasaṅkami upa
+LOW group   6    113.05-  148.38  conf 0.27  Ahaṃ kho samaṇa kasāmi ca vapāmi ca kasitvā ca vap
+    group   7    148.38-  199.05  conf 0.57  Na kho pana mayaṃ passāma gotamassa yugaṃ vā naṅga
+    group   8    199.05-  218.64  conf 0.68  Kassako paṭijānāsi na ca passāma te kasiṃ
+    group   9    218.64-  237.74  conf 0.73  Saddhā bījaṃ
+    group  10    237.74-  256.83  conf 0.75  Kāyagutto
+    group  11    256.83-  275.69  conf 0.61  Viriyaṃ me dhuradhorayhaṃ yogakkhemādhivāhanaṃ, ga
+    group  12    275.69-  331.54  conf 0.66  Evamesā kasīkaṭṭhā sā hoti amatapphalā etaṃ kasiṃ 
+    group  13    331.54-  360.98  conf 0.72  Gāthābhigītaṃ me abhojaneyyaṃ
+    group  14    360.98-  391.91  conf 0.61  Aññena ca kevalinaṃ mahesiṃ khīṇāsavaṃ kukkucca vū
+    group  15    391.91-  400.80  conf 0.59  Atha kassa cāhaṃ bho gotama
+    group  16    400.80-  436.55  conf 0.52  Na khvāhaṃ taṃ brāhmaṇa passāmi sadevake loke samā
+    group  17    436.55-  453.07  conf 0.72  Tena hi tvaṃ brāhmamaṇa taṃ pāyāsaṃ appaharite vā 
+    group  18    453.07-  483.38  conf 0.68  Atha kho kasībhāradvājo brāhmaṇo
+    group  19    483.38-  517.38  conf 0.51  Seyyathāpi nāma phālo divasasantatto udake pakkhit
+    group  20    517.38-  545.65  conf 0.69  Atha kho kasībhāradvājo brāhmaṇo
+    group  21    545.65-  583.01  conf 0.64  Abhikkantaṃ bho gotama abhikkantaṃ bho gotama
+    group  22    583.01-  619.50  conf 0.61  Evamevaṃ bhotā gotamena
+    group  23    619.50-  664.46  conf 0.67  Alattha kho kasībhāradvājo brāhmaṇo bhagavato sant
+    group  24    664.46-  708.53  conf 0.70  Tadanuttaraṃ brahmacariyapariyosānaṃ

@@ -1,0 +1,13 @@
+02-saranagamanam (ariyadhamma)  mean confidence 0.69  low groups 0/12
+    group   1      0.31-    8.20  conf 0.65  Namo tassa bhagavato arahato sammā sambuddhassa
+    group   2      8.61-   16.79  conf 0.69  Namo tassa bhagavato arahato sammā sambuddhassa
+    group   3     17.22-   26.32  conf 0.65  Namo tassa bhagavato arahato sammā sambuddhassa
+    group   4     27.65-   34.14  conf 0.70  Buddhaṃ saraṇaṃ gacchāmi.
+    group   5     34.70-   41.37  conf 0.72  Dhammaṃ saraṇaṃ gacchāmi.
+    group   6     41.75-   48.60  conf 0.63  Saṃghaṃ saraṇaṃ gacchāmi.
+    group   7     48.98-   57.16  conf 0.71  Dutiyampi buddhaṃ saraṇaṃ gacchāmi.
+    group   8     57.54-   65.44  conf 0.77  Dutiyampi dhammaṃ saraṇaṃ gacchāmi.
+    group   9     65.85-   74.23  conf 0.70  Dutiyampi saṃghaṃ saraṇaṃ gacchāmi.
+    group  10     74.64-   82.76  conf 0.67  Tatiyampi buddhaṃ saraṇaṃ gacchāmi.
+    group  11     83.20-   91.20  conf 0.72  Tatiyampi dhammaṃ saraṇaṃ gacchāmi.
+    group  12     91.61-  100.04  conf 0.64  Tatiyampi saṃghaṃ saraṇaṃ gacchāmi.

@@ -1,0 +1,31 @@
+27-parabhava-suttam (ariyadhamma)  mean confidence 0.70  low groups 0/30
+    group   1      0.00-    2.58  conf 0.75  Parābhava suttaṃ
+    group   2      2.58-   25.81  conf 0.62  Evaṃ me sutaṃ
+    group   3     25.81-   50.72  conf 0.60  Atha kho
+    group   4     50.72-   72.86  conf 0.70  Yena bhagavā
+    group   5     72.86-   88.71  conf 0.69  Ekamantaṃ ṭhitā kho
+    group   6     88.71-  110.98  conf 0.73  Parābhavantaṃ purisaṃ
+    group   7    110.98-  132.64  conf 0.72  Suvijāno bhavaṃ hoti
+    group   8    132.64-  153.05  conf 0.80  Iti hetaṃ vijānāma
+    group   9    153.05-  174.30  conf 0.69  Asantassa piyā honti
+    group  10    174.30-  194.04  conf 0.72  Iti hetaṃ vijānāma
+    group  11    194.04-  215.29  conf 0.69  Niddāsīlī
+    group  12    215.29-  235.22  conf 0.77  Iti hetaṃ vijānāma
+    group  13    235.22-  256.04  conf 0.69  Yo mātaraṃ vā pitaraṃ vā
+    group  14    256.04-  276.27  conf 0.73  Iti hetaṃ vijānāma
+    group  15    276.27-  297.88  conf 0.64  Yo brāhmaṇaṃ vā samaṇaṃ vā
+    group  16    297.88-  317.86  conf 0.71  Iti hetaṃ vijānāma
+    group  17    317.86-  337.85  conf 0.75  Pahūtavitto puriso
+    group  18    337.85-  357.30  conf 0.71  Iti hetaṃ vijānāma
+    group  19    357.30-  378.30  conf 0.70  Jātitthaddho dhanatthaddho
+    group  20    378.30-  397.21  conf 0.71  Iti hetaṃ vijānāma
+    group  21    397.21-  417.74  conf 0.69  Itthidhutto surādhutto
+    group  22    417.74-  437.30  conf 0.72  Iti hetaṃ vijānāma
+    group  23    437.30-  457.23  conf 0.57  Sehi dārehasantuṭṭho (dārehi + asantuṭṭho)
+    group  24    457.23-  476.67  conf 0.75  Iti hetaṃ vijānāma
+    group  25    476.67-  495.94  conf 0.71  Atītayobbano poso
+    group  26    495.94-  516.05  conf 0.75  Iti hetaṃ vijānāma
+    group  27    516.05-  535.55  conf 0.70  Itthisoṇḍiṃ vikiraṇiṃ
+    group  28    535.55-  555.66  conf 0.66  Iti hetaṃ vijānāma
+    group  29    555.66-  575.77  conf 0.68  Appabhogo mahātaṇho
+    group  30    575.77-  598.45  conf 0.71  Ete parābhave loke

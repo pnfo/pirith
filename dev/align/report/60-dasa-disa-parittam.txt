@@ -1,0 +1,7 @@
+60-dasa-disa-parittam (ariyadhamma)  mean confidence 0.66  low groups 0/6
+    group   1      0.00-   19.18  conf 0.76  Disāsu dasabhāgesu ṭhitā buddhānubhāvato
+    group   2     19.18-   32.45  conf 0.68  Padumuttaro puratthimāyaṃ aggine ceva revato
+    group   3     32.45-   44.86  conf 0.56  Pacchime ca sikhī buddho vāyakhyā medhaṃkaro
+    group   4     44.86-   58.38  conf 0.62  Paṭhaviṃ kakusandhoca ākāse saraṇaṃkaro
+    group   5     58.38-   71.50  conf 0.63  Accantarāyā sabbe te soka roga bhayā pi ca
+    group   6     71.50-   90.56  conf 0.69  Yakkhādidevatābhi ca rājacorādi aggihi

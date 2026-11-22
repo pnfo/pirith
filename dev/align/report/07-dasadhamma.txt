@@ -1,0 +1,17 @@
+07-dasadhamma (ariyadhamma)  mean confidence 0.65  low groups 0/16
+    group   1      0.92-    2.65  conf 0.56  Dasadhamma sutaṃ
+    group   2      2.65-   23.97  conf 0.63  Evaṃ me sutaṃ
+    group   3     24.28-   47.73  conf 0.65  Tatra kho
+    group   4     48.08-   62.83  conf 0.67  Dasa ime
+    group   5     63.35-   79.16  conf 0.60  Vevaṇṇiyamhi
+    group   6     79.53-   94.58  conf 0.63  Parapaṭibaddhā
+    group   7     94.98-  111.17  conf 0.63  Añño
+    group   8    111.54-  129.79  conf 0.67  Kaccinu kho
+    group   9    130.23-  154.16  conf 0.64  Kaccinu kho
+    group  10    154.46-  175.62  conf 0.72  Sabbehi
+    group  11    176.29-  218.65  conf 0.72  Kammassakomhi
+    group  12    219.02-  237.79  conf 0.64  Kathaṃbhūtassa me
+    group  13    238.23-  255.56  conf 0.59  Kaccanukhohaṃ
+    group  14    255.97-  293.25  conf 0.64  Atthinu kho
+    group  15    294.28-  307.92  conf 0.65  Ime kho
+    group  16    308.22-  322.34  conf 0.76  Idamavoca

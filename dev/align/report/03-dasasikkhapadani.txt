@@ -1,0 +1,11 @@
+03-dasasikkhapadani (ariyadhamma)  mean confidence 0.73  low groups 0/10
+    group   1      0.46-    9.10  conf 0.77  Pāṇātipātā
+    group   2      9.56-   17.70  conf 0.77  Adinnādānā
+    group   3     18.19-   26.88  conf 0.78  Abrahmacariyā
+    group   4     27.37-   35.35  conf 0.74  Musāvādā
+    group   5     35.81-   47.55  conf 0.67  Surāmeraya majjapamādaṭṭhānā
+    group   6     48.02-   56.40  conf 0.78  Vikālabhojanā
+    group   7     56.87-   68.61  conf 0.69  Nacca gīta vādita visūka dassanā
+    group   8     69.30-   84.32  conf 0.74  Mālā gandhavilepana dhāraṇa maṇḍana vibhūsanaṭṭhān
+    group   9     85.39-   95.19  conf 0.63  Uccāsayana mahāsayanā
+    group  10     95.68-  106.88  conf 0.74  Jātarūpa rajata paṭiggahaṇā

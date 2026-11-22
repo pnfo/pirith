@@ -1,0 +1,21 @@
+59-jinapanjara-parittam (ariyadhamma)  mean confidence 0.69  low groups 0/20
+    group   1      0.00-   26.92  conf 0.66  Jayāsana gatā vīrā
+    group   2     26.92-   40.28  conf 0.62  Sire patiṭṭhitā buddhā,
+    group   3     40.28-   54.39  conf 0.61  Hadaye anuruddho ca,
+    group   4     54.39-   68.08  conf 0.65  Dakkhiṇe savaṇe (tuyhaṃ)
+    group   5     68.08-   81.73  conf 0.71  Kesante piṭṭhibhāgasmiṃ,
+    group   6     81.73-   95.75  conf 0.62  Kumāra kassapo nāma
+    group   7     95.75-  109.62  conf 0.73  Puṇeṇo aṃgulimāloca
+    group   8    109.62-  123.78  conf 0.71  Sesāsīti mahātherā
+    group   9    123.78-  137.61  conf 0.73  Ratanaṃ purato āsī
+    group  10    137.61-  152.09  conf 0.68  Khandha mora parittaṃca
+    group  11    152.09-  180.08  conf 0.72  Jinānā bala saṃyutte
+    group  12    180.08-  193.21  conf 0.74  Jinapañjara majkdhaṭṭhaṃ
+    group  13    193.21-  212.12  conf 0.77  Iccevamaccanta kato surakkho
+    group  14    212.12-  231.26  conf 0.78  Iccevamaccanta kato surakkho
+    group  15    231.26-  250.12  conf 0.66  Iccevamaccanta kato surakkho
+    group  16    250.12-  268.98  conf 0.57  Saddhamma pākāra parikkhitosi
+    group  17    268.98-  303.40  conf 0.69  Hindanto mārasenaṃ
+    group  18    303.40-  325.80  conf 0.70  Sabbāvamaṃgalamupaddavadunnimittaṃ
+    group  19    325.80-  348.33  conf 0.71  Sabbāvamaṃgalamupaddavadunnimittaṃ
+    group  20    348.33-  370.13  conf 0.69  Sabbāvamaṃgalamupaddavadunnimittaṃ

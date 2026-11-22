@@ -1,0 +1,35 @@
+57-jvara-parittam (ariyadhamma)  mean confidence 0.74  low groups 0/34
+    group   1      0.00-   31.33  conf 0.78  Taṇhaṃkaro nāma jino puretvā dasa pāramī
+    group   2     31.33-   63.38  conf 0.72  Medhaṃkaro nāma jino – puretvā dasa pāramī
+    group   3     63.38-   95.07  conf 0.74  Saraṇaṃkaro nāma jino – puretvā dasa pāramī
+    group   4     95.07-  127.12  conf 0.75  Dīpaṃkaro nāma jino – puretvā dasa pāramī
+    group   5    127.12-  158.45  conf 0.79  Koṇḍañño nāma jino – puretvā dasa pāramī
+    group   6    158.45-  189.84  conf 0.75  Maṃgalo nāma jino – puretvā dasa pāramī
+    group   7    189.84-  220.16  conf 0.76  Sumano nāma jino – puretvā dasa pāramī
+    group   8    220.16-  251.13  conf 0.77  Revato nāma jino – puretvā dasa pāramī
+    group   9    251.13-  281.99  conf 0.76  Sobhito nāma jino – puretvā dasa pāramī
+    group  10    281.99-  313.08  conf 0.76  Anomadassī nāma jino – puretvā dasa pāramī
+    group  11    313.08-  343.33  conf 0.76  Padumo nāma jino- puretvā dasa pāramī
+    group  12    343.33-  373.59  conf 0.78  Nārado nāma jino – puretvā dasa pāramī
+    group  13    373.59-  403.55  conf 0.77  Padumuttaro nāma jino – puretvā dasa pāramī
+    group  14    403.55-  434.16  conf 0.75  Sumedho nāma jino – puretvā dasa pāramī
+    group  15    434.16-  463.94  conf 0.75  Sujāto nāma jino – puretvā dasa pāramī
+    group  16    463.94-  493.89  conf 0.78  Piyadassī nāma jino – puretvā dasa pāramī
+    group  17    493.89-  523.79  conf 0.78  Atthadassī nāma jino – puretvā dasa pāramī
+    group  18    523.79-  553.87  conf 0.77  Dhammadassī nāma jino – puretvā dasa pāramī
+    group  19    553.87-  583.70  conf 0.74  Siddhattho nāma jino – puretvā dasa pāramī
+    group  20    583.70-  612.70  conf 0.77  Tisso nāma jino – puretvā dasa pāramī
+    group  21    612.70-  642.06  conf 0.71  Phusso nāma jino – puretvā dasa pāramī
+    group  22    642.06-  671.54  conf 0.75  Vipassī nāma jino – puretvā dasa pāramī
+    group  23    671.54-  700.84  conf 0.73  Sikhī nāma jino - puretvā dasa pāramī
+    group  24    700.84-  730.98  conf 0.75  Vessabhu nāma jino - puretvā dasa pāramī
+    group  25    730.98-  760.93  conf 0.74  Kukusando nāma jino – puretvā dasa pāramī
+    group  26    760.93-  791.01  conf 0.77  Konāgamano nāma jino – puretvā dasa pāramī
+    group  27    791.01-  820.73  conf 0.76  Kassapo nāma jino – puretvā dasa pāramī
+    group  28    820.73-  850.56  conf 0.78  Gotamo nāma jino – puretvā dasa pāramī
+    group  29    850.56-  870.71  conf 0.76  Aṭṭha vīsati ime buddhā
+    group  30    870.71-  890.62  conf 0.72  Aṭṭha vīsati ime buddhā
+    group  31    890.62-  910.89  conf 0.69  Aṭṭha vīsati ime buddhā
+    group  32    910.89-  924.41  conf 0.54  Tesaṃ saccena sīlena
+    group  33    924.41-  937.86  conf 0.64  Tesaṃ saccena sīlena
+    group  34    937.86-  952.87  conf 0.65  Tesaṃ saccena sīlena

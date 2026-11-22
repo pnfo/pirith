@@ -1,0 +1,8 @@
+14-mora-parittam (ariyadhamma)  mean confidence 0.66  low groups 0/7
+    group   1      0.28-    2.63  conf 0.60  Moraparittaṃ
+    group   2      2.63-   33.41  conf 0.67  Udetayaṃ
+    group   3     33.41-   48.28  conf 0.69  Ye brahmaṇā
+    group   4     48.28-   72.21  conf 0.73  Namatthu
+    group   5     72.21-  102.28  conf 0.62  Apetayaṃ
+    group   6    102.28-  116.87  conf 0.64  Ye brahmaṇā
+    group   7    116.87-  143.47  conf 0.69  Namatthu

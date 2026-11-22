@@ -1,0 +1,18 @@
+50-angulimala (ariyadhamma)  mean confidence 0.62  low groups 0/17
+    group   1      0.00-    7.13  conf 0.62  Parittaṃ yaṃ bhaṇantassa nisinnaṭṭhāna dhovanaṃ
+    group   2      7.13-   13.47  conf 0.60  Udakampi vināsesi sabba meva parissayaṃ
+    group   3     13.47-   20.49  conf 0.48  Sotthinā gabbhavuṭṭhānaṃ yañca sādeti taṃ khaṇe
+    group   4     20.49-   27.69  conf 0.63  Therassaṃgulimālassa lokanāthena bhāsitaṃ
+    group   5     27.69-   35.19  conf 0.68  Kappaṭṭhāyiṃ mahātejaṃ parittaṃ taṃ bhaṇāmahe
+    group   6     35.19-   41.50  conf 0.69  Yatohaṃ bhagini āriyāya jātiyā jāto
+    group   7     41.50-   49.78  conf 0.71  Nābhijānāmi saṃcicca pāṇaṃ jīvitā voro petā
+    group   8     49.78-   57.59  conf 0.59  Tena saccena sothite hotu sotthi gabbhassāti
+    group   9     57.59-   64.00  conf 0.57  Yatohaṃ bhagini āriyāya jātiyā jāto
+    group  10     64.00-   72.28  conf 0.68  Nābhijānāmi saṃcicca pāṇaṃ jīvitā voro petā
+    group  11     72.28-   79.68  conf 0.41  Tena saccena sothite hotu sotthi gabbhassāti
+    group  12     79.68-   85.89  conf 0.69  Yatohaṃ bhagini āriyāya jātiyā jāto
+    group  13     85.89-   94.31  conf 0.72  Nābhijānāmi saṃcicca pāṇaṃ jīvitā voro petā
+    group  14     94.31-  101.71  conf 0.65  Tena saccena sothite hotu sotthi gabbhassāti
+    group  15    101.71-  108.80  conf 0.59  Etena sacca vajjena dukkhā vūpa samentu (te).
+    group  16    108.80-  116.06  conf 0.61  Etena sacca vajjena bhayā vūpa samentu (te).
+    group  17    116.06-  123.65  conf 0.62  Etena sacca vajjena rogā vūpa samentu (te).

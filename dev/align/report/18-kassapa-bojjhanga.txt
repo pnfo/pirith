@@ -1,0 +1,18 @@
+18-kassapa-bojjhanga (ariyadhamma)  mean confidence 0.66  low groups 0/17
+    group   1      0.00-    4.73  conf 0.65  Mahākassapa bojjhaṃga suttaṃ
+    group   2      4.73-   43.02  conf 0.65  Evaṃ
+    group   3     43.02-   82.35  conf 0.67  Atha kho
+    group   4     82.35-  108.38  conf 0.67  Kacci?
+    group   5    108.38-  134.41  conf 0.65  Na me bhante khamanīyaṃ
+    group   6    134.41-  161.68  conf 0.71  Sattime kassapa bojjhaṃgā
+    group   7    161.68-  187.03  conf 0.67  Satisambojjhaṃgo kho
+    group   8    187.03-  213.81  conf 0.66  Dhamma vicaya sambojjhaṃgo kho
+    group   9    213.81-  239.92  conf 0.69  Viriya sambojjhaṃgo kho
+    group  10    239.92-  265.95  conf 0.64  Pīti sambojjhaṃgo kho
+    group  11    265.95-  292.39  conf 0.69  Passaddhi sambojjhaṃgo kho
+    group  12    292.39-  318.97  conf 0.72  Samādhi sambojjhaṃgo kho
+    group  13    318.97-  345.28  conf 0.66  Upekkhā sambojjhaṃgo kho
+    group  14    345.28-  371.32  conf 0.73  Ime kho kassapa sattabojjhaṃgā
+    group  15    371.32-  381.04  conf 0.54  Taggha
+    group  16    381.04-  398.17  conf 0.55  Idamavoca
+    group  17    398.17-  423.79  conf 0.73  Uṭṭhāhi ca

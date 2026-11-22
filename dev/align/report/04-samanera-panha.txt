@@ -1,0 +1,11 @@
+04-samanera-panha (ariyadhamma)  mean confidence 0.61  low groups 0/10
+    group   1      0.51-   12.68  conf 0.63  Eka nāma kiṃ?
+    group   2     13.25-   22.35  conf 0.61  Dve nāma kiṃ?
+    group   3     22.90-   31.51  conf 0.52  Tīṇi nāma kima?
+    group   4     32.02-   43.15  conf 0.62  Cattāri nāma kiṃ?
+    group   5     43.57-   53.44  conf 0.64  Pañca nāma kiṃ?
+    group   6     53.92-   64.93  conf 0.58  Chanāma kiṃ?
+    group   7     65.30-   74.20  conf 0.68  Satta nāma kiṃ?
+    group   8     74.63-   85.49  conf 0.70  Aṭṭha nāma kiṃ?
+    group   9     85.89-   94.65  conf 0.53  Nava nāma kiṃ?
+    group  10     95.08-  111.21  conf 0.58  Dasa nāma kiṃ?

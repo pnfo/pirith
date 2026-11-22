@@ -1,0 +1,5 @@
+06-paccavekkhana (ariyadhamma)  mean confidence 0.66  low groups 0/4
+    group   1      0.00-   46.41  conf 0.68  Paṭisaṃkhāyoniso
+    group   2     46.41-  116.63  conf 0.62  Paṭisaṃkhāyoniso
+    group   3    116.63-  166.46  conf 0.61  Paṭisaṃkhāyoniso
+    group   4    166.46-  202.49  conf 0.74  Paṭisaṃkhāyoniso

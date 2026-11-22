@@ -1,0 +1,20 @@
+11-khandha-parittam (ariyadhamma)  mean confidence 0.66  low groups 0/19
+    group   1      0.00-    2.43  conf 0.61  Khandha parittaṃ
+    group   2      2.43-   23.91  conf 0.62  Evaṃ
+    group   3     23.91-   42.31  conf 0.68  Tena kho pana samayena
+    group   4     42.31-   67.52  conf 0.69  Atha kho
+    group   5     67.52-   81.49  conf 0.57  Ekamantaṃ
+    group   6     81.49-   95.63  conf 0.65  Idha bhante sāvatthiyaṃ
+    group   7     95.63-  112.09  conf 0.70  Naha nūna so bhikkhave bhikkhu
+    group   8    112.09-  140.21  conf 0.64  Sacehi
+    group   9    140.21-  175.02  conf 0.71  Katamāni
+    group  10    175.02-  194.45  conf 0.72  Naha nūna so bhikkhave bhikkhu
+    group  11    194.45-  224.73  conf 0.66  Sacehi
+    group  12    224.73-  252.36  conf 0.71  Anujānāmi
+    group  13    252.36-  266.66  conf 0.66  Idamavoca bhagavā
+    group  14    266.66-  289.76  conf 0.63  Virūpakkhehi
+    group  15    289.76-  310.00  conf 0.57  Apādakehi
+    group  16    310.00-  331.10  conf 0.63  Mā maṃ hiṃsi apādako
+    group  17    331.10-  353.34  conf 0.74  Sabe sattā
+    group  18    353.34-  365.16  conf 0.67  Appamāṇo buddho
+    group  19    365.16-  407.69  conf 0.73  Pamāṇavantāni

@@ -1,0 +1,22 @@
+10-karaniya (ariyadhamma)  mean confidence 0.65  low groups 0/21
+    group   1      0.00-    2.50  conf 0.80  Karaṇīya metta suttaṃ
+    group   2      3.11-   13.74  conf 0.70  Karaṇīyamatthakusalena
+    group   3     14.22-   25.04  conf 0.59  Sakko
+    group   4     25.69-   36.34  conf 0.57  Santussako ca
+    group   5     36.94-   48.26  conf 0.55  Santindriyo ca
+    group   6     48.89-   60.07  conf 0.66  Naca khuddaṃ samācare
+    group   7     60.61-   72.51  conf 0.69  Sukhino vā
+    group   8     73.16-   85.33  conf 0.66  Ye keci
+    group   9     85.87-   96.95  conf 0.75  Dīghā vā
+    group  10     97.51-  108.87  conf 0.62  Diṭṭhā vā
+    group  11    109.41-  121.40  conf 0.67  Bhūtā vā
+    group  12    121.96-  133.31  conf 0.65  Na
+    group  13    133.74-  145.19  conf 0.61  Khyārosanā
+    group  14    145.79-  157.18  conf 0.71  Mātā
+    group  15    157.68-  168.81  conf 0.71  Evampi
+    group  16    169.27-  180.07  conf 0.59  Mettaṃ ca
+    group  17    180.57-  191.70  conf 0.47  Uddhaṃ ca
+    group  18    192.75-  204.86  conf 0.63  Tiṭṭhaṃ
+    group  19    205.40-  216.57  conf 0.66  Etaṃ satiṃ
+    group  20    217.12-  226.98  conf 0.54  Diṭṭhiñ ca
+    group  21    227.52-  240.63  conf 0.75  Kāmesū

@@ -21,3 +21,10 @@ yarn-error.log*
 *.sw?
 Android
 obsolete audio
+# build output
+/dist-app
+/dist-ssr
+.env
+
+# alignment tooling
+/dev/align/.venv

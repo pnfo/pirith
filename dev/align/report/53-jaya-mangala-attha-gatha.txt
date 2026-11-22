@@ -1,0 +1,11 @@
+53-jaya-mangala-attha-gatha (ariyadhamma)  mean confidence 0.57  low groups 0/10
+    group   1      0.00-    4.61  conf 0.33  Jaya maṃgala aṭṭha gāthā
+    group   2      4.61-   37.06  conf 0.60  Bāhuṃ sahassa mabhinim mita sā yudhaṃ taṃ
+    group   3     37.06-   69.42  conf 0.61  Mārātireka mabhiyuj jita sabba rattiṃ
+    group   4     69.42-  100.68  conf 0.62  Nālāgiriṃ gajavaraṃ atimattha bhūtaṃ
+    group   5    100.68-  132.21  conf 0.57  Ukkhitta khagga matihattha sudārunaṃtaṃ
+    group   6    132.21-  162.91  conf 0.60  Katvāna kaṭṭhamudaraṃ ivagabbhinīyā
+    group   7    162.91-  193.42  conf 0.61  Saccaṃ vihāya mati saccaka vādaketuṃ
+    group   8    193.42-  223.94  conf 0.60  Nandopananda bhujagaṃ vibudhaṃ mahiddhiṃ
+    group   9    223.94-  255.10  conf 0.60  Duggāhadiṭthi bhujagena sudaṭṭha hatthaṃ
+    group  10    255.10-  286.17  conf 0.59  Etā pi buddha jaya maṃgala aṭṭha gāthā

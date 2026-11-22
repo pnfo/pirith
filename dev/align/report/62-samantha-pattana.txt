@@ -1,0 +1,160 @@
+62-samantha-pattana (ariyadhamma)  mean confidence 0.65  low groups 0/159
+    group   1      0.00-    3.08  conf 0.75  Paṭṭhānauddesapāḷi
+    group   2      3.08-   16.18  conf 0.66  1. Hetupaccayo
+    group   3     16.18-   29.20  conf 0.59  5. Samanantarapaccayo
+    group   4     29.20-   42.49  conf 0.59  9. Upanissayapaccayo
+    group   5     42.49-   53.73  conf 0.63  13. Kammapaccayo
+    group   6     53.73-   65.43  conf 0.55  17. Jhānapaccayo
+    group   7     65.43-   79.19  conf 0.43  21. Atthipaccayo
+    group   8     79.31-   82.87  conf 0.64  Paccayaniddeso
+    group   9     82.97-  100.04  conf 0.81  1. Hetupaccayo’ti
+    group  10    100.04-  119.19  conf 0.67  2. Ārammaṇapaccayo’ti
+    group  11    119.19-  134.84  conf 0.60  Saddāyatanaṃ
+    group  12    135.04-  150.53  conf 0.61  Gandhāyatanaṃ
+    group  13    150.53-  165.97  conf 0.61  Rasāyatanaṃ
+    group  14    166.11-  181.91  conf 0.55  Phoṭṭhabbāyatanaṃ
+    group  15    182.29-  204.77  conf 0.65  Rūpāyatanaṃ
+    group  16    204.77-  220.40  conf 0.67  Sabbe dhammā
+    group  17    220.63-  242.42  conf 0.76  Yaṃ yaṃ dhammaṃ ārabbha
+    group  18    242.76-  261.65  conf 0.68  3. Adhipatipaccayo’ti
+    group  19    261.65-  277.22  conf 0.61  Viriyādhipati
+    group  20    277.22-  293.35  conf 0.61  Cittādhipati
+    group  21    293.35-  310.88  conf 0.68  Vīmaṃsādhipati
+    group  22    310.88-  332.90  conf 0.74  Yaṃ yaṃ dhammaṃ garuṃ katvā
+    group  23    332.90-  354.40  conf 0.52  4. Anantarapaccayo’ti
+    group  24    354.40-  373.06  conf 0.46  Manodhātu
+    group  25    373.06-  391.53  conf 0.60  Sotaviññāṇadhātu
+    group  26    391.53-  410.12  conf 0.54  Manodhātu
+    group  27    410.12-  428.83  conf 0.66  Ghānaviññāṇadhātu
+    group  28    428.83-  446.89  conf 0.65  Manodhātu
+    group  29    446.89-  465.68  conf 0.65  Jivhāviññāṇadhātu
+    group  30    465.68-  484.10  conf 0.67  Manodhātu
+    group  31    484.10-  503.02  conf 0.62  Kāyaviññāṇadhātu
+    group  32    503.02-  521.73  conf 0.65  Manodhātu
+    group  33    521.73-  536.22  conf 0.75  Purimā purimā
+    group  34    536.22-  551.31  conf 0.77  Purimā purimā
+    group  35    551.31-  566.41  conf 0.71  Purimā purimā
+    group  36    566.41-  582.44  conf 0.76  Purimā purimā
+    group  37    582.44-  599.12  conf 0.72  Purimā purimā
+    group  38    599.12-  615.24  conf 0.77  Purimā purimā
+    group  39    615.24-  631.15  conf 0.75  Purimā purimā
+    group  40    631.15-  654.04  conf 0.79  Yesaṃ yesaṃ dhammānaṃ anantarā
+    group  41    654.04-  675.83  conf 0.63  5. Samanantarapaccayo’ti
+    group  42    675.83-  694.01  conf 0.65  Manodhātu
+    group  43    694.01-  712.36  conf 0.64  Sotaviññāṇadhātu
+    group  44    712.36-  730.41  conf 0.66  Manodhātu
+    group  45    730.41-  748.92  conf 0.63  Ghānaviññāṇadhātu
+    group  46    748.92-  767.48  conf 0.56  Manodhātu
+    group  47    767.48-  785.36  conf 0.65  Jivhāviññāṇadhātu
+    group  48    785.36-  803.82  conf 0.65  Manodhātu
+    group  49    803.82-  822.24  conf 0.63  Kāyaviññāṇadhātu
+    group  50    822.24-  840.95  conf 0.61  Manodhātu
+    group  51    840.95-  855.66  conf 0.77  Purimā purimā
+    group  52    855.66-  870.64  conf 0.78  Purimā purimā
+    group  53    870.64-  885.86  conf 0.74  Purimā purimā
+    group  54    885.86-  900.94  conf 0.77  Purimā purimā
+    group  55    900.94-  916.90  conf 0.79  Purimā purimā
+    group  56    916.90-  932.22  conf 0.77  Purimā purimā
+    group  57    932.22-  947.54  conf 0.74  Purimā purimā
+    group  58    947.54-  970.43  conf 0.80  Yesaṃ yesaṃ dhammānaṃ samanantarā
+    group  59    970.43-  984.38  conf 0.61  6. Sahajātapaccayo’ti
+    group  60    984.38-  994.05  conf 0.62  Cattāro mahābhūtā
+    group  61    994.05- 1003.87  conf 0.58  Okkantikkhaṇe nāmarūpaṃ
+    group  62   1003.87- 1015.81  conf 0.67  Cittacetasikā dhammā
+    group  63   1015.81- 1025.28  conf 0.74  Mahābhūtā
+    group  64   1025.28- 1042.67  conf 0.44  Rūpino dhammā arūpīnaṃ dhammānaṃ
+    group  65   1042.67- 1055.04  conf 0.64  7. Aññamaññapaccayo’ti
+    group  66   1055.04- 1062.90  conf 0.68  Cattāro mahābhūtā
+    group  67   1062.90- 1071.89  conf 0.62  Okkantikkhaṇe nāmarūpaṃ
+    group  68   1071.89- 1084.51  conf 0.62  8. Nissayapaccayo’ti
+    group  69   1084.51- 1093.30  conf 0.72  Cattāro mahābhūtā
+    group  70   1093.30- 1103.17  conf 0.63  Okkantikkhaṇe nāmarūpaṃ
+    group  71   1103.17- 1114.66  conf 0.64  Cittacetasikā dhammā
+    group  72   1114.66- 1123.94  conf 0.70  Mahābhūtā
+    group  73   1123.94- 1137.99  conf 0.57  Cakkhāyatanaṃ
+    group  74   1137.99- 1151.93  conf 0.58  Sotāyatanaṃ
+    group  75   1151.93- 1166.42  conf 0.59  Ghānāyatanaṃ
+    group  76   1166.42- 1181.30  conf 0.60  Jivhāyatanaṃ
+    group  77   1181.30- 1195.79  conf 0.60  Kāyāyatanaṃ
+    group  78   1195.79- 1220.49  conf 0.61  Yaṃ rūpaṃ nissāya
+    group  79   1220.49- 1238.27  conf 0.44  9. Upanissayapaccayo’ti
+    group  80   1238.27- 1254.47  conf 0.68  Purimā purimā
+    group  81   1254.47- 1269.35  conf 0.76  Purimā purimā
+    group  82   1269.35- 1284.18  conf 0.75  Purimā purimā
+    group  83   1284.18- 1299.90  conf 0.76  Purimā purimā
+    group  84   1299.90- 1315.76  conf 0.72  Purimā purimā
+    group  85   1315.76- 1331.57  conf 0.73  Purimā purimā
+    group  86   1331.57- 1346.35  conf 0.73  Purimā purimā
+    group  87   1346.35- 1361.04  conf 0.74  Purimā purimā
+    group  88   1361.04- 1381.02  conf 0.45  Utubhojanaṃ’pi
+    group  89   1381.02- 1398.06  conf 0.60  10. Purejātapaccayo’ti
+    group  90   1398.06- 1412.21  conf 0.61  Sotāyatanaṃ
+    group  91   1412.21- 1426.25  conf 0.61  Ghānāyatanaṃ
+    group  92   1426.25- 1440.40  conf 0.57  Jivhāyatanaṃ
+    group  93   1440.40- 1454.54  conf 0.54  Kāyāyatanaṃ
+    group  94   1454.54- 1468.44  conf 0.61  Rūpāyatanaṃ
+    group  95   1468.44- 1482.24  conf 0.63  Saddāyatanaṃ
+    group  96   1482.24- 1496.08  conf 0.63  Gandhāyatanaṃ
+    group  97   1496.08- 1510.47  conf 0.62  Rasāyatanaṃ
+    group  98   1510.47- 1525.11  conf 0.62  Phoṭṭhabbāyatanaṃ
+    group  99   1525.11- 1545.68  conf 0.64  Rūpāyatanaṃ
+    group 100   1545.68- 1565.92  conf 0.59  Yaṃ rūpaṃ nissāya
+    group 101   1565.92- 1585.56  conf 0.59  Manoviññāṇadhātuyā ca
+    group 102   1585.56- 1605.84  conf 0.67  11. Pacchājātapaccayo’ti
+    group 103   1605.84- 1625.44  conf 0.74  12. Āsevanapaccayo’ti
+    group 104   1625.44- 1642.03  conf 0.69  Purimā purimā
+    group 105   1642.03- 1660.55  conf 0.71  Purimā purimā
+    group 106   1660.55- 1677.54  conf 0.66  13. Kammapaccayo’ti
+    group 107   1677.54- 1692.32  conf 0.70  Cetanā
+    group 108   1692.32- 1707.94  conf 0.64  14. Vipākapaccayo’ti
+    group 109   1707.94- 1722.22  conf 0.58  15. Āhārapaccayo’ti
+    group 110   1722.22- 1738.94  conf 0.67  Arūpino āhārā
+    group 111   1738.94- 1757.01  conf 0.57  16. Indriyapaccayo’ti
+    group 112   1757.01- 1772.18  conf 0.67  Sotindriyaṃ
+    group 113   1772.18- 1786.91  conf 0.63  Ghānindriyaṃ
+    group 114   1786.91- 1801.83  conf 0.63  Jivhindriyaṃ
+    group 115   1801.83- 1816.52  conf 0.64  Kāyindriyaṃ
+    group 116   1816.52- 1826.58  conf 0.66  Rūpajīvitindriyaṃ
+    group 117   1826.58- 1843.08  conf 0.72  Arūpino indriyā
+    group 118   1843.08- 1861.35  conf 0.66  17. Jhānapaccayo’ti
+    group 119   1861.35- 1880.06  conf 0.76  18. Maggapaccayo’ti
+    group 120   1880.06- 1894.55  conf 0.65  19. Sampayuttapaccayo’ti
+    group 121   1894.55- 1909.18  conf 0.74  20. Vippayuttapaccayo’ti
+    group 122   1909.18- 1920.13  conf 0.71  Arūpino dhammā
+    group 123   1920.13- 1932.85  conf 0.64  21. Atthipaccayo’ti
+    group 124   1932.85- 1942.23  conf 0.66  Cattāro mahābhūtā
+    group 125   1942.23- 1952.25  conf 0.60  Okkantikkhaṇe nāmarūpaṃ
+    group 126   1952.25- 1963.89  conf 0.68  Cittacetasikā dhammā
+    group 127   1963.89- 1973.47  conf 0.73  Mahābhūtā
+    group 128   1973.47- 1987.71  conf 0.62  Cakkhāyatanaṃ
+    group 129   1987.71- 2002.19  conf 0.64  Sotāyatanaṃ
+    group 130   2002.19- 2016.63  conf 0.62  Ghānāyatanaṃ
+    group 131   2016.63- 2031.27  conf 0.64  Jivhāyatanaṃ
+    group 132   2031.27- 2045.75  conf 0.65  Kāyāyatanaṃ
+    group 133   2045.75- 2060.09  conf 0.66  Rūpāyatanaṃ
+    group 134   2060.09- 2074.04  conf 0.69  Saddāyatanaṃ
+    group 135   2074.04- 2088.23  conf 0.64  Gandhāyatanaṃ
+    group 136   2088.23- 2102.33  conf 0.63  Rasāyatanaṃ
+    group 137   2102.33- 2117.11  conf 0.62  Phoṭṭhabbāyatanaṃ
+    group 138   2117.11- 2137.88  conf 0.64  Rūpāyatanaṃ
+    group 139   2137.88- 2163.76  conf 0.59  Yaṃ rūpaṃ nissāya
+    group 140   2163.76- 2182.96  conf 0.83  22. Natthipaccayo’ti
+    group 141   2182.96- 2202.51  conf 0.64  23. Vigatapaccayo’ti
+    group 142   2202.51- 2215.08  conf 0.60  24. Avigatapaccayo’ti
+    group 143   2215.08- 2224.07  conf 0.58  Cattāro mahābhūtā
+    group 144   2224.07- 2233.79  conf 0.69  Okkantikkhaṇe nāmarūpaṃ
+    group 145   2233.79- 2245.38  conf 0.68  Cittacetasikā dhammā
+    group 146   2245.38- 2254.76  conf 0.77  Mahābhūtā
+    group 147   2254.76- 2268.36  conf 0.59  Cakkhāyatanaṃ
+    group 148   2268.36- 2282.36  conf 0.60  Sotāyatanaṃ
+    group 149   2282.36- 2296.94  conf 0.63  Ghānāyatanaṃ
+    group 150   2296.94- 2311.23  conf 0.67  Jivhāyatanaṃ
+    group 151   2311.23- 2325.72  conf 0.65  Kāyāyatanaṃ
+    group 152   2325.72- 2339.67  conf 0.58  Rūpāyatanaṃ
+    group 153   2339.67- 2353.71  conf 0.71  Saddāyatanaṃ
+    group 154   2353.71- 2367.71  conf 0.62  Gandhāyatanaṃ
+    group 155   2367.71- 2381.85  conf 0.63  Rasāyatanaṃ
+    group 156   2381.85- 2396.34  conf 0.58  Phoṭṭhabbāyatanaṃ
+    group 157   2396.34- 2417.26  conf 0.62  Rūpāyatanaṃ
+    group 158   2417.26- 2443.43  conf 0.60  Yaṃ rūpaṃ nissāya
+    group 159   2443.43- 2447.75  conf 0.59  Paccayaniddeso niṭṭhito

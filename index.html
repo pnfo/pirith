@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>පිරිත්</title>
-    <meta name="description" content="මෙත්ත මංගල රතන සුත්‍ර සෙත් පිරිත් පරිත්ත නාඋයනේ අරියධම්ම හිමි Chanting Pariththa Nauyane Ariyadhamma Thero Sinhala Sri Lanka">
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="සිංහල අර්ථ සහිත පිරිත්" /> <!--For facebook link previews -->
-    <meta property="og:image" content="https://pitaka.lk/pirith/artwork/logo-800.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="800" />
-    <meta property="og:image:height" content="800" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!--head-start-->
+    <title>පිරිත් - Pirith</title>
+    <!--head-end-->
+    <meta name="theme-color" content="#2e4c37">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Chantings">
-    <link rel="apple-touch-icon" href="/artwork/logo-180.png">
+    <meta name="apple-mobile-web-app-title" content="Pirith">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <link rel="apple-touch-icon" href="%BASE_URL%artwork/logo-180.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="%BASE_URL%favicon-96x96.png">
+    <script>
+      // before first paint: dark mode and text size chosen earlier (kept out of the bundle to avoid a flash)
+      try {
+        if (localStorage.getItem('darkMode') === 'true') document.documentElement.classList.add('dark')
+        var fs = JSON.parse(localStorage.getItem('fontSize')); if (fs) document.documentElement.style.setProperty('--reader-size', fs)
+      } catch (e) {}
+    </script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app"><!--app--></div>
+    <!--state-->
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

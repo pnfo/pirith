@@ -1,161 +1,65 @@
 <template>
-  <div class="p-4 pb-0">
-    <div class="flex justify-center items-center">
-      <ListMusicIcon class="text-primary w-6 h-6 mr-2 dark:text-stone-400" />
-
-      <template v-if="isEdit">
-        <div class="flex-grow mx-2 max-w-[300px] relative">
-            <input 
-                type="text" 
-                v-model="editedName" 
-                class="w-full border border-line rounded px-2 py-1 text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow dark:bg-surface-dark-alt dark:border-line-dark dark:text-main-dark"
-                :placeholder="t('playlist.placeholder')"
-                maxlength="25"
-                @keyup.enter="commitEditName"
-            />
-        </div>
-
-        <button @click="commitEditName" class="p-1 text-primary hover:bg-primary-light rounded-full mr-1 transition-colors dark:text-primary dark:hover:bg-primary/30" title="Save">
-            <CheckIcon class="w-5 h-5" />
-        </button>
-        <button @click="isEdit = false" class="p-1 text-danger hover:bg-danger-light rounded-full transition-colors dark:text-danger dark:hover:bg-danger-dark/30" title="Cancel">
-            <XIcon class="w-5 h-5" />
-        </button>
+  <div class="px-3 no-print">
+    <div class="flex items-center gap-1">
+      <ListMusicIcon class="w-5 h-5 text-primary dark:text-muted-dark flex-shrink-0" />
+      <template v-if="renaming">
+        <input ref="nameInput" v-model="name" :placeholder="t('playlist.placeholder')" maxlength="25"
+          @keyup.enter="saveName" @keyup.esc="renaming = false"
+          class="flex-grow min-w-0 border rounded px-2 py-1.5 bg-surface focus:outline-none focus:ring-2 focus:ring-primary/40 dark:bg-surface-dark-alt dark:border-line-dark" />
+        <button @click="saveName" :aria-label="t('home.done')" class="p-2 text-primary dark:text-main-dark"><CheckIcon class="w-5 h-5" /></button>
+        <button @click="renaming = false" class="p-2 text-muted dark:text-muted-dark"><XIcon class="w-5 h-5" /></button>
       </template>
-
       <template v-else>
-        <div class="flex-grow mx-2 max-w-[300px] relative">
-          <!-- Custom Dropdown Trigger (Small Control) -->
-          <button 
-            @click="toggleDropdown"
-            class="w-full border border-line rounded px-2 py-1 text-lg bg-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-left flex items-center justify-between transition-shadow dark:bg-surface-dark-alt dark:border-line-dark dark:text-main-dark"
-          >
-            <span class="truncate">{{ playlists[curPlInd].name }}</span>
-            <ChevronDownIcon class="w-4 h-4 ml-1 flex-shrink-0 text-main dark:text-muted-dark" />
-          </button>
-
-          <!-- Custom Dropdown List (Larger Items) -->
-          <div v-if="isDropdownOpen" class="absolute top-full left-0 w-full mt-1 bg-surface border-2 border-line rounded shadow-xl z-50 max-h-80 overflow-y-auto dark:bg-surface-dark dark:border-line-dark">
-            <div 
-              v-for="(p, i) in playlists" 
-              :key="i"
-              @click="selectPlaylist(i)"
-              class="px-4 py-3 text-lg cursor-pointer hover:bg-primary-light transition-colors border-b border-line last:border-0 dark:border-line-dark dark:hover:bg-surface-dark-alt dark:text-main-dark"
-              :class="{'bg-primary-light text-primary font-medium dark:bg-surface-dark-alt dark:text-main-dark': i === curPlInd}"
-            >
-              {{ p.name }}
-            </div>
-          </div>
-        </div>
-
-        <button @click="startEditName" class="p-1 text-muted hover:bg-surface-alt rounded-full transition-colors dark:text-muted-dark dark:hover:bg-surface-dark-alt" title="Edit Name">
-          <PencilIcon class="w-5 h-5" />
+        <select :value="store.plInd" @change="store.setPlInd(Number($event.target.value))" :aria-label="t('playlist.choose')"
+          class="flex-grow min-w-0 border border-line rounded px-2 py-1.5 bg-surface font-medium focus:outline-none dark:bg-surface-dark-alt dark:border-line-dark">
+          <option v-for="(pl, i) in store.playlists" :key="i" :value="i">{{ pl.name }} ({{ pl.list.length }})</option>
+        </select>
+        <button @click="$emit('toggle-edit')" :title="t(editing ? 'home.done' : 'home.reorder')" :aria-label="t(editing ? 'home.done' : 'home.reorder')"
+          class="p-2 rounded-full" :class="editing ? 'bg-primary text-white dark:bg-main-dark dark:text-surface-dark' : 'text-muted dark:text-muted-dark'">
+          <component :is="editing ? CheckIcon : ArrowUpDownIcon" class="w-5 h-5" />
         </button>
+        <button v-if="store.plInd > 0" @click="startRename" :title="t('playlist.rename')" :aria-label="t('playlist.rename')" class="p-2 text-muted dark:text-muted-dark"><PencilIcon class="w-5 h-5" /></button>
+        <button v-if="store.plInd > 0" @click="store.deletePlaylist()" :disabled="store.curPl.list.length > 0"
+          :title="t(store.curPl.list.length ? 'playlist.deleteHint' : 'playlist.delete')" :aria-label="t('playlist.delete')"
+          class="p-2 text-danger disabled:text-muted disabled:opacity-40"><TrashIcon class="w-5 h-5" /></button>
+        <button @click="store.addNewPlaylist(t('playlist.newPrefix'))" :title="t('playlist.add')" :aria-label="t('playlist.add')" class="p-2 text-primary dark:text-main-dark"><PlusIcon class="w-5 h-5" /></button>
       </template>
-
-      <button v-if="playlists[curPlInd].list.length == 0" @click="deletePlaylist" class="ml-2 p-1 text-danger hover:bg-danger-light rounded-full transition-colors dark:hover:bg-danger-dark/30 dark:text-muted-dark dark:hover:text-danger" title="Delete Playlist">
-        <Trash2Icon class="w-6 h-6" />
-      </button>
-      <button v-else @click="addNewPlaylist" class="ml-2 p-1 text-primary hover:bg-primary-light rounded-full transition-colors dark:hover:bg-primary/30 dark:text-muted-dark dark:hover:text-primary" title="New Playlist">
-        <FolderPlusIcon class="w-6 h-6" />
-      </button>
     </div>
-
-    <!-- Backdrop for dropdown -->
-    <div v-if="isDropdownOpen" class="fixed inset-0 z-40" @click="closeDropdown"></div>
+    <p v-if="error" class="text-sm text-danger mt-1">{{ error }}</p>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, nextTick } from 'vue'
 import { usePlayerStore } from '@/stores/player'
-import { 
-  ListMusic as ListMusicIcon, 
-  Check as CheckIcon, 
-  X as XIcon, 
-  Pencil as PencilIcon, 
-  Trash2 as Trash2Icon, 
-  FolderPlus as FolderPlusIcon,
-  ChevronDown as ChevronDownIcon
+import {
+  ListMusic as ListMusicIcon, Check as CheckIcon, X as XIcon, Pencil as PencilIcon,
+  Trash2 as TrashIcon, Plus as PlusIcon, ArrowUpDown as ArrowUpDownIcon,
 } from 'lucide-vue-next'
 import { useI18n } from '@/locales/index.js'
 
+defineProps({ editing: Boolean })
+defineEmits(['toggle-edit'])
+
 const store = usePlayerStore()
 const { t } = useI18n()
+const renaming = ref(false)
+const name = ref('')
+const error = ref('')
+const nameInput = ref(null)
 
-const isEdit = ref(false)
-const editedName = ref('')
-const isDropdownOpen = ref(false)
-
-// Computed properties
-const playlists = computed(() => store.playlists)
-const curPlInd = computed({
-  get: () => store.curPlInd,
-  set: (val) => store.setPlInd(val)
-})
-
-// Watch activeDropdown to close if needed
-watch(() => store.activeDropdown, (newVal) => {
-  if (newVal !== 'playlist' && isDropdownOpen.value) {
-    isDropdownOpen.value = false
-  }
-})
-
-// Validation rules logic
-function validateName(name) {
-    if (!name) return false
-    if (name.length < 5) return false
-    if (name.length > 25) return false
-    // Allow saving if name hasn't changed
-    if (name === playlists.value[curPlInd.value].name) return true 
-    if (store.playlists.some((p, i) => i !== curPlInd.value && p.name === name)) return false
-    return true
+function startRename() {
+  name.value = store.curPl.name
+  error.value = ''
+  renaming.value = true
+  nextTick(() => nameInput.value?.focus())
 }
-
-function startEditName() {
-  isEdit.value = true
-  editedName.value = playlists.value[curPlInd.value].name
-}
-
-function commitEditName() {
-  if (!validateName(editedName.value)) {
-      alert(t('playlist.invalidName')) 
-      return
-  }
-  isEdit.value = false
-  store.setPlaylistName(editedName.value)
-}
-
-function addNewPlaylist() {
-  isEdit.value = false
-  store.addNewPlaylist(t('playlist.newPrefix'))
-  store.setPlInd(playlists.value.length - 1)
-}
-
-function deletePlaylist() {
-  isEdit.value = false
-  store.deletePlaylist()
-  store.setPlInd(0)
-}
-
-function toggleDropdown() {
-  if (isDropdownOpen.value) {
-    closeDropdown()
-  } else {
-    isDropdownOpen.value = true
-    store.setActiveDropdown('playlist')
-  }
-}
-
-function closeDropdown() {
-  isDropdownOpen.value = false
-  if (store.activeDropdown === 'playlist') {
-    store.setActiveDropdown(null)
-  }
-}
-
-function selectPlaylist(index) {
-  curPlInd.value = index
-  closeDropdown()
+function saveName() {
+  const v = name.value.trim()
+  const taken = store.playlists.some((pl, i) => i !== store.plInd && pl.name === v)
+  if (v.length < 5 || v.length > 25 || taken) { error.value = t('playlist.invalidName'); return }
+  store.setPlaylistName(v)
+  error.value = ''
+  renaming.value = false
 }
 </script>

@@ -1,0 +1,7 @@
+58-antharaya-nivarana-parittam (ariyadhamma)  mean confidence 0.68  low groups 0/6
+    group   1      0.00-    6.66  conf 0.59  Buddhānaṃ jivitassa
+    group   2      6.66-   14.36  conf 0.71  Buddhānaṃ chabbaṇṇa raṃsīnaṃ
+    group   3     14.36-   23.36  conf 0.66  Buddhānaṃ dvattiṃsa māhā purisalakkhaṇānaṃ
+    group   4     23.36-   32.09  conf 0.74  Buddhānaṃ abihaṭa catunnaṃ paccayānaṃ
+    group   5     32.09-   40.28  conf 0.70  Imesaṃ catunnaṃ acchariyānaṃ
+    group   6     40.28-   53.93  conf 0.66  Etena sacca vajjena antarāyā asesato

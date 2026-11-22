@@ -1,0 +1,132 @@
+32-atanatiya-suttam-2 (ariyadhamma)  FULL alignment (labels made from the audio)
+audio 2935s, text ends at 2932s, words placed 100%, mean confidence 0.53, low groups 7/130
+LOW group   1      0.00-   11.05  conf 0.10  Āṭānāṭiya suttaṃ
+    group   2     11.05-   25.52  conf 0.58  Atha kho
+    group   3     25.52-   66.10  conf 0.38  Imaṃ bhikkhave rattiṃ
+    group   4     66.10-   89.10  conf 0.35  Catuddisaṃ rakkhaṃ ṭhapetvā
+    group   5     89.10-  117.62  conf 0.44  Abhikkantāya rattiyā
+    group   6    117.62-  131.15  conf 0.51  Upasaṅkamitvā
+    group   7    131.15-  150.40  conf 0.55  Tepi kho bhikkhave yakkhā
+    group   8    150.40-  176.40  conf 0.69  Appekacce
+    group   9    176.40-  192.61  conf 0.59  Appekacce
+    group  10    192.61-  219.61  conf 0.43  Appekacce
+    group  11    219.61-  237.58  conf 0.53  Ekamantaṃ nisinno kho bhikkhave
+    group  12    237.58-  261.43  conf 0.36  Santi hi bhante
+    group  13    261.43-  286.31  conf 0.46  Santi hi bhante
+    group  14    286.31-  310.09  conf 0.36  Santi hi bhante
+    group  15    310.09-  328.18  conf 0.41  Yebhuyyena kho pana bhante
+    group  16    328.18-  352.71  conf 0.51  Bhagavā hi bhante
+    group  17    352.71-  390.12  conf 0.38  Kāmesu micchācārā veramaṇiyā
+    group  18    390.12-  441.59  conf 0.58  Yebhuyyena kho pana bhante
+    group  19    441.59-  451.34  conf 0.51  Tesaṃ taṃ
+    group  20    451.34-  472.01  conf 0.66  Santi hi bhante
+    group  21    472.01-  493.41  conf 0.54  Appasaddāni
+    group  22    493.41-  512.08  conf 0.62  Tattha
+    group  23    512.08-  529.43  conf 0.71  Tesaṃ pasādāya
+    group  24    529.43-  552.29  conf 0.58  Bhikkhūnaṃ
+    group  25    552.29-  564.00  conf 0.56  Adhivāsesiṃ kho ahaṃ bhikkhave
+    group  26    564.00-  589.11  conf 0.54  Atha kho bhikkhave
+    group  27    589.11-  611.65  conf 0.71  Vipassissa namatthu
+    group  28    611.65-  635.32  conf 0.64  Vessabhussa namatthu
+    group  29    635.32-  659.38  conf 0.45  Koṇāgamanassa namatthu
+    group  30    659.38-  685.66  conf 0.71  Aṅgīrasassa namatthu
+    group  31    685.66-  711.13  conf 0.78  Ye cāpi
+    group  32    711.13-  736.71  conf 0.66  Hitaṃ devamanussānaṃ
+    group  33    736.71-  763.43  conf 0.51  Yato uggacchati
+    group  34    763.43-  802.87  conf 0.58  Yassa cuggate suriye
+    group  35    802.87-  828.49  conf 0.70  Ito
+    group  36    828.49-  853.67  conf 0.70  Gandhabbānaṃ ādhipati
+    group  37    853.67-  878.24  conf 0.68  Puttā pi tassa bahavo
+    group  38    878.24-  917.99  conf 0.68  Te cāpi
+    group  39    917.99-  940.95  conf 0.61  Kusalena samekkhasi
+    group  40    940.95-  965.84  conf 0.61  Jinaṃ vandatha gotamaṃ
+    group  41    965.84-  990.76  conf 0.76  Yena petā pavuccanti
+    group  42    990.76- 1015.20  conf 0.78  Ito
+    group  43   1015.20- 1039.25  conf 0.72  Kumbhaṇḍānaṃ ādhipati
+    group  44   1039.25- 1064.45  conf 0.69  Puttā pi tassa bahavo
+    group  45   1064.45- 1103.49  conf 0.56  Te cāpi
+    group  46   1103.49- 1127.49  conf 0.45  Kusalena samekkhasi
+    group  47   1127.49- 1153.19  conf 0.43  Jinaṃ vandatha gotamaṃ
+    group  48   1153.19- 1177.66  conf 0.44  Yattha coggacchati
+    group  49   1177.66- 1214.69  conf 0.63  Yassa coggate suriye
+    group  50   1214.69- 1238.92  conf 0.70  Ito
+    group  51   1238.92- 1262.98  conf 0.60  Nāgānaṃ ādhipati
+    group  52   1262.98- 1286.58  conf 0.58  Puttā pi tassa bahavo
+    group  53   1286.58- 1325.38  conf 0.53  Te cāpi
+    group  54   1325.38- 1347.00  conf 0.55  Kusalena samekkhasi
+    group  55   1347.00- 1370.87  conf 0.51  Jinaṃ vandatha gotamaṃ
+    group  56   1370.87- 1393.93  conf 0.66  Yena uttarakurū rammā
+    group  57   1393.93- 1417.18  conf 0.76  Na te bījaṃ pavapanti
+    group  58   1417.18- 1441.84  conf 0.77  Akaṇaṃ athusaṃ
+    group  59   1441.84- 1464.47  conf 0.52  Gāviṃ ekakhuraṃ katvā
+    group  60   1464.47- 1484.47  conf 0.41  Itthivāhanaṃ katvā
+    group  61   1484.47- 1505.50  conf 0.30  Kumārivāhanaṃ katvā
+    group  62   1505.50- 1533.70  conf 0.68  Te yāne abhirūhitvā
+    group  63   1533.70- 1556.63  conf 0.59  Pāsādā sivikā ceva
+    group  64   1556.63- 1573.13  conf 0.67  Āṭānāṭā
+    group  65   1573.13- 1597.58  conf 0.55  Uttarena kapivanto
+    group  66   1597.58- 1621.82  conf 0.64  Kuverassa kho pana mārisa mahārājassa
+    group  67   1621.82- 1644.39  conf 0.79  Paccesanto pakāsenti
+    group  68   1644.39- 1674.43  conf 0.62  Rahado pi tattha
+    group  69   1674.43- 1694.37  conf 0.58  Tattha niccaphalā rukkhā
+    group  70   1694.37- 1716.94  conf 0.58  Jīvajīvakasaddettha
+    group  71   1716.94- 1738.84  conf 0.62  Sukasālikasaddettha
+    group  72   1738.84- 1761.73  conf 0.53  Ito
+    group  73   1761.73- 1782.83  conf 0.45  Yakkhānaṃ ādhipati
+    group  74   1782.83- 1805.10  conf 0.44  Puttā pi tassa bahavo
+    group  75   1805.10- 1841.68  conf 0.55  Te cāpi
+    group  76   1841.68- 1863.28  conf 0.55  Kusalena samekkhasi
+    group  77   1863.28- 1887.82  conf 0.55  Jinaṃ vandatha gotamaṃ
+    group  78   1887.82- 1896.22  conf 0.43  Ayaṃ kho sā mārisa
+    group  79   1896.22- 1916.97  conf 0.45  Bhikkhūnaṃ
+    group  80   1916.97- 1945.21  conf 0.55  Yassa kassaci mārisa
+    group  81   1945.21- 1973.09  conf 0.37  Tañce
+LOW group  82   1973.09- 1999.11  conf 0.29  Gandhabbo vā
+    group  83   1999.11- 2024.17  conf 0.42  Kumbhaṇḍo vā
+    group  84   2024.17- 2046.22  conf 0.38  Nāgo vā
+LOW group  85   2046.22- 2055.99  conf 0.16  Paduṭṭhacitto
+    group  86   2055.99- 2072.92  conf 0.36  Gacchantaṃ vā anugaccheyya
+    group  87   2072.92- 2091.07  conf 0.58  Na me so mārisa
+    group  88   2091.07- 2108.04  conf 0.51  Na me so mārisa
+    group  89   2108.04- 2121.47  conf 0.61  Na me so mārisa
+    group  90   2121.47- 2134.42  conf 0.58  Apissu naṃ mārisa
+    group  91   2134.42- 2149.03  conf 0.67  Apissu naṃ mārisa
+    group  92   2149.03- 2162.04  conf 0.56  Apissu naṃ mārisa
+    group  93   2162.04- 2174.97  conf 0.47  Apissu naṃ mārisa
+    group  94   2174.97- 2185.03  conf 0.44  Santi hi mārisa
+    group  95   2185.03- 2209.21  conf 0.46  Te neva mahārājānaṃ
+    group  96   2209.21- 2222.80  conf 0.45  Te kho te mārisa
+    group  97   2222.80- 2231.82  conf 0.46  Seyyathāpi mārisa
+LOW group  98   2231.82- 2256.84  conf 0.28  Te neva rañño māgadhassa
+    group  99   2256.84- 2271.95  conf 0.52  Te kho te mārisa
+    group 100   2271.95- 2282.68  conf 0.41  Evameva kho mārisa
+    group 101   2282.68- 2306.69  conf 0.31  Te neva mahārājānaṃ
+    group 102   2306.69- 2321.60  conf 0.51  Te kho te mārisa
+    group 103   2321.60- 2350.32  conf 0.37  Yo hi koci mārisa
+LOW group 104   2350.32- 2374.24  conf 0.23  Gandhabbo vā
+    group 105   2374.24- 2398.01  conf 0.61  Kumbhaṇḍo vā
+    group 106   2398.01- 2420.29  conf 0.57  Nāgo vā
+    group 107   2420.29- 2433.86  conf 0.40  Paduṭṭhacitto
+    group 108   2433.86- 2456.23  conf 0.56  Gacchantaṃ vā anugaccheyya
+    group 109   2456.23- 2479.51  conf 0.61  Imesaṃ yakkhānaṃ
+    group 110   2479.51- 2517.23  conf 0.37  Ayaṃ yakkho gaṇhāti
+    group 111   2517.23- 2531.94  conf 0.59  Katamesaṃ yakkhānaṃ
+    group 112   2531.94- 2560.16  conf 0.48  Indo somo varuṇo ca
+    group 113   2560.16- 2586.56  conf 0.36  Panādo opamañño ca
+    group 114   2586.56- 2612.00  conf 0.56  Sātāgiro hemavato
+    group 115   2612.00- 2653.53  conf 0.63  Gopālo supparodho ca
+    group 116   2653.53- 2675.72  conf 0.63  Imesaṃ yakkhānaṃ
+    group 117   2675.72- 2716.07  conf 0.34  Ayaṃ yakkho gaṇhāti
+    group 118   2716.07- 2724.11  conf 0.71  Ayaṃ kho sā mārisa
+    group 119   2724.11- 2744.55  conf 0.50  Bhikkhūnaṃ
+    group 120   2744.55- 2758.57  conf 0.52  Handa ca dāni mayaṃ mārisa
+    group 121   2758.57- 2769.10  conf 0.33  Yassa dāni tumhe mahārājāno
+    group 122   2769.10- 2791.60  conf 0.57  Atha kho bhikkhave
+    group 123   2791.60- 2811.47  conf 0.65  Te’pi kho bhikkhave yakkhā
+    group 124   2811.47- 2831.40  conf 0.51  Appekacce
+    group 125   2831.40- 2843.75  conf 0.44  Appekacce
+LOW group 126   2843.75- 2866.55  conf 0.27  Appekacce
+LOW group 127   2866.55- 2892.96  conf 0.23  Uggaṇhātha bhikkhave
+    group 128   2892.96- 2901.37  conf 0.48  Atthasaṃhitā bhikkhave
+    group 129   2901.37- 2920.50  conf 0.59  Bhikkhūnaṃ
+    group 130   2920.50- 2932.93  conf 0.62  Idamavoca bhagavā

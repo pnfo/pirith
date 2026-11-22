@@ -1,23 +1,27 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import legacy from '@vitejs/plugin-legacy'
 import path from 'path'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [
-    vue(),
-    legacy({
-      // Ensure compatibility down to Android 7 (API 24)
-      targets: ['defaults', 'not IE 11', 'chrome 51', 'android >= 7']
-    })
-  ],
+/**
+ * Two targets from one codebase:
+ *   web (default)  history routing under /pirith/, every page prerendered by dev/prerender.js -> dist/
+ *   app            hash routing with relative paths, for the Android/iOS WebView -> dist-app/
+ * PIRITH_BASE overrides the web base path (e.g. "/" to host on its own domain).
+ */
+const target = process.env.PIRITH_TARGET === 'app' ? 'app' : 'web'
+
+export default defineConfig(({ isSsrBuild }) => ({
+  plugins: [vue()],
   resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+    alias: { '@': path.resolve(import.meta.dirname, './src') },
   },
-  // This ensures assets are loaded like "./assets/file.js" 
-  // instead of "/assets/file.js" needed for android app
-  base: './',
-})
+  base: target === 'app' ? './' : (process.env.PIRITH_BASE || '/pirith/'),
+  define: {
+    __APP__: JSON.stringify(target === 'app'),
+  },
+  build: {
+    outDir: isSsrBuild ? 'dist-ssr' : (target === 'app' ? 'dist-app' : 'dist'),
+    copyPublicDir: !isSsrBuild,
+    emptyOutDir: true,
+  },
+}))

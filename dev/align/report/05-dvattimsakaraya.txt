@@ -1,0 +1,7 @@
+05-dvattimsakaraya (ariyadhamma)  mean confidence 0.73  low groups 0/6
+    group   1      0.69-   13.76  conf 0.83  Atthi
+    group   2     14.14-   24.65  conf 0.75  Maṃsaṃ
+    group   3     24.93-   35.31  conf 0.65  Hadayaṃ
+    group   4     35.82-   44.59  conf 0.75  Antaṃ
+    group   5     44.97-   55.29  conf 0.83  Pittaṃ
+    group   6     55.67-   67.69  conf 0.55  Assu

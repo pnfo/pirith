@@ -1,0 +1,32 @@
+25-alavaka-suttam (ariyadhamma)  FULL alignment (labels made from the audio)
+audio 580s, text ends at 577s, words placed 100%, mean confidence 0.52, low groups 2/30
+    group   1      0.00-    3.98  conf 0.39  Āḷavaka suttaṃ
+    group   2      3.98-   12.05  conf 0.63  Evaṃ sutaṃ
+    group   3     12.05-   20.47  conf 0.53  Āḷaviyaṃ viharati
+    group   4     20.47-   38.69  conf 0.42  Atha kho āḷavako yakkho
+    group   5     38.69-   57.88  conf 0.48  Nikkhama samaṇāti
+    group   6     57.88-   68.39  conf 0.33  Dutiyampi kho āḷavako yakkho
+LOW group   7     68.39-   87.04  conf 0.29  Nikkhama samaṇāti
+LOW group   8     87.04-   97.57  conf 0.16  Tatiyampi kho āḷavako yakkho bhagavantaṃ etadavoca
+    group   9     97.57-  115.72  conf 0.40  Nikkhama samaṇāti
+    group  10    115.72-  126.31  conf 0.32  Catutthampi kho āḷavako yakkho bhagavantaṃ etadavo
+    group  11    126.31-  141.94  conf 0.63  Nikkhama samaṇāti
+    group  12    141.94-  170.76  conf 0.58  Pañhaṃ taṃ samaṇa
+    group  13    170.76-  175.84  conf 0.66  Na khvāhaṃ taṃ āvuso passāmi
+    group  14    175.84-  224.40  conf 0.52  Api ca tvaṃ āvuso
+    group  15    224.40-  254.96  conf 0.61  Kiṃ sūdha vittaṃ
+    group  16    254.96-  285.94  conf 0.56  Saddhīdha vittaṃ purisassa seṭṭhaṃ
+    group  17    285.94-  305.89  conf 0.53  Kathaṃ su tarati oghaṃ
+    group  18    305.89-  326.00  conf 0.52  Saddhāya tarati oghaṃ
+    group  19    326.00-  355.75  conf 0.46  Kathaṃ su labhate paññaṃ
+    group  20    355.75-  367.69  conf 0.57  Saddahāno arahataṃ
+    group  21    367.69-  393.65  conf 0.47  Patirūpakārī dhuravā
+    group  22    393.65-  422.51  conf 0.58  Yassete caturo dhammā
+    group  23    422.51-  429.56  conf 0.58  Iṅgha aññepi pucchassu
+    group  24    429.56-  456.56  conf 0.81  Kathaṃ nu dāni puccheyyaṃ
+    group  25    456.56-  476.37  conf 0.58  Atthāya vata me buddho vāsāyāḷavimāgamā
+    group  26    476.37-  496.78  conf 0.75  So ahaṃ vicarissāmi
+    group  27    496.78-  513.12  conf 0.49  Bhagavantaṃ
+    group  28    513.12-  531.47  conf 0.47  Seyyathāpi
+    group  29    531.47-  553.50  conf 0.60  Andhakāre
+    group  30    553.50-  578.36  conf 0.58  Esā’haṃ

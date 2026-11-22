@@ -1,0 +1,12 @@
+13-mittanisamsa (ariyadhamma)  mean confidence 0.72  low groups 0/11
+    group   1      0.17-    2.78  conf 0.68  Mittānisaṃsa suttaṃ
+    group   2      2.78-   23.39  conf 0.68  Pahūtabhakkho
+    group   3     23.39-   43.56  conf 0.72  Yaṃ yaṃ janapadaṃ yātī
+    group   4     43.56-   64.77  conf 0.77  Nāssa
+    group   5     64.77-   85.31  conf 0.76  Akkuddho
+    group   6     85.31-  105.29  conf 0.77  Sakkatvā
+    group   7    105.29-  125.30  conf 0.70  Pūjako
+    group   8    125.30-  144.43  conf 0.66  Aggi yathā
+    group   9    144.43-  165.31  conf 0.67  Gāvo
+    group  10    165.31-  184.61  conf 0.75  Darito
+    group  11    184.61-  205.19  conf 0.78  Viruḷhamūla santānāṃ

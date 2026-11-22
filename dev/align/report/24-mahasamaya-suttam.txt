@@ -1,0 +1,179 @@
+24-mahasamaya-suttam (ariyadhamma)  mean confidence 0.69  low groups 0/178
+    group   1      0.00-    2.86  conf 0.66  Mahāsamayasuttaṃ
+    group   2      2.86-   11.94  conf 0.55  Evaṃ me sutaṃ
+    group   3     11.94-   24.59  conf 0.72  Sakkesu
+    group   4     24.59-   34.98  conf 0.68  Pañcamattehi bhikkhusatehi
+    group   5     34.98-   52.81  conf 0.61  Dasahi ca lokadhātūhi
+    group   6     52.81-   64.41  conf 0.69  Atha kho
+    group   7     64.41-   88.94  conf 0.70  Ayaṃ kho bhagavā
+    group   8     88.94-  107.26  conf 0.63  Dasahi ca lokadhātūhi devatā
+    group   9    107.26-  116.34  conf 0.76  Yannūna
+    group  10    116.34-  128.93  conf 0.69  Upasaṅkamitvā
+    group  11    128.93-  137.95  conf 0.74  Atha kho
+    group  12    137.95-  149.78  conf 0.58  Samiñjitaṃ vā bāhaṃ
+    group  13    149.78-  163.59  conf 0.67  Evameva
+    group  14    163.59-  176.84  conf 0.69  Atha kho
+    group  15    176.84-  191.80  conf 0.75  Ekamantaṃ ṭhitā kho
+    group  16    191.80-  201.76  conf 0.81  Mahāsamayo
+    group  17    201.76-  214.58  conf 0.74  Āgatamha
+    group  18    214.58-  225.14  conf 0.72  Atha kho
+    group  19    225.14-  236.03  conf 0.64  Tatra
+    group  20    236.03-  247.80  conf 0.77  Sārathīva
+    group  21    247.80-  257.37  conf 0.78  Atha kho
+    group  22    257.37-  268.54  conf 0.60  Chetvā
+    group  23    268.54-  280.75  conf 0.83  Te
+    group  24    280.75-  291.70  conf 0.60  Atha kho
+    group  25    291.70-  305.12  conf 0.75  Ye keci
+    group  26    305.12-  318.37  conf 0.75  Pahāya
+    group  27    318.37-  324.70  conf 0.53  Atha kho
+    group  28    324.70-  341.70  conf 0.58  Yebhuyyena
+    group  29    341.70-  352.31  conf 0.70  Ye pi te
+    group  30    352.31-  369.53  conf 0.67  Tesampi bhagavantānaṃ
+    group  31    369.53-  380.91  conf 0.70  Ye pi te
+    group  32    380.91-  398.30  conf 0.69  Tesampi bhagavantānaṃ
+    group  33    398.30-  407.15  conf 0.59  Ācikkhissāmi
+    group  34    407.15-  415.57  conf 0.63  Kittayissāmi
+    group  35    415.57-  424.04  conf 0.63  Desissāmi
+    group  36    424.04-  432.45  conf 0.65  Taṃ suṇātha
+    group  37    432.45-  446.26  conf 0.55  Evambhante”ti kho
+    group  38    446.26-  455.61  conf 0.72  Silokamanukassāmi
+    group  39    455.61-  465.40  conf 0.85  Ye
+    group  40    465.40-  475.14  conf 0.69  Puthū sīhā’va sallīnā
+    group  41    475.14-  484.60  conf 0.72  Odātamanasā
+    group  42    484.60-  494.78  conf 0.60  Bhiyyo pañcasate
+    group  43    494.78-  505.72  conf 0.70  Tato
+    group  44    505.72-  515.62  conf 0.66  Devakāyā
+    group  45    515.62-  525.52  conf 0.51  Te ca
+    group  46    525.52-  534.93  conf 0.78  Tesaṃ
+    group  47    534.93-  544.94  conf 0.56  Appeke
+    group  48    544.94-  554.51  conf 0.72  Sataṃ eke sahassānaṃ
+    group  49    554.51-  564.91  conf 0.73  Appeke’nantamaddakkhuṃ
+    group  50    564.69-  574.37  conf 0.63  Tañca sabbaṃ
+    group  51    574.37-  584.66  conf 0.75  Tato
+    group  52    584.66-  594.61  conf 0.62  Devakāyā
+    group  53    594.61-  603.85  conf 0.53  Ye
+    group  54    603.85-  612.93  conf 0.55  Sattasahassā
+    group  55    612.93-  622.77  conf 0.70  Iddhimanto
+    group  56    622.77-  632.57  conf 0.68  Modamānā
+    group  57    632.57-  642.14  conf 0.49  Cha sahassā
+    group  58    642.14-  652.20  conf 0.79  Iddhimanto
+    group  59    652.20-  661.66  conf 0.67  Modamānā
+    group  60    661.66-  672.17  conf 0.73  Sātāgirā
+    group  61    672.17-  682.07  conf 0.71  Iddhimanto
+    group  62    682.07-  691.92  conf 0.70  Modamānā
+    group  63    691.92-  702.48  conf 0.65  Iccete
+    group  64    702.48-  712.27  conf 0.77  Iddhimanto
+    group  65    712.27-  722.45  conf 0.69  Modamānā
+    group  66    722.45-  732.84  conf 0.72  Vessāmittā
+    group  67    732.84-  742.80  conf 0.72  Iddhimanto
+    group  68    742.80-  752.64  conf 0.68  Modamānā
+    group  69    752.64-  762.27  conf 0.68  Kumbhīro
+    group  70    762.27-  772.23  conf 0.62  Bhiyyo
+    group  71    772.23-  781.80  conf 0.66  Kumbhīro
+    group  72    781.80-  791.86  conf 0.77  Purimañca
+    group  73    791.86-  801.82  conf 0.75  Gandhabbānaṃ
+    group  74    801.82-  810.51  conf 0.60  Puttāpi
+    group  75    810.51-  820.14  conf 0.74  Iddhimanto
+    group  76    820.14-  829.43  conf 0.69  Modamānā
+    group  77    829.43-  839.00  conf 0.73  Dakkhiṇañca
+    group  78    839.00-  848.79  conf 0.83  Kumbhāṇḍānaṃ
+    group  79    848.79-  857.54  conf 0.66  Puttāpi
+    group  80    857.54-  867.28  conf 0.72  Iddhimanto
+    group  81    867.28-  877.07  conf 0.71  Modamānā
+    group  82    877.07-  887.08  conf 0.76  Pacchimañca
+    group  83    887.08-  896.59  conf 0.77  Nāgānaṃ
+    group  84    896.59-  905.83  conf 0.64  Puttāpi
+    group  85    905.83-  915.35  conf 0.81  Iddhimanto
+    group  86    915.35-  924.76  conf 0.68  Modamānā
+    group  87    924.76-  934.22  conf 0.76  Uttarañca
+    group  88    934.22-  943.24  conf 0.77  Yakkhānaṃ
+    group  89    943.24-  952.31  conf 0.61  Puttāpi
+    group  90    952.31-  961.88  conf 0.79  Iddhimanto
+    group  91    961.88-  971.35  conf 0.72  Modamānā
+    group  92    971.35-  980.37  conf 0.62  Purimaṃ disaṃ
+    group  93    980.37-  989.39  conf 0.58  Pacchimena
+    group  94    989.39-  998.90  conf 0.82  Cattāro te mahārājā
+    group  95    998.90- 1008.31  conf 0.59  Daddallamānā
+    group  96   1008.31- 1018.27  conf 0.81  Tesaṃ
+    group  97   1018.27- 1027.23  conf 0.70  Māyā
+    group  98   1027.23- 1036.64  conf 0.52  Candano
+    group  99   1036.64- 1046.54  conf 0.66  Panādo
+    group 100   1046.54- 1056.05  conf 0.69  Cittaseno ca
+    group 101   1056.05- 1065.46  conf 0.63  Āgū
+    group 102   1065.46- 1075.25  conf 0.62  Ete ca
+    group 103   1075.25- 1084.55  conf 0.71  Modamānā
+    group 104   1084.55- 1094.17  conf 0.71  Athāgū
+    group 105   1094.17- 1103.25  conf 0.80  Kambalassatarā
+    group 106   1103.25- 1112.22  conf 0.75  Yāmunā
+    group 107   1112.22- 1121.35  conf 0.61  Erāvaṇo mahānāgo
+    group 108   1121.35- 1134.27  conf 0.71  Ye nāgarāje
+    group 109   1134.27- 1148.30  conf 0.71  Vehāsayā
+    group 110   1148.30- 1161.67  conf 0.61  Abhayantadā (abhayaṃ+tadā)
+    group 111   1161.67- 1175.20  conf 0.80  Saṇhāhi vācāhi
+    group 112   1175.20- 1183.61  conf 0.75  Jitā
+    group 113   1183.61- 1192.69  conf 0.69  Bhātaro vāsavassete
+    group 114   1192.69- 1201.49  conf 0.73  Kālakañjā
+    group 115   1201.49- 1211.06  conf 0.52  Vepacitti
+    group 116   1211.06- 1220.19  conf 0.75  Satañca baliputtānaṃ
+    group 117   1220.19- 1229.10  conf 0.76  Sannayhitvā
+    group 118   1229.10- 1238.01  conf 0.66  Samayo dāni
+    group 119   1238.01- 1248.24  conf 0.45  Āpo ca devā
+    group 120   1248.24- 1257.16  conf 0.68  Varuṇā
+    group 121   1257.16- 1265.79  conf 0.81  Mettā karuṇā kāyikā
+    group 122   1265.79- 1274.98  conf 0.81  Dasete dasadhā kāyā
+    group 123   1274.98- 1283.83  conf 0.69  Iddhimanto
+    group 124   1283.83- 1292.74  conf 0.71  Modamānā
+    group 125   1292.74- 1301.55  conf 0.48  Veṇhū ca devā
+    group 126   1301.55- 1310.07  conf 0.73  Candassūpanisā devā
+    group 127   1310.07- 1318.65  conf 0.70  Sūriyassūpanisā devā
+    group 128   1318.65- 1327.12  conf 0.75  Nakkhattāni purakkhatvā
+    group 129   1327.12- 1335.87  conf 0.73  Vasūnaṃ
+    group 130   1335.87- 1345.00  conf 0.71  Dasete dasadhā kāyā
+    group 131   1345.00- 1353.53  conf 0.70  Iddhimanto
+    group 132   1353.53- 1362.27  conf 0.68  Modamānā
+    group 133   1362.27- 1369.81  conf 0.62  Athāgū
+    group 134   1369.81- 1378.28  conf 0.59  Ariṭṭhakā ca
+    group 135   1378.28- 1386.20  conf 0.47  Varuṇā
+    group 136   1386.20- 1394.23  conf 0.70  Sūleyyarucirā
+    group 137   1394.23- 1402.92  conf 0.82  Dasete dasadhā kāyā
+    group 138   1402.92- 1411.50  conf 0.80  Iddhimanto
+    group 139   1411.50- 1419.92  conf 0.67  Modamānā
+    group 140   1419.92- 1428.61  conf 0.93  Samānā
+    group 141   1428.61- 1436.91  conf 0.68  Khiḍḍāpadosikā
+    group 142   1436.91- 1444.67  conf 0.61  Athāgū
+    group 143   1444.67- 1452.92  conf 0.85  Pāragā
+    group 144   1452.92- 1461.61  conf 0.78  Dasete dasadhā kāyā
+    group 145   1461.61- 1470.19  conf 0.68  Iddhimanto
+    group 146   1470.19- 1478.55  conf 0.69  Modamānā
+    group 147   1478.55- 1486.09  conf 0.64  Sukkā
+    group 148   1486.09- 1494.78  conf 0.69  Odātagayhā
+    group 149   1494.78- 1502.87  conf 0.68  Sadāmattā
+    group 150   1502.87- 1510.73  conf 0.66  Thanayaṃ
+    group 151   1510.73- 1519.31  conf 0.80  Dasete dasadhā kāyā
+    group 152   1519.31- 1527.67  conf 0.62  Iddhimanto
+    group 153   1527.67- 1535.98  conf 0.69  Modamānā
+    group 154   1535.98- 1544.29  conf 0.65  Khemiyā
+    group 155   1544.29- 1552.87  conf 0.65  Lambitakā
+    group 156   1552.87- 1560.68  conf 0.69  Nimmānaratino
+    group 157   1560.68- 1569.42  conf 0.75  Dasete dasadhā kāyā
+    group 158   1569.42- 1577.78  conf 0.68  Iddhimanto
+    group 159   1577.78- 1586.25  conf 0.70  Modamānā
+    group 160   1586.25- 1595.39  conf 0.78  Saṭṭhete devanikāyā
+    group 161   1595.39- 1604.08  conf 0.67  Nāmanvayena
+    group 162   1604.08- 1611.83  conf 0.64  Pavuṭṭhajātiṃ
+    group 163   1611.83- 1620.36  conf 0.64  Dakkhema
+    group 164   1620.36- 1629.16  conf 0.56  Subrahmā
+    group 165   1629.16- 1637.96  conf 0.62  Sanaṃkumāro
+    group 166   1637.96- 1646.60  conf 0.73  Sahassabrahmalokānaṃ
+    group 167   1646.60- 1655.18  conf 0.75  Upapanno
+    group 168   1655.18- 1663.10  conf 0.57  Dasettha issarā
+    group 169   1663.10- 1671.73  conf 0.71  Tesañca majjhato
+    group 170   1671.73- 1680.97  conf 0.60  Te ca sabbe abhikkante
+    group 171   1680.97- 1689.56  conf 0.70  Mārasenā
+    group 172   1689.56- 1697.53  conf 0.48  Etha
+    group 173   1697.53- 1706.50  conf 0.61  Samantā
+    group 174   1706.50- 1723.11  conf 0.71  Iti
+    group 175   1723.11- 1741.10  conf 0.68  Yathā
+    group 176   1741.10- 1768.10  conf 0.70  Tañca sabbaṃ
+    group 177   1768.10- 1786.64  conf 0.57  Te ca
+    group 178   1786.64- 1809.85  conf 0.79  Sabbe

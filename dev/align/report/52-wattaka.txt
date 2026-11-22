@@ -1,0 +1,9 @@
+52-wattaka (ariyadhamma)  mean confidence 0.57  low groups 1/8
+LOW group   1      0.00-    2.04  conf 0.25  Vaṭṭa sutta
+    group   2      2.04-   20.13  conf 0.61  Pūrentaṃ bodhi sambhāre
+    group   3     20.13-   38.37  conf 0.62  Therassa sāriputtassa
+    group   4     38.37-   55.44  conf 0.63  Atthi loke sīlaguṇo
+    group   5     55.44-   72.59  conf 0.62  Āvajjitvā dhammabalaṃ
+    group   6     72.59-   90.37  conf 0.62  Santipakkhā apatanā
+    group   7     90.37-  109.09  conf 0.63  Sahasacce kate mayhaṃ
+    group   8    109.09-  121.62  conf 0.58  Saccena me samo natthi

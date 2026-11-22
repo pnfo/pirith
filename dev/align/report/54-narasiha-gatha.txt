@@ -1,0 +1,10 @@
+54-narasiha-gatha (ariyadhamma)  mean confidence 0.52  low groups 0/9
+    group   1      0.00-   22.69  conf 0.47  Cakka varaṃkita ratta supādo
+    group   2     22.69-   44.83  conf 0.58  Sakya kumāravaro sukhumālo
+    group   3     44.83-   66.71  conf 0.53  Puṇṇa sasaṃka nibho mukha vaṇṇo
+    group   4     66.71-   89.30  conf 0.56  Khattiya sambhava agga kulīno
+    group   5     89.30-  111.44  conf 0.48  Āyata yutta susanṭhita nāso
+    group   6    111.44-  133.94  conf 0.47  Vaṭṭa sumaṭṭa susaṇṭhita gīvo
+    group   7    133.94-  156.17  conf 0.44  Añjana vaṇṇa sunīla sukeso
+    group   8    156.17-  178.31  conf 0.54  Siniddha sugambhira manju sughoso
+    group   9    178.31-  201.82  conf 0.58  Gacchati nīla pathe viya cando

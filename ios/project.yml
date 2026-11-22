@@ -1,0 +1,53 @@
+# XcodeGen spec of the iOS app "Pirith" (bundle id lk.pitaka.pirith, App Store id 1503645003): the pirith web app
+# offline in a WKWebView, audio played natively (Pirith/Player.swift). ios/build-ios.sh copies the app build of the
+# site into Pirith/www and generates Pirith.xcodeproj from this file.
+name: Pirith
+options:
+  deploymentTarget: { iOS: "15.0" }
+  createIntermediateGroups: true
+settings:
+  base:
+    PRODUCT_BUNDLE_IDENTIFIER: lk.pitaka.pirith # the existing app's
+    PRODUCT_NAME: Pirith
+    DEVELOPMENT_TEAM: ${TEAM_ID}
+    CODE_SIGN_STYLE: Automatic
+    MARKETING_VERSION: ${VERSION}
+    CURRENT_PROJECT_VERSION: ${BUILD}
+    SWIFT_VERSION: "5.0"
+    GENERATE_INFOPLIST_FILE: NO
+targets:
+  Pirith-iOS:
+    type: application
+    platform: iOS
+    sources:
+      - path: Pirith
+        excludes: [www]
+      - path: Pirith/www
+        type: folder
+        buildPhase: resources
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: "1,2"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SUPPORTS_MACCATALYST: NO
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: YES
+        SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: NO
+    info:
+      path: build/Info.plist
+      properties:
+        CFBundleName: Pirith
+        CFBundleDisplayName: පිරිත්
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        ITSAppUsesNonExemptEncryption: false
+        LSRequiresIPhoneOS: true
+        UIBackgroundModes: [audio] # the chanting goes on with the screen locked
+        UILaunchScreen: { UIColorName: LaunchBackground }
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations:
+            UIWindowSceneSessionRoleApplication:
+              - UISceneConfigurationName: Default
+                UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        UISupportedInterfaceOrientations~ipad: [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]

@@ -1,0 +1,103 @@
+23-dhammacakkappavattana (ariyadhamma)  mean confidence 0.67  low groups 0/102
+    group   1      0.00-    3.40  conf 0.66  Dhammacakkapavattana suttaṃ
+    group   2      3.40-   13.17  conf 0.56  Evaṃ
+    group   3     13.17-   21.87  conf 0.76  Bārāṇasiyaṃ
+    group   4     21.87-   32.48  conf 0.73  Tatra kho
+    group   5     32.48-   43.08  conf 0.61  Dve me bhikkhave antā
+    group   6     43.08-   62.15  conf 0.81  Yocāyaṃ
+    group   7     62.15-   75.62  conf 0.65  Yocāyaṃ
+    group   8     75.62-   92.90  conf 0.80  Ete te bhikkhave ubho ante
+    group   9     92.90-  111.07  conf 0.68  Cakkhukaraṇi
+    group  10    111.07-  124.42  conf 0.67  Katamā ca sā bhikkhave majjhimā paṭipadā
+    group  11    124.42-  142.24  conf 0.64  Cakkhukaraṇi
+    group  12    142.24-  152.37  conf 0.65  Ayaṃ eva ariyo aṭṭhaṃgiko maggo
+    group  13    152.37-  165.54  conf 0.86  Sammādiṭṭhi
+    group  14    165.54-  178.88  conf 0.88  Sammāājīvo
+    group  15    178.88-  192.05  conf 0.73  Ayaṃ kho sā bhikkhave majjhimā paṭipadā
+    group  16    192.05-  211.12  conf 0.68  Cakkhukaraṇi
+    group  17    211.12-  220.60  conf 0.59  Idaṃ kho pana
+    group  18    220.60-  232.87  conf 0.71  Jātipi dukkhā
+    group  19    232.87-  244.43  conf 0.72  Appiyehi sampayogo dukkho
+    group  20    244.43-  258.67  conf 0.70  Yampicchaṃ na labhati
+    group  21    258.67-  268.39  conf 0.59  Idaṃ kho pana
+    group  22    268.39-  284.71  conf 0.74  Yāyaṃ taṇhā
+    group  23    284.71-  292.76  conf 0.51  Kāma taṇhā
+    group  24    292.76-  301.64  conf 0.60  Idaṃ kho pana
+    group  25    301.64-  310.81  conf 0.53  Yo tassāya eva taṇhāya
+    group  26    310.81-  318.80  conf 0.72  Cāgo
+    group  27    318.80-  331.13  conf 0.60  Idaṃ kho pana
+    group  28    331.13-  340.79  conf 0.64  Ayameva ariyo aṭṭhaṃgiko maggo
+    group  29    340.79-  353.24  conf 0.77  Sammādiṭṭhi
+    group  30    353.24-  365.81  conf 0.83  Sammāājīvo
+    group  31    365.81-  379.46  conf 0.65  Idaṃ dukkhaṃ ariyasaccanti
+    group  32    379.46-  398.53  conf 0.71  Cakkhuṃ udapādi
+    group  33    398.53-  417.42  conf 0.66  Taṃ kho pana idaṃ dukkhaṃ ariyasaccaṃ
+    group  34    417.42-  436.78  conf 0.69  Cakkhuṃ udapādi
+    group  35    436.78-  454.60  conf 0.67  Taṃ kho pana idaṃ dukkhaṃ ariyasaccaṃ
+    group  36    454.60-  473.37  conf 0.70  Cakkhuṃ udapādi
+    group  37    473.37-  488.15  conf 0.69  Idaṃ dukkha samudayaṃ ariyasaccanti
+    group  38    488.15-  506.62  conf 0.69  Cakkhuṃ udapādi
+    group  39    506.62-  526.52  conf 0.63  Taṃ kho pana idaṃ dukkhaṃ samudayaṃ ariyasaccaṃ
+    group  40    526.52-  545.18  conf 0.62  Cakkhuṃ udapādi
+    group  41    545.18-  563.23  conf 0.65  Taṃ kho pana idaṃ dukkhaṃ samudayaṃ ariyasaccaṃ
+    group  42    563.23-  581.88  conf 0.67  Cakkhuṃ udapādi
+    group  43    581.88-  596.36  conf 0.70  Idaṃ dukkha nirodho ariyasaccanti
+    group  44    596.36-  615.49  conf 0.64  Cakkhuṃ udapādi
+    group  45    615.49-  635.27  conf 0.64  Taṃ kho pana idaṃ dukkha nirodho ariyasaccaṃ
+    group  46    635.27-  654.22  conf 0.72  Cakkhuṃ udapādi
+    group  47    654.22-  673.53  conf 0.62  Taṃ kho pana idaṃ dukkha nirodho ariyasaccaṃ
+    group  48    673.53-  692.54  conf 0.71  Cakkhuṃ udapādi
+    group  49    692.54-  709.94  conf 0.76  Idaṃ dukkha nirodha gāmini paṭipadā ariyasaccanti
+    group  50    709.94-  728.65  conf 0.66  Cakkhuṃ udapādi
+    group  51    728.65-  750.16  conf 0.70  Taṃ kho pana idaṃ dukkha nirodha gāmini paṭipadā a
+    group  52    750.16-  768.51  conf 0.70  Cakkhuṃ udapādi
+    group  53    768.51-  789.67  conf 0.66  Taṃ kho pana idaṃ dukkha nirodho ariyasaccaṃ
+    group  54    789.67-  808.08  conf 0.64  Cakkhuṃ udapādi
+    group  55    808.08-  819.58  conf 0.64  Yāvakīvañca me bhikkhave
+    group  56    819.58-  834.72  conf 0.65  Evaṃ
+    group  57    834.72-  847.17  conf 0.44  Neva tāvāhaṃ bhikkhave
+    group  58    847.17-  857.00  conf 0.67  Sassamaṇabrāhmaṇiyā
+    group  59    857.00-  868.14  conf 0.71  Anuttaraṃ sammāsambodhiṃ abhisambuddho paccaññāsiṃ
+    group  60    868.14-  878.45  conf 0.68  Yatoca kho me bhikkhave
+    group  61    878.45-  893.41  conf 0.68  Evaṃ
+    group  62    893.41-  904.67  conf 0.53  Athāhaṃ bhikkhave
+    group  63    904.67-  914.80  conf 0.66  Sassamaṇabrāhmaṇiyā
+    group  64    914.80-  926.78  conf 0.69  Anuttaraṃ sammāsambodhiṃ abhisambuddho paccaññāsiṃ
+    group  65    926.78-  947.64  conf 0.76  Ñāṇañca pana me dassanaṃ
+    group  66    947.64-  963.37  conf 0.65  Idamavoca bhagavā
+    group  67    963.37-  975.94  conf 0.69  Imasmiñca pana veyyākaraṇasmiṃ
+    group  68    975.94-  983.75  conf 0.60  Virajaṃ
+    group  69    983.75-  992.98  conf 0.60  Yaṃkiñci
+    group  70    992.98- 1006.57  conf 0.71  Pavattite ca pana bhagavatā
+    group  71   1006.57- 1015.86  conf 0.71  Etaṃ
+    group  72   1015.86- 1024.62  conf 0.58  Anuttaraṃ dhamma cakkaṃ
+    group  73   1024.62- 1042.32  conf 0.48  Samaṇena vā
+    group  74   1042.32- 1058.35  conf 0.70  Bhummānaṃ devānaṃ
+    group  75   1058.35- 1074.86  conf 0.67  Cātummahārājikānaṃ devānaṃ
+    group  76   1074.86- 1089.87  conf 0.66  Tāvatiṃsānaṃ devānaṃ
+    group  77   1089.87- 1103.64  conf 0.72  Yāmānaṃ devānaṃ
+    group  78   1103.64- 1118.06  conf 0.75  Tusitānaṃ devānaṃ
+    group  79   1118.06- 1135.58  conf 0.71  Nimmāṇaratinaṃ devānaṃ
+    group  80   1135.58- 1152.68  conf 0.68  Paranimmita vasavattinodevānaṃ
+    group  81   1152.68- 1168.83  conf 0.67  Brahmapārisajjānaṃ devānaṃ
+    group  82   1168.83- 1184.68  conf 0.72  Brahmapurohitānaṃ devānaṃ
+    group  83   1184.68- 1199.40  conf 0.74  Mahābrahmāṇaṃ devānaṃ
+    group  84   1199.40- 1214.89  conf 0.66  Parittābhānaṃ devānaṃ
+    group  85   1214.89- 1230.26  conf 0.66  Appamāṇabhānaṃ devānaṃ
+    group  86   1230.26- 1244.86  conf 0.66  Ābhassarānaṃ devānaṃ
+    group  87   1244.86- 1259.76  conf 0.65  Parittasubhānaṃ devānaṃ
+    group  88   1259.76- 1275.07  conf 0.66  Appamāṇasubhānaṃ devānaṃ
+    group  89   1275.07- 1289.55  conf 0.69  Subhakiṇhakānaṃ devānaṃ
+    group  90   1289.55- 1304.39  conf 0.69  Vehapphalānaṃ devānaṃ
+    group  91   1304.39- 1317.68  conf 0.65  Avihānaṃ devānaṃ
+    group  92   1317.68- 1331.15  conf 0.65  Atappānaṃ devānaṃ
+    group  93   1331.15- 1344.73  conf 0.68  Sudassānaṃ devānaṃ
+    group  94   1344.73- 1359.04  conf 0.71  Sudassīnaṃ devānaṃ
+    group  95   1359.04- 1376.79  conf 0.61  Etaṃ
+    group  96   1376.79- 1393.54  conf 0.57  Samaṇena vā
+    group  97   1393.54- 1406.47  conf 0.66  Itīha
+    group  98   1406.47- 1417.97  conf 0.65  Ayañca dasa sahassa lokadhātu
+    group  99   1417.97- 1434.59  conf 0.80  Appamāṇo ca
+    group 100   1434.59- 1441.27  conf 0.72  Atha kho
+    group 101   1441.27- 1451.40  conf 0.40  Aññāsi vata bho, koṇḍañño
+    group 102   1451.40- 1466.59  conf 0.71  Itihidaṃ

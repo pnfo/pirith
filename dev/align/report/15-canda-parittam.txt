@@ -1,0 +1,12 @@
+15-canda-parittam (ariyadhamma)  mean confidence 0.70  low groups 0/11
+    group   1      0.47-    2.49  conf 0.72  Candaparittaṃ
+    group   2      2.49-   23.04  conf 0.63  Evaṃ
+    group   3     23.04-   38.44  conf 0.68  Teta kho pana samayena
+    group   4     38.44-   58.59  conf 0.67  Atha kho
+    group   5     58.59-   81.76  conf 0.66  Namo
+    group   6     81.76-   95.36  conf 0.67  Atha kho
+    group   7     95.36-  117.31  conf 0.82  Tathāgataṃ
+    group   8    117.31-  148.16  conf 0.71  Atha kho
+    group   9    148.16-  162.03  conf 0.71  Ekamantaṃ ṭhitaṃ kho rāhuṃ asurindaṃ
+    group  10    162.03-  182.65  conf 0.73  Kinnu
+    group  11    182.65-  204.26  conf 0.67  Sattadhā

@@ -1,0 +1,139 @@
+29-saccavibhanga-suttam (ariyadhamma)  FULL alignment (labels made from the audio)
+audio 1832s, text ends at 1830s, words placed 100%, mean confidence 0.52, low groups 8/137
+    group   1      0.00-    4.00  conf 0.61  Saccavibhaṅga suttaṃ
+    group   2      4.00-   12.67  conf 0.62  Evaṃ
+    group   3     12.67-   20.75  conf 0.60  Bārāṇasiyaṃ
+    group   4     20.75-   29.80  conf 0.57  Tatra kho
+    group   5     29.80-   42.13  conf 0.46  Bhadanteti
+    group   6     42.13-   51.76  conf 0.54  Tathāgatena
+    group   7     51.76-   64.10  conf 0.46  Bārāṇasiyaṃ
+    group   8     64.10-   85.28  conf 0.51  Appativattiyaṃ
+    group   9     85.28-  107.19  conf 0.43  Yadidaṃ
+    group  10    107.19-  131.51  conf 0.37  Katamesaṃ catunnaṃ
+    group  11    131.51-  152.14  conf 0.43  Dukkhasamudayassa ariyasaccassa
+    group  12    152.14-  172.28  conf 0.60  Dukkhanirodhassa ariyasaccassa
+    group  13    172.28-  195.75  conf 0.66  Dukkhanirodhagāminiyā paṭipadāya ariyasaccassa
+    group  14    195.75-  205.14  conf 0.63  Tathāgatena
+    group  15    205.14-  216.87  conf 0.60  Bārāṇasiyaṃ
+    group  16    216.87-  236.78  conf 0.52  Appativattiyaṃ
+    group  17    236.78-  258.94  conf 0.56  Yadidaṃ
+    group  18    258.94-  274.41  conf 0.37  Sevetha
+    group  19    274.41-  283.01  conf 0.47  Paṇḍitā bhikkhū
+    group  20    283.01-  292.50  conf 0.49  Seyyathāpi
+    group  21    292.50-  302.85  conf 0.42  Seyyathāpi
+LOW group  22    302.85-  320.12  conf 0.27  Sāriputto
+LOW group  23    320.12-  331.35  conf 0.27  Sāriputto
+    group  24    331.35-  348.44  conf 0.52  Ācikkhituṃ
+    group  25    348.44-  362.35  conf 0.57  Idamavoca bhagavā
+    group  26    362.35-  381.58  conf 0.43  Tatra kho
+    group  27    381.58-  400.01  conf 0.41  Āvusoti kho
+    group  28    400.01-  409.84  conf 0.59  Tathāgatena
+    group  29    409.84-  421.67  conf 0.58  Bārāṇasiyaṃ
+    group  30    421.67-  441.04  conf 0.46  Appativattiyaṃ
+    group  31    441.04-  461.75  conf 0.33  Yadidaṃ
+    group  32    461.75-  483.41  conf 0.44  Katamesaṃ catunnaṃ
+    group  33    483.41-  502.90  conf 0.46  Dukkhasamudayassa ariyasaccassa
+    group  34    502.90-  522.39  conf 0.39  Dukkhanirodhassa ariyasaccassa
+    group  35    522.39-  544.81  conf 0.47  Dukkhanirodhagāminiyā paṭipadāya ariyasaccassa
+    group  36    544.81-  551.79  conf 0.42  Katamañcāvuso
+    group  37    551.79-  568.59  conf 0.55  Jātipi dukkhā
+    group  38    568.59-  583.24  conf 0.36  Yampicchaṃ
+    group  39    583.24-  588.46  conf 0.52  Katamā cāvuso
+    group  40    588.46-  605.91  conf 0.41  Yā tesaṃ tesaṃ sattānaṃ
+    group  41    605.91-  620.06  conf 0.70  Khandhānaṃ pātubhāvo
+    group  42    620.06-  624.96  conf 0.70  Katamā cāvuso
+    group  43    624.96-  644.68  conf 0.75  Yā tesaṃ tesaṃ sattānaṃ
+    group  44    644.68-  657.81  conf 0.76  Āyuno saṃhāni
+    group  45    657.81-  662.83  conf 0.56  Katamañcāvuso
+    group  46    662.83-  680.58  conf 0.60  Yaṃ tesaṃ tesaṃ sattānaṃ
+    group  47    680.58-  698.31  conf 0.43  Maccu maraṇaṃ
+    group  48    698.31-  703.76  conf 0.60  Katamo cāvuso
+    group  49    703.76-  722.29  conf 0.53  Yo kho āvuso
+    group  50    722.29-  740.12  conf 0.64  Soko
+    group  51    740.12-  745.73  conf 0.61  Katamo cāvuso
+    group  52    745.73-  764.24  conf 0.41  Yo kho āvuso
+    group  53    764.24-  785.41  conf 0.30  Ādevo
+    group  54    785.41-  790.46  conf 0.53  Katamaṃ cāvuso
+    group  55    790.46-  812.43  conf 0.57  Yaṃ kho āvuso
+    group  56    812.43-  818.29  conf 0.65  Katamaṃ cāvuso
+    group  57    818.29-  840.53  conf 0.57  Yaṃ kho āvuso
+    group  58    840.53-  846.67  conf 0.61  Katamo cāvuso
+    group  59    846.67-  864.93  conf 0.52  Yo kho āvuso
+    group  60    864.93-  881.78  conf 0.36  Āyāso
+    group  61    881.78-  889.96  conf 0.64  Katamaṃ cāvuso
+    group  62    889.96-  900.41  conf 0.57  Jātidhammānaṃ
+    group  63    900.41-  914.14  conf 0.64  Aho vata
+    group  64    914.14-  920.36  conf 0.60  Na kho panetaṃ
+    group  65    920.36-  927.11  conf 0.71  Idampi
+    group  66    927.11-  937.25  conf 0.47  Jarādhammānaṃ
+    group  67    937.25-  950.74  conf 0.59  Aho vata
+    group  68    950.74-  956.85  conf 0.46  Na kho panetaṃ
+    group  69    956.85-  963.37  conf 0.45  Idampi
+    group  70    963.37-  973.58  conf 0.53  Byādhidhammānaṃ
+    group  71    973.58-  986.97  conf 0.58  Aho vata
+    group  72    986.97-  993.03  conf 0.46  Na kho panetaṃ
+    group  73    993.03- 1000.00  conf 0.68  Idampi
+    group  74   1000.00- 1010.18  conf 0.58  Maraṇadhammānaṃ
+    group  75   1010.18- 1023.71  conf 0.58  Aho vata
+    group  76   1023.71- 1029.72  conf 0.47  Na kho panetaṃ
+    group  77   1029.72- 1036.28  conf 0.53  Idampi
+    group  78   1036.28- 1052.69  conf 0.46  Sokaparidevadukkhadomanassupāyāsadhammānaṃ
+    group  79   1052.69- 1075.83  conf 0.60  Aho vata
+    group  80   1075.83- 1081.91  conf 0.55  Na kho panetaṃ
+    group  81   1081.91- 1088.62  conf 0.71  Idampi
+    group  82   1088.62- 1098.38  conf 0.71  Katame cāvuso
+    group  83   1098.38- 1125.94  conf 0.77  Seyyathidaṃ
+    group  84   1125.94- 1143.89  conf 0.66  Ime vuccantāvuso
+    group  85   1143.89- 1151.66  conf 0.58  Katamañcāvuso
+    group  86   1151.66- 1163.77  conf 0.66  Yāyaṃ taṇhā
+    group  87   1163.77- 1183.06  conf 0.44  Seyyathidaṃ
+    group  88   1183.06- 1190.95  conf 0.42  Katamañcāvuso
+    group  89   1190.95- 1206.32  conf 0.50  Yo tassāyeva taṇhāya
+    group  90   1206.32- 1214.54  conf 0.55  Idaṃ vuccatāvuso
+    group  91   1214.54- 1224.69  conf 0.71  Katamañcāvuso
+    group  92   1224.69- 1233.56  conf 0.52  Ayameva
+    group  93   1233.56- 1245.36  conf 0.60  Sammādiṭṭhi
+    group  94   1245.36- 1257.65  conf 0.69  Sammāājīvo
+    group  95   1257.65- 1263.58  conf 0.38  Katamā cāvuso
+    group  96   1263.58- 1288.97  conf 0.47  Yaṃ kho āvuso
+LOW group  97   1288.97- 1295.66  conf 0.30  Katamo cāvuso
+    group  98   1295.66- 1314.45  conf 0.51  Nekkhammasaṅkappo
+    group  99   1314.45- 1320.56  conf 0.48  Katamā cāvuso
+    group 100   1320.56- 1344.83  conf 0.65  Musāvādā veramaṇī
+    group 101   1344.83- 1351.13  conf 0.71  Katamo cāvuso
+    group 102   1351.13- 1373.25  conf 0.64  Pāṇātipātā veramaṇī
+    group 103   1373.25- 1380.04  conf 0.44  Katamo cāvuso
+    group 104   1380.04- 1403.09  conf 0.51  Idhāvuso
+    group 105   1403.09- 1410.06  conf 0.56  Katamo cāvuso
+LOW group 106   1410.06- 1423.51  conf 0.26  Idhāvuso bhikkhu
+    group 107   1423.51- 1435.87  conf 0.57  Chandaṃ janeti
+LOW group 108   1435.87- 1445.94  conf 0.24  Uppannānaṃ
+    group 109   1445.94- 1458.91  conf 0.53  Chandaṃ janeti
+    group 110   1458.91- 1467.65  conf 0.56  Anuppannānaṃ
+    group 111   1467.65- 1481.00  conf 0.55  Chandaṃ janeti
+    group 112   1481.00- 1500.42  conf 0.65  Uppannānaṃ
+    group 113   1500.42- 1520.47  conf 0.63  Chandaṃ janeti
+    group 114   1520.47- 1526.45  conf 0.72  Katamā cāvuso
+    group 115   1526.45- 1535.32  conf 0.37  Idhāvuso bhikkhu
+    group 116   1535.32- 1546.83  conf 0.39  Ātāpī
+    group 117   1546.83- 1571.44  conf 0.35  Vedanāsu
+    group 118   1571.44- 1583.19  conf 0.52  Ātāpī
+    group 119   1583.19- 1588.74  conf 0.33  Citte
+LOW group 120   1588.74- 1589.88  conf 0.01  Ātāpī
+LOW group 121   1589.88- 1590.60  conf 0.02  Dhammesu
+    group 122   1590.60- 1607.59  conf 0.40  Ātāpī
+    group 123   1607.59- 1613.93  conf 0.44  Katamo cāvuso
+    group 124   1613.93- 1624.40  conf 0.36  Idhāvuso bhikkhu
+    group 125   1624.40- 1638.63  conf 0.54  Savitakkaṃ
+    group 126   1638.63- 1653.00  conf 0.55  Vitakkavicārānaṃ vūpasamā
+    group 127   1653.00- 1667.97  conf 0.58  Avitakkaṃ
+    group 128   1667.97- 1685.50  conf 0.41  Pītiyā ca virāgā
+    group 129   1685.50- 1702.53  conf 0.53  Yaṃ taṃ ariyā ācikkhanti
+LOW group 130   1702.53- 1717.70  conf 0.22  Sukhassa ca pahānā
+    group 131   1717.70- 1731.25  conf 0.60  Adukkhamasukhaṃ
+    group 132   1731.25- 1748.31  conf 0.62  Ayaṃ vuccatāvuso sammāsamādhi
+    group 133   1748.31- 1757.17  conf 0.73  Tathāgatenāvuso
+    group 134   1757.17- 1768.80  conf 0.71  Bārāṇasiyaṃ
+    group 135   1768.80- 1789.89  conf 0.44  Appativattiyaṃ
+    group 136   1789.89- 1812.47  conf 0.60  Yadidaṃ
+    group 137   1812.47- 1830.58  conf 0.75  Idamavocāyasmā sāriputto

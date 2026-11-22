@@ -1,0 +1,18 @@
+19-moggallana-bojjhanga (ariyadhamma)  mean confidence 0.70  low groups 0/17
+    group   1      0.00-    5.27  conf 0.66  Mahāmoggallāna bojjhaṃga parittaṃ
+    group   2      5.27-   46.27  conf 0.70  Evaṃ
+    group   3     46.27-   87.31  conf 0.74  Atha kho
+    group   4     87.31-  114.66  conf 0.69  Kacci?
+    group   5    114.66-  141.47  conf 0.65  Na me bhante khamanīyaṃ
+    group   6    141.47-  169.54  conf 0.74  Sattime moggallāna bojjhaṃgā
+    group   7    169.54-  195.17  conf 0.70  Satisambojjhaṃgo kho
+    group   8    195.17-  221.02  conf 0.72  Dhamma vicaya sambojjhaṃgo kho
+    group   9    221.02-  246.00  conf 0.67  Viriya sambojjhaṃgo kho
+    group  10    246.00-  270.70  conf 0.76  Pīti sambojjhaṃgo kho
+    group  11    270.70-  295.88  conf 0.71  Passaddhi sambojjhaṃgo kho
+    group  12    295.88-  320.85  conf 0.73  Samādhi sambojjhaṃgo kho
+    group  13    320.85-  346.10  conf 0.71  Upekkhā sambojjhaṃgo kho
+    group  14    346.10-  371.55  conf 0.76  Ime kho moggallāna sattabojjhaṃgā
+    group  15    371.55-  380.12  conf 0.60  Taggha
+    group  16    380.12-  396.25  conf 0.67  Idamavoca
+    group  17    396.25-  421.77  conf 0.76  Uṭṭhāhi ca

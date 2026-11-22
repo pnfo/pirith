@@ -2,12 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Abhaya Uni - from pitaka.lk/tools/unicode/fonts/web */
 @font-face {
   font-family: 'sinhala';
-  src: local('###'), url('./assets/fonts/UN-Abhaya.ttf') format('truetype');
-  font-weight: normal;
+  src: url('./assets/fonts/AbhayaUni-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'sinhala';
+  src: url('./assets/fonts/AbhayaUni-Bold.woff2') format('woff2');
+  font-weight: 600 700;
+  font-display: swap;
+}
+
+:root {
+  --reader-size: 1;
+  --player-h: 0px;
 }
 
 body {
   @apply bg-primary-light text-main dark:bg-surface-dark dark:text-main-dark;
+  -webkit-tap-highlight-color: transparent;
 }
+
+/* ---------- pirith text ---------- */
+.reader {
+  font-size: calc(1.125rem * var(--reader-size));
+  line-height: 1.55;
+}
+.reader .grp {
+  @apply rounded-lg px-2 py-1.5 my-1 border border-transparent transition-colors;
+  scroll-margin: 5rem 0 calc(var(--player-h) + 5rem);
+}
+.reader .row {
+  @apply grid gap-x-3 px-1 rounded;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.reader .pali { @apply text-main dark:text-main-dark; }
+.reader .mean { @apply text-main/80 dark:text-main-dark/80; }
+.reader.no-meaning .row { grid-template-columns: minmax(0, 1fr); }
+.reader.no-meaning .mean { display: none; }
+.reader.can-seek .row { cursor: pointer; }
+
+.reader .grp.on { @apply bg-surface border-primary/30 shadow-sm dark:bg-surface-dark-alt dark:border-line-dark; }
+.reader .grp.on .row.on { @apply bg-primary/10 dark:bg-white/10; }
+.reader .grp.on .row.on .pali { @apply text-primary font-semibold dark:text-amber-200; }
+.reader .grp.on .row.on .mean { @apply text-main dark:text-main-dark; }
+/* the word being chanted (reader and player bar) */
+.w.on { @apply bg-amber-200 rounded underline decoration-2 underline-offset-4 decoration-amber-600 dark:bg-amber-700/70 dark:text-white dark:decoration-amber-300; box-shadow: 0 0 0 2px theme('colors.amber.200'); }
+.dark .w.on { box-shadow: 0 0 0 2px rgb(180 83 9 / 0.7); }
+.now-text { font-size: calc(1.125rem * var(--reader-size)); line-height: 1.5; }
+
+/* ---------- print / save as PDF: just the text ---------- */
+@media print {
+  .no-print, header, footer { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  main { padding: 0 !important; margin: 0 !important; }
+  .reader { font-size: 11pt; }
+  .reader .grp { break-inside: avoid; margin: 0; padding: 2pt 0; }
+  .reader .grp.on, .reader .grp.on .row.on { background: none !important; border-color: transparent !important; box-shadow: none !important; }
+  .reader .pali, .reader .mean { color: #000 !important; font-weight: normal !important; }
+  .print-only { display: block !important; }
+}
+.print-only { display: none; }

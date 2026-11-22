@@ -1,0 +1,48 @@
+09-rathana (ariyadhamma)  mean confidence 0.71  low groups 0/47
+    group   1      0.23-    1.87  conf 0.84  Ratana suttaṃ
+    group   2      3.39-   16.95  conf 0.70  Yānīdha bhūtāni
+    group   3     17.34-   30.78  conf 0.66  Sabbeva bhūtā
+    group   4     31.21-   45.08  conf 0.71  Tasmāhi
+    group   5     45.59-   58.60  conf 0.63  Divā ca ratto ca
+    group   6     59.11-   72.40  conf 0.65  Yaṃ kiñci vittaṃ
+    group   7     72.87-   85.45  conf 0.74  Na no samaṃ atthi
+    group   8     85.92-   93.13  conf 0.63  Etena saccena
+    group   9     93.56-  106.96  conf 0.74  Khayaṃ
+    group  10    107.43-  120.37  conf 0.66  Na tena dhammena samatthi kiñci
+    group  11    120.76-  127.96  conf 0.67  Etena saccena
+    group  12    128.74-  141.95  conf 0.68  Yaṃ
+    group  13    142.26-  155.12  conf 0.78  Samādhinā tena
+    group  14    155.51-  162.68  conf 0.73  Etena saccena
+    group  15    163.03-  176.28  conf 0.78  Ye puggalā
+    group  16    176.71-  190.43  conf 0.75  Te
+    group  17    190.97-  204.30  conf 0.70  Idampi
+    group  18    204.92-  218.72  conf 0.76  Ye
+    group  19    219.14-  232.74  conf 0.70  Te
+    group  20    233.21-  246.62  conf 0.75  Idampi
+    group  21    247.47-  261.42  conf 0.71  Yathā
+    group  22    261.81-  275.37  conf 0.65  Tathupamaṃ
+    group  23    275.76-  289.17  conf 0.72  Idampi
+    group  24    289.79-  302.92  conf 0.76  Ye
+    group  25    303.35-  316.36  conf 0.75  Kiñcāpi te honti bhusappamattā
+    group  26    316.79-  329.89  conf 0.76  Idampi
+    group  27    330.55-  343.06  conf 0.75  Sahāvassa dassana sampadāya
+    group  28    343.48-  355.95  conf 0.67  Sakkāya diṭṭhi
+    group  29    356.38-  369.40  conf 0.59  Catuhi apāyehi ca
+    group  30    369.79-  382.88  conf 0.69  Idampi
+    group  31    383.81-  397.96  conf 0.76  Kiñcāpi
+    group  32    398.19-  411.09  conf 0.60  Abhabbo
+    group  33    411.56-  424.61  conf 0.73  Idampi
+    group  34    425.27-  438.68  conf 0.77  Vanappagumbe
+    group  35    439.03-  451.73  conf 0.68  Tathopamaṃ
+    group  36    452.24-  465.45  conf 0.75  Idampi
+    group  37    465.95-  478.89  conf 0.68  Varo
+    group  38    479.40-  492.61  conf 0.71  Idampi
+    group  39    493.15-  507.30  conf 0.65  Khīṇaṃ
+    group  40    507.73-  521.52  conf 0.74  Te
+    group  41    522.03-  535.12  conf 0.72  Idampi
+    group  42    536.25-  549.57  conf 0.69  Yānīdha bhūtāni
+    group  43    550.00-  563.60  conf 0.72  Tathāgataṃ
+    group  44    564.19-  577.51  conf 0.68  Yānīdha bhūtāni
+    group  45    577.94-  591.19  conf 0.71  Tathāgataṃ
+    group  46    591.81-  604.98  conf 0.68  Yānīdha bhūtāni
+    group  47    605.49-  619.09  conf 0.74  Tathāgataṃ

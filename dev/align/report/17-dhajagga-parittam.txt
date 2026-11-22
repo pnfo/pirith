@@ -1,0 +1,31 @@
+17-dhajagga-parittam (ariyadhamma)  mean confidence 0.63  low groups 0/30
+    group   1      0.00-    3.25  conf 0.68  Dhajagga parittaṃ
+    group   2      3.25-   22.07  conf 0.63  Evaṃ
+    group   3     22.07-   43.27  conf 0.60  Tatra kho
+    group   4     43.27-   68.05  conf 0.63  Bhūtapubbaṃ
+    group   5     68.05-   92.93  conf 0.64  Sace
+    group   6     92.93-  112.67  conf 0.57  Mamaṃhi vo
+    group   7    112.67-  130.07  conf 0.65  No ce me dhajaggaṃ ullokeyyātha
+    group   8    130.07-  154.15  conf 0.61  Pajāpatissahi vo devarājassa
+    group   9    154.15-  174.59  conf 0.63  No ce pajāpatissa devarājassa dhajaggaṃ ullokeyyāt
+    group  10    174.59-  197.53  conf 0.63  Varuṇassahi vo devarājassa
+    group  11    197.53-  217.97  conf 0.65  No ce varuṇassa devarājassa dhajaggaṃ ullokeyyātha
+    group  12    217.97-  242.20  conf 0.59  Īsānassahi vo devarājassa
+    group  13    242.20-  301.25  conf 0.65  Taṃ kho pana
+    group  14    301.25-  320.28  conf 0.67  Sakkohi bhikkhave devānamindo
+    group  15    320.28-  358.61  conf 0.58  Ahañva kho
+    group  16    359.21-  387.46  conf 0.73  Itipi
+    group  17    387.46-  405.89  conf 0.67  Mamaṃhi vo bhikkhave anussarataṃ
+    group  18    406.60-  416.85  conf 0.58  No ce maṃ anussareyyātha
+    group  19    416.85-  437.67  conf 0.70  Svākkhāto
+    group  20    437.67-  456.48  conf 0.62  Dhammaṃhi vo bhikkhave anussarataṃ
+    group  21    456.48-  467.54  conf 0.59  No ce dhammaṃ anussareyyātha
+    group  22    467.54-  498.39  conf 0.45  Supaṭipanno bhagavato sāvaka saṃgho
+    group  23    499.26-  532.01  conf 0.69  Yadidaṃ
+    group  24    532.01-  553.92  conf 0.61  Saṃghaṃhi vo bhikkhave anussarataṃ
+    group  25    553.92-  578.15  conf 0.65  Tathāgato
+    group  26    578.91-  591.00  conf 0.66  Idamavoca
+    group  27    591.00-  610.79  conf 0.63  Araññe
+    group  28    610.79-  630.69  conf 0.63  No ce buddhaṃ sareyyātha
+    group  29    630.69-  650.59  conf 0.66  No ce dhammaṃ sareyyātha
+    group  30    650.59-  672.66  conf 0.55  Evaṃ

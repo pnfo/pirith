@@ -1,0 +1,25 @@
+55-maha-jaya-mangala-gatha (ariyadhamma)  mean confidence 0.69  low groups 0/24
+    group   1      0.00-   17.36  conf 0.77  Mahākāruṇiko nātho
+    group   2     17.36-   28.63  conf 0.74  Jayanto bodhiyā mūle
+    group   3     28.63-   45.85  conf 0.62  Sakkatvā buddharatanaṃ
+    group   4     45.85-   63.10  conf 0.71  Sakkatvā dhammaratanaṃ
+    group   5     63.10-   81.47  conf 0.71  Sakkatvā saṃgharatanaṃ
+    group   6     81.47-   93.36  conf 0.74  Yaṃ kiñci ratanaṃ loke
+    group   7     93.36-  105.41  conf 0.72  Yaṃ kiñci ratanaṃ loke
+    group   8    105.41-  117.51  conf 0.72  Yaṃ kiñci ratanaṃ loke
+    group   9    117.51-  129.79  conf 0.65  Natthi me saraṇaṃ aññaṃ
+    group  10    129.79-  141.98  conf 0.62  Natthi me saraṇaṃ aññaṃ
+    group  11    141.98-  153.77  conf 0.65  Natthi me saraṇaṃ aññaṃ
+    group  12    153.77-  166.05  conf 0.78  Sabbītiyo vivajjantu
+    group  13    166.05-  177.79  conf 0.64  Bhavatu sabbamaṃgalaṃ
+    group  14    177.79-  189.53  conf 0.62  Bhavatu sabbamaṃgalaṃ
+    group  15    189.53-  201.56  conf 0.61  Bhavatu sabbamaṃgalaṃ
+    group  16    201.56-  214.03  conf 0.71  Nakkhatta yakkha bhūtānaṃ
+    group  17    214.03-  231.39  conf 0.74  Yaṃ dunimittaṃ avamaṃgalañca
+    group  18    231.39-  248.84  conf 0.72  Yaṃ dunimittaṃ avamaṃgalañca
+    group  19    248.84-  266.23  conf 0.74  Yaṃ dunimittaṃ avamaṃgalañca
+    group  20    266.23-  279.93  conf 0.59  Dukkhappattā ca niddukkhā
+    group  21    279.93-  292.51  conf 0.78  Dānaṃ dadantu saddhāya
+    group  22    292.51-  306.49  conf 0.68  Sabbe buddhā balappattā
+    group  23    306.49-  320.33  conf 0.68  Sabbe buddhā balappattā
+    group  24    320.33-  334.67  conf 0.71  Sabbe buddhā balappattā

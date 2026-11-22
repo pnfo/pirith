@@ -1,0 +1,120 @@
+21-girimananda-suttam (ariyadhamma)  mean confidence 0.64  low groups 1/119
+    group   1      0.00-    2.79  conf 0.80  Girimānanda suttaṃ
+    group   2      2.79-   12.80  conf 0.54  Evaṃ
+    group   3     12.80-   25.89  conf 0.65  Sāvatthiyaṃ
+    group   4     25.89-   45.46  conf 0.71  Tena kho pana samayena
+    group   5     45.46-   61.29  conf 0.71  Atha kho
+    group   6     61.29-   71.86  conf 0.67  Bhagavantaṃ
+    group   7     71.86-   87.87  conf 0.72  Ekamantaṃ
+    group   8     87.87-  104.18  conf 0.74  Āyasmā
+    group   9    104.18-  124.97  conf 0.81  Sādhu
+    group  10    124.97-  145.36  conf 0.61  Sace kho
+    group  11    145.36-  156.66  conf 0.56  Ṭhānaṃ kho panetaṃ
+    group  12    156.66-  172.58  conf 0.69  Dasa saññā sutvā
+    group  13    172.58-  185.41  conf 0.72  Anicca saññā
+    group  14    185.41-  200.55  conf 0.69  Pahāṇa saññā
+    group  15    200.55-  211.90  conf 0.76  Sabba saṃkhāresu anicca saññā
+    group  16    211.90-  219.04  conf 0.70  Katamā ca
+    group  17    219.04-  238.22  conf 0.66  Idha ānanda
+    group  18    238.22-  258.05  conf 0.66  Rūpaṃ aniccaṃ
+    group  19    258.05-  278.27  conf 0.66  Iti
+    group  20    278.27-  285.02  conf 0.73  Katamā ca
+    group  21    285.02-  304.67  conf 0.65  Idha ānanda
+    group  22    304.67-  318.03  conf 0.74  Cakkhuṃ anattā
+    group  23    318.03-  331.86  conf 0.75  Ghāṇaṃ anattā
+    group  24    331.86-  346.08  conf 0.77  Kāyo anattā
+    group  25    346.08-  367.74  conf 0.66  Iti
+    group  26    367.74-  374.48  conf 0.65  Katamā ca
+    group  27    374.48-  384.36  conf 0.60  Idha ānanda
+    group  28    384.36-  400.10  conf 0.62  Adho kesamatthakā
+    group  29    400.10-  412.15  conf 0.82  Atthi
+    group  30    412.15-  428.94  conf 0.69  Maṃsaṃ
+    group  31    428.94-  444.90  conf 0.73  Antaṃ
+    group  32    444.90-  455.12  conf 0.68  Assu
+    group  33    455.12-  471.04  conf 0.71  Iti
+    group  34    471.04-  478.22  conf 0.76  Katamā ca
+    group  35    478.22-  496.92  conf 0.65  Idha ānanda
+    group  36    496.92-  506.18  conf 0.78  Bahudukkho ayaṃ kāyo
+    group  37    506.18-  518.23  conf 0.70  Iti
+    group  38    518.23-  532.76  conf 0.36  Cakkhu rogo
+    group  39    532.76-  540.50  conf 0.45  Kaṇṇa rogo
+    group  40    540.50-  549.76  conf 0.73  Kāso
+    group  41    549.76-  566.90  conf 0.67  Mūcjā
+    group  42    566.90-  578.47  conf 0.68  Daddu
+    group  43    578.47-  589.34  conf 0.67  Aṃsā
+    group  44    589.34-  600.91  conf 0.70  Semha samuṭṭhānā ābādhā
+    group  45    600.91-  612.39  conf 0.83  Sannipātikā ābādhā
+    group  46    612.39-  629.44  conf 0.73  Visamaparihārajā ābādhā
+    group  47    629.44-  640.84  conf 0.68  Sītaṃ
+    group  48    640.84-  658.85  conf 0.68  Iti
+    group  49    658.85-  665.85  conf 0.78  Katamā ca
+    group  50    665.85-  679.81  conf 0.66  Idha ānanda
+    group  51    679.81-  687.20  conf 0.62  Khyanti karoti
+    group  52    687.20-  699.21  conf 0.71  Uppannaṃ vyāpāda vitakkaṃ
+    group  53    699.21-  706.78  conf 0.59  Khyanti karoti
+    group  54    706.78-  725.83  conf 0.71  Uppannaṃ vihiṃsā vitakkaṃ
+    group  55    725.83-  748.53  conf 0.74  Uppannuppanne
+    group  56    748.53-  755.71  conf 0.53  Ayaṃ vuccati ānanda pahāṇa saññā
+    group  57    755.71-  761.93  conf 0.72  Katamā ca
+    group  58    761.93-  780.50  conf 0.63  Idha ānanda
+    group  59    780.50-  792.94  conf 0.67  Etaṃ santaṃ
+    group  60    792.94-  805.46  conf 0.73  Sabbupadhipaṭinissago
+    group  61    805.46-  812.68  conf 0.57  Ayaṃ vuccati ānanda virāga saññā
+    group  62    812.68-  819.47  conf 0.65  Katamā ca
+    group  63    819.47-  838.65  conf 0.60  Idha ānanda
+    group  64    838.65-  851.39  conf 0.68  Etaṃ santaṃ
+    group  65    851.39-  863.92  conf 0.78  Sabbupadhipaṭinissaggo
+    group  66    863.92-  871.18  conf 0.62  Ayaṃ vuccati ānanda nirodha saññā
+    group  67    871.18-  880.32  conf 0.69  Katamā ca
+    group  68    880.32-  889.32  conf 0.71  Idha ānanda
+    group  69    889.32-  905.28  conf 0.65  Cetaso
+    group  70    905.28-  914.81  conf 0.63  Ayaṃ vuccati ānanda sabba loke anabhirata saññā
+    group  71    914.81-  924.42  conf 0.66  Katamā ca
+    group  72    924.42-  937.08  conf 0.62  Idha ānanda
+    group  73    937.08-  947.43  conf 0.59  Ayaṃ vuccati ānanda sabba saṃkhāresu anicca saññā
+    group  74    947.43-  954.91  conf 0.78  Katamā ca
+    group  75    954.91-  976.57  conf 0.65  Idha ānanda
+    group  76    976.57-  986.75  conf 0.72  Ujuṃ kāyaṃ paṇīdhāya
+LOW group  77    986.75-  995.97  conf 0.23  So
+    group  78    995.97- 1007.75  conf 0.69  Dīghaṃ vā
+    group  79   1007.75- 1019.93  conf 0.63  Dīghaṃ vā passa santo
+    group  80   1019.93- 1031.76  conf 0.70  Rassaṃ vā assa santo
+    group  81   1031.76- 1043.85  conf 0.71  Rassaṃ vā passa santo
+    group  82   1043.85- 1054.77  conf 0.57  Sabbakāya paṭisaṃvedī
+    group  83   1054.77- 1066.25  conf 0.54  Sabbakāya paṭisaṃvedī
+    group  84   1066.25- 1077.65  conf 0.49  Passaṃbhayaṃ kāya saṃkhāraṃ
+    group  85   1077.65- 1089.09  conf 0.50  Passaṃbhayaṃ kāya saṃkhāraṃ
+    group  86   1089.09- 1098.92  conf 0.48  Pītipaṭisaṃvedī
+    group  87   1098.92- 1108.92  conf 0.52  Pītipaṭisaṃvedī
+    group  88   1108.92- 1118.66  conf 0.53  Sukhapaṭisaṃvedī
+    group  89   1118.66- 1128.40  conf 0.55  Sukhapaṭisaṃvedī
+    group  90   1128.40- 1139.84  conf 0.49  Cittasaṃkhāra paṭisaṃvedī
+    group  91   1139.84- 1150.63  conf 0.53  Citta saṃkhāra paṭisaṃvedī
+    group  92   1150.63- 1161.55  conf 0.43  Passambhayaṃ citta saṃkhāraṃ
+    group  93   1161.55- 1172.55  conf 0.49  Passambhayaṃ citta saṃkhāraṃ
+    group  94   1172.55- 1181.86  conf 0.49  Cittapaṭisaṃvedī
+    group  95   1181.86- 1191.38  conf 0.55  Cittapaṭisaṃvedī
+    group  96   1191.38- 1201.56  conf 0.47  Adhippamodayaṃ cittaṃ
+    group  97   1201.56- 1211.83  conf 0.52  Abhippamodayaṃ cittaṃ
+    group  98   1211.83- 1221.22  conf 0.47  Samādahaṃ cittaṃ
+    group  99   1221.22- 1230.48  conf 0.62  Samādahaṃ cittaṃ
+    group 100   1230.48- 1239.44  conf 0.54  Vimocayaṃ cittaṃ
+    group 101   1239.44- 1248.58  conf 0.51  Vimocayaṃ cittaṃ
+    group 102   1248.58- 1257.63  conf 0.55  Aniccānupassi
+    group 103   1257.63- 1266.15  conf 0.61  Aniccānupassi
+    group 104   1266.15- 1274.94  conf 0.56  Virāgānupassi
+    group 105   1274.94- 1283.94  conf 0.51  Virāgānupassi
+    group 106   1283.94- 1292.77  conf 0.54  Nirodhānupassi
+    group 107   1292.77- 1301.77  conf 0.57  Nirodhānupassī
+    group 108   1301.77- 1311.95  conf 0.58  Paṭinissaggānupassi
+    group 109   1311.95- 1322.04  conf 0.44  Paṭinissaggānupassi
+    group 110   1322.04- 1329.26  conf 0.65  Ayaṃ vuccati ānanda ānāpānasati
+    group 111   1329.26- 1346.79  conf 0.66  Sace kho
+    group 112   1346.79- 1355.66  conf 0.55  Ṭhānaṃ kho panetaṃ
+    group 113   1355.66- 1368.36  conf 0.71  Imā dasa saññā sutvā
+    group 114   1368.36- 1382.76  conf 0.73  Atha kho
+    group 115   1382.76- 1393.98  conf 0.70  Yena āyasmā girimānando
+    group 116   1393.98- 1404.33  conf 0.68  Āyasmato girimānandassa
+    group 117   1404.33- 1423.34  conf 0.69  Atha kho
+    group 118   1423.34- 1433.43  conf 0.58  Vuṭṭhāhi
+    group 119   1433.43- 1450.30  conf 0.76  Tathā pahīno ca panāyasmato girimānandassa so ābād

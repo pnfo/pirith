@@ -1,0 +1,9 @@
+12-mettanisamsa (ariyadhamma)  mean confidence 0.67  low groups 0/8
+    group   1      0.69-    3.09  conf 0.81  Mettānisaṃsa suttaṃ
+    group   2      3.09-   23.99  conf 0.62  Evaṃ
+    group   3     23.99-   47.80  conf 0.61  Tatra kho
+    group   4     47.66-   91.28  conf 0.72  Mettāya
+    group   5     91.28-  115.75  conf 0.63  1. Sukhaṃsupati
+    group   6    115.75-  155.86  conf 0.66  6. Devatā rakkhanti
+    group   7    155.86-  195.60  conf 0.71  Mettāya
+    group   8    195.60-  210.80  conf 0.63  Idamavoca
