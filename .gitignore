@@ -28,3 +28,4 @@ obsolete audio
 
 # alignment tooling
 /dev/align/.venv
+/dev/store/build

@@ -70,6 +70,7 @@ final class NativePlayer: NSObject {
         queue = []
         index = -1
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nil
+        MPNowPlayingInfoCenter.default().playbackState = .stopped
     }
 
     private func setQueue(_ c: [String: Any]) {
@@ -235,6 +236,8 @@ final class NativePlayer: NSObject {
         if duration > 0 { info[MPMediaItemPropertyPlaybackDuration] = duration }
         if let art = artwork(t.artwork) { info[MPMediaItemPropertyArtwork] = art }
         MPNowPlayingInfoCenter.default().nowPlayingInfo = info
+        // a phone works out "playing" from the audio session; the simulator (and a Mac) need to be told
+        MPNowPlayingInfoCenter.default().playbackState = playing ? .playing : .paused
         let c = MPRemoteCommandCenter.shared()
         c.nextTrackCommand.isEnabled = index + 1 < queue.count
         c.previousTrackCommand.isEnabled = true

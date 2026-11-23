@@ -1,0 +1,27 @@
+<!doctype html>
+<!-- The logo (oil lamp over පිරිත්, night teal, Abhaya Uni Bold). dev/store/logo.mjs renders it:
+     ?mode=full the square icon, ?mode=round in a circle, ?mode=fg the lamp and letters only, in the safe zone of an Android adaptive icon -->
+<html lang="si"><head><meta charset="utf-8"><style>
+  @font-face { font-family: Abhaya; src: url('file:///Volumes/2TB/node/pitaka.lk/tools/unicode/fonts/web/AbhayaUni-Bold.woff2') }
+  html, body { margin: 0; background: transparent } svg { display: block; width: 100vw; height: 100vw }
+</style></head><body>
+<svg viewBox="0 0 512 512"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#143a3a"/><stop offset="1" stop-color="#0b1f24"/></linearGradient>
+  <clipPath id="c"><circle cx="256" cy="256" r="256"/></clipPath></defs>
+  <rect id="bg" width="512" height="512" fill="url(#g)"/>
+  <g id="art"><circle cx="256" cy="118" r="96" fill="#f6c453" fill-opacity=".14"/><path d="M256 52 C288 94 294 122 256 156 C218 122 224 94 256 52Z" fill="#f6c453"/>
+  <path d="M190 166 H322 C318 194 294 208 256 208 S194 194 190 166Z" fill="#c98a2b"/>
+  <text x="256" y="400" font-size="200" text-anchor="middle" fill="#f6dc9a" font-family="Abhaya">පිරිත්</text></g></svg>
+<script>
+  const mode = new URLSearchParams(location.search).get('mode') || 'full'
+  document.fonts.load("200px Abhaya", 'පිරිත්').then(() => {
+    const t = document.querySelector('text')
+    let b = t.getBBox()
+    t.setAttribute('font-size', 200 * Math.min(410 / b.width, 215 / b.height))
+    b = t.getBBox()
+    t.setAttribute('y', 400 + 350 - (b.y + b.height / 2))
+    const art = document.getElementById('art'), bg = document.getElementById('bg')
+    if (mode === 'fg') { bg.remove(); art.setAttribute('transform', 'translate(256 256) scale(.56) translate(-256 -256)') }
+    if (mode === 'round') { bg.setAttribute('clip-path', 'url(#c)'); art.setAttribute('transform', 'translate(256 256) scale(.8) translate(-256 -256)') }
+    document.title = 'ready'
+  })
+</script></body></html>

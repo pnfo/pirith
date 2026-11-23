@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- Logo concepts for the store icon: node dev/store/logo.mjs renders this page to dev/store/build/logo-concepts.png -->
+<html lang="si"><head><meta charset="utf-8"><style>
+  @font-face { font-family: Abhaya; src: url('file:///Volumes/2TB/node/pitaka.lk/tools/unicode/fonts/web/AbhayaUni-Bold.woff2'); font-weight: 700 }
+  @font-face { font-family: Seela; src: url('file:///Volumes/2TB/node/pitaka.lk/tools/unicode/fonts/web/Seela-Bold.woff2'); font-weight: 700 }
+  body { margin: 0; padding: 40px; background: #e9e9e6; font-family: -apple-system, sans-serif; width: 1720px }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px 40px }
+  .card { display: flex; gap: 22px; align-items: flex-end }
+  svg.big { width: 380px; height: 380px; border-radius: 22%; box-shadow: 0 6px 24px rgba(0,0,0,.25); flex: none }
+  .small { display: flex; flex-direction: column; gap: 14px; align-items: flex-start }
+  .small svg { border-radius: 22%; box-shadow: 0 2px 6px rgba(0,0,0,.25) }
+  h2 { margin: 0 0 4px; font-size: 26px } p { margin: 0; font-size: 17px; color: #444; line-height: 1.35; max-width: 150px }
+  text { font-family: Abhaya; font-weight: 700; text-anchor: middle }
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <!-- A: green, gold letters, the pirith thread -->
+  <symbol id="A" viewBox="0 0 512 512">
+    <radialGradient id="ga" cx="50%" cy="25%" r="85%"><stop offset="0" stop-color="#4f8060"/><stop offset=".55" stop-color="#2e4c37"/><stop offset="1" stop-color="#162a1d"/></radialGradient>
+    <rect width="512" height="512" fill="url(#ga)"/>
+    <text x="256" y="300" font-size="212" fill="#f6dc9a">පිරිත්</text>
+    <path d="M70 392 C150 352 200 432 256 392 S362 352 442 392" fill="none" stroke="#e9c46a" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="70" cy="392" r="11" fill="#e9c46a"/><circle cx="442" cy="392" r="11" fill="#e9c46a"/>
+  </symbol>
+  <!-- B: robe saffron, cream letters, sound rings -->
+  <symbol id="B" viewBox="0 0 512 512">
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2a33a"/><stop offset="1" stop-color="#c2541a"/></linearGradient>
+    <rect width="512" height="512" fill="url(#gb)"/>
+    <g fill="none" stroke="#fff3d6" stroke-opacity=".22" stroke-width="10"><circle cx="256" cy="256" r="150"/><circle cx="256" cy="256" r="205"/><circle cx="256" cy="256" r="260"/></g>
+    <text x="256" y="326" font-size="220" fill="#fffaf0">පිරිත්</text>
+  </symbol>
+  <!-- C: cream, green letters, one syllable lit as in the app -->
+  <symbol id="C" viewBox="0 0 512 512">
+    <rect width="512" height="512" fill="#f4f8f1"/>
+    <rect x="46" y="150" width="194" height="212" rx="26" fill="#fde68a"/><rect x="46" y="350" width="194" height="12" rx="6" fill="#d97706"/>
+    <text x="256" y="326" font-size="216" fill="#2e4c37">පිරිත්</text>
+    <rect x="0" y="452" width="512" height="60" fill="#2e4c37"/>
+    <g fill="#e9c46a"><rect x="150" y="470" width="14" height="24" rx="7"/><rect x="180" y="462" width="14" height="40" rx="7"/><rect x="210" y="472" width="14" height="20" rx="7"/><rect x="240" y="460" width="14" height="44" rx="7"/><rect x="270" y="468" width="14" height="28" rx="7"/><rect x="300" y="462" width="14" height="40" rx="7"/><rect x="330" y="472" width="14" height="20" rx="7"/><rect x="360" y="466" width="14" height="32" rx="7"/></g>
+  </symbol>
+  <!-- D: maroon and gold, bodhi leaf -->
+  <symbol id="D" viewBox="0 0 512 512">
+    <radialGradient id="gd" cx="50%" cy="20%" r="90%"><stop offset="0" stop-color="#8a2f1c"/><stop offset="1" stop-color="#3d1108"/></radialGradient>
+    <rect width="512" height="512" fill="url(#gd)"/>
+    <g transform="translate(256 118) scale(1.25)"><path d="M0-52 C34-52 52-18 36 12 C24 32 9 38 0 70 C-9 38-24 32-36 12 C-52-18-34-52 0-52Z" fill="#e9c46a"/><path d="M0-40 V60" stroke="#6b2414" stroke-width="3"/></g>
+    <text x="256" y="388" font-size="208" fill="#f6dc9a">පිරිත්</text>
+  </symbol>
+  <!-- E: green, white letters in a gold ring -->
+  <symbol id="E" viewBox="0 0 512 512">
+    <rect width="512" height="512" fill="#2e4c37"/>
+    <circle cx="256" cy="256" r="214" fill="#f7f3e6" stroke="#e9c46a" stroke-width="14"/>
+    <circle cx="256" cy="256" r="188" fill="none" stroke="#2e4c37" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round"/>
+    <text x="256" y="316" font-size="176" fill="#2e4c37">පිරිත්</text>
+  </symbol>
+  <!-- F: deep night blue-green, gold letters, lamp flame -->
+  <symbol id="F" viewBox="0 0 512 512">
+    <linearGradient id="gf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#143a3a"/><stop offset="1" stop-color="#0b1f24"/></linearGradient>
+    <rect width="512" height="512" fill="url(#gf)"/>
+    <circle cx="256" cy="112" r="92" fill="#f6c453" fill-opacity=".13"/>
+    <path d="M256 52 C286 92 292 118 256 150 C220 118 226 92 256 52Z" fill="#f6c453"/>
+    <path d="M196 160 H316 C312 186 290 198 256 198 S200 186 196 160Z" fill="#c98a2b"/>
+    <text x="256" y="400" font-size="208" fill="#f6dc9a">පිරිත්</text>
+  </symbol>
+</defs></svg>
+<div class="grid" id="grid"></div>
+<script>
+  const notes = { A: 'Green + gold, pirith thread', B: 'Robe saffron, sound rings', C: 'Light, lit syllable as in the app', D: 'Maroon + gold, bodhi leaf', E: 'Gold ring on green', F: 'Night, oil lamp' }
+  document.getElementById('grid').innerHTML = Object.keys(notes).map(k => `<div class="card"><svg class="big"><use href="#${k}"/></svg>
+    <div class="small"><h2>${k}</h2><p>${notes[k]}</p><svg width="120" height="120"><use href="#${k}"/></svg><svg width="60" height="60"><use href="#${k}"/></svg></div></div>`).join('')
+</script></body></html>

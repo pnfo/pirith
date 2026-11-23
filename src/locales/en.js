@@ -21,6 +21,8 @@ export default {
   home: {
     heading: 'Pirith – Paritta chanting with Pali text and English meaning',
     intro: 'Listen to the protective chants (paritta) recited by the Most Venerable Nauyane Ariyadhamma Maha Thero. Tap a title to read the Pali text line by line with its English meaning.',
+    appHint: 'Open in the app for a better experience: it works offline and with the screen locked.',
+    appOpen: 'Open app',
     dismiss: 'Dismiss',
     search: 'Search a chant… (e.g. ratana, metta)',
     all: 'All',

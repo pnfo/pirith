@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- The oil lamp logo in several colours and Sinhala Unicode fonts (fonts of the pitaka.lk repo). Rendered with Chrome:
+     chrome --headless --allow-file-access-from-files --screenshot=build/logo-lamp.png --window-size=1800,2330 logo-lamp.html -->
+<html lang="si"><head><meta charset="utf-8"><style id="faces"></style><style>
+  body { margin: 0; padding: 36px 40px; background: #e9e9e6; font-family: -apple-system, sans-serif; width: 1720px }
+  h1 { font-size: 30px; margin: 0 0 18px } h1:not(:first-child) { margin-top: 44px }
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 30px 24px }
+  .tile svg.big { width: 100%; aspect-ratio: 1; border-radius: 22%; box-shadow: 0 6px 20px rgba(0,0,0,.25); display: block }
+  .cap { display: flex; align-items: center; gap: 10px; margin-top: 10px; font-size: 19px; color: #333 }
+  .cap svg { width: 54px; height: 54px; border-radius: 22%; box-shadow: 0 2px 5px rgba(0,0,0,.25); flex: none }
+  .cap b { font-size: 22px }
+</style></head><body>
+<h1>Colours (Abhaya Uni Bold)</h1><div class="grid" id="colours"></div>
+<h1>Fonts (in colour 1)</h1><div class="grid" id="fonts"></div>
+<h1>Fonts (in colour 3)</h1><div class="grid" id="fonts3"></div>
+<script>
+  const DIR = 'file:///Volumes/2TB/node/pitaka.lk/tools/unicode/fonts/'
+  const FONTS = [['Abhaya Bold', 'AbhayaUni-Bold'], ['Abhaya Condensed', 'AbhayaUniCondensed-Bold'], ['Alakamanda', 'AlakamandaUni-Regular'], ['Arundathee', 'ArundatheeUni-Regular'],
+    ['Bindumathi', 'BindumathiUni-Regular'], ['Davasa', 'DavasaUni-Regular'], ['Ganganee', 'GanganeeUni-Regular'], ['Gurulugomi', 'GurulugomiUni-Regular'],
+    ['Imanee', 'ImaneeUni-Regular'], ['Malithi', 'MalithiUni-Regular'], ['Samantha', 'SamanthaUni-Regular']]
+  document.getElementById('faces').textContent = FONTS.map(([, f]) => `@font-face { font-family: '${f}'; src: url('${DIR}${f}.woff2') }`).join('\n')
+  // bg: top, bottom; text; flame; bowl; glow
+  const COLOURS = [['Night teal', '#143a3a', '#0b1f24', '#f6dc9a', '#f6c453', '#c98a2b', '#f6c453'], ['Forest green', '#35593f', '#16291c', '#f6dc9a', '#f6c453', '#c98a2b', '#f6c453'],
+    ['Maroon', '#7c2a1a', '#3a1008', '#f8dfa0', '#f8c95a', '#d2933a', '#f8c95a'], ['Midnight blue', '#1f2c5c', '#0d1330', '#f3e2b0', '#f6c453', '#c98a2b', '#f6c453'],
+    ['Saffron', '#f0a23a', '#c4561b', '#fffaf0', '#fff3c4', '#7a2e0c', '#fff3c4'], ['Cream', '#fbf6e6', '#f1e7c9', '#2e4c37', '#e8960c', '#2e4c37', '#f6c453']]
+  let n = 0
+  const logo = (c, font, cls = 'big') => { const g = 'g' + n++; return `<svg class="${cls}" viewBox="0 0 512 512"><defs><linearGradient id="${g}" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="${c[1]}"/><stop offset="1" stop-color="${c[2]}"/></linearGradient></defs><rect width="512" height="512" fill="url(#${g})"/>
+    <circle cx="256" cy="118" r="96" fill="${c[6]}" fill-opacity=".14"/><path d="M256 52 C288 94 294 122 256 156 C218 122 224 94 256 52Z" fill="${c[4]}"/>
+    <path d="M190 166 H322 C318 194 294 208 256 208 S194 194 190 166Z" fill="${c[5]}"/>
+    <text x="256" y="400" font-size="200" text-anchor="middle" fill="${c[3]}" style="font-family:'${font}'">පිරිත්</text></svg>` }
+  const tile = (label, c, font) => `<div class="tile">${logo(c, font)}<div class="cap">${logo(c, font, '')}<span>${label}</span></div></div>`
+  document.getElementById('colours').innerHTML = COLOURS.map((c, i) => tile(`<b>${i + 1}</b> ${c[0]}`, c, 'AbhayaUni-Bold')).join('')
+  document.getElementById('fonts').innerHTML = FONTS.map(([name, f], i) => tile(`<b>${String.fromCharCode(97 + i)}</b> ${name}`, COLOURS[0], f)).join('')
+  document.getElementById('fonts3').innerHTML = FONTS.map(([name, f], i) => tile(`<b>${String.fromCharCode(97 + i)}</b> ${name}`, COLOURS[2], f)).join('')
+  // every font at the same width and on the same line: fit the word into 410 x 215 below the lamp
+  document.fonts.ready.then(() => Promise.all(FONTS.map(([, f]) => document.fonts.load(`200px '${f}'`, 'පිරිත්')))).then(() => {
+    for (const t of document.querySelectorAll('text')) {
+      let b = t.getBBox()
+      t.setAttribute('font-size', 200 * Math.min(410 / b.width, 215 / b.height))
+      b = t.getBBox()
+      t.setAttribute('y', 400 + (238 + (462 - 238) / 2) - (b.y + b.height / 2))
+    }
+    document.title = 'ready'
+  })
+</script></body></html>
