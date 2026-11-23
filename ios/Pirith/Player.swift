@@ -125,13 +125,19 @@ final class NativePlayer: NSObject {
         }
     }
 
+    // next / previous go to another pirith: the repeats of one pirith are skipped together
     private func next() {
-        if index + 1 < queue.count { load(index + 1, play: true) }
+        guard queue.indices.contains(index) else { return }
+        if let i = queue.indices.first(where: { $0 > index && queue[$0].url != queue[index].url }) { load(i, play: true) }
     }
 
-    /// restarts the pirith, or goes to the one before when it has only just begun
     private func previous() {
-        if position > 3 || index <= 0 { seek(to: 0) } else { load(index - 1, play: true) }
+        guard queue.indices.contains(index) else { return }
+        var i = index
+        while i >= 0 && queue[i].url == queue[index].url { i -= 1 }
+        if i < 0 { seek(to: 0); return } // the first pirith: start it again
+        while i > 0 && queue[i - 1].url == queue[i].url { i -= 1 }
+        load(i, play: true)
     }
 
     private func sleepIn(minutes: Double) {
@@ -239,7 +245,7 @@ final class NativePlayer: NSObject {
         // a phone works out "playing" from the audio session; the simulator (and a Mac) need to be told
         MPNowPlayingInfoCenter.default().playbackState = playing ? .playing : .paused
         let c = MPRemoteCommandCenter.shared()
-        c.nextTrackCommand.isEnabled = index + 1 < queue.count
+        c.nextTrackCommand.isEnabled = queue.indices.contains(index) && queue[(index + 1)...].contains { $0.url != queue[index].url }
         c.previousTrackCommand.isEnabled = true
     }
 

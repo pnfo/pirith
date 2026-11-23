@@ -64,8 +64,18 @@ export function createHtmlBackend(emit) {
     pause() { audio.pause() },
     seek(s) { if (isFinite(audio.duration)) audio.currentTime = Math.min(s, audio.duration - 0.05); else pendingSeek = s },
     setRate(r) { rate = r; audio.playbackRate = r },
-    next() { if (index + 1 < queue.length) load(index + 1) },
-    previous() { if (audio.currentTime > 3 || index === 0) api.seek(0); else load(index - 1) },
+    // next / previous go to another pirith: the repeats of one pirith are skipped together
+    next() {
+      const i = queue.findIndex((t, j) => j > index && t.url !== queue[index].url)
+      if (i >= 0) load(i)
+    },
+    previous() {
+      let i = index
+      while (i >= 0 && queue[i].url === queue[index].url) i--
+      if (i < 0) return api.seek(0) // the first pirith: start it again
+      while (i > 0 && queue[i - 1].url === queue[i].url) i--
+      load(i)
+    },
     sleepIn(minutes) {
       clearTimeout(sleepTimer)
       if (minutes > 0) sleepTimer = setTimeout(() => audio.pause(), minutes * 60000)

@@ -117,25 +117,35 @@ export const usePlayerStore = defineStore('player', {
         })),
       }
     },
+    /**
+     * the queue of a playlist, repeats expanded: { tracks, index } with tracks[index] the entry to play.
+     * What comes before it is in the queue too, so that "previous" has somewhere to go.
+     */
     buildQueue(plInd, fromLInd, fromRep = 1) {
-      const out = []
       const list = this.playlists[plInd].list
-      for (let l = fromLInd; l < list.length && out.length < MAX_QUEUE; l++) {
-        for (let rep = (l === fromLInd ? fromRep : 1); rep <= list[l].repeats && out.length < MAX_QUEUE; rep++) {
-          out.push(this.trackFor(list[l], l, rep))
+      const after = [], before = []
+      for (let l = fromLInd; l < list.length && after.length < MAX_QUEUE; l++) {
+        for (let rep = (l === fromLInd ? fromRep : 1); rep <= list[l].repeats && after.length < MAX_QUEUE; rep++) {
+          after.push(this.trackFor(list[l], l, rep))
         }
       }
-      return out
+      for (let l = fromLInd; l >= 0 && before.length + after.length < MAX_QUEUE; l--) {
+        for (let rep = (l === fromLInd ? fromRep - 1 : list[l].repeats); rep >= 1 && before.length + after.length < MAX_QUEUE; rep--) {
+          before.unshift(this.trackFor(list[l], l, rep))
+        }
+      }
+      return { tracks: before.concat(after), index: before.length }
     },
     /** start a playlist entry */
     play(plInd, lInd, position = 0) {
-      queue = this.buildQueue(plInd, lInd)
-      if (!queue.length) return
-      const t = queue[0]
+      const q = this.buildQueue(plInd, lInd)
+      const t = q.tracks[q.index]
+      if (!t) return
+      queue = q.tracks
       this.now = { plInd, lInd, pInd: t.pInd, rep: 1, repeats: t.repeats }
       store.set('curPirith', t.pInd + 1)
       engine.setRate(this.rate)
-      engine.setQueue(queue, 0, { play: true, position })
+      engine.setQueue(queue, q.index, { play: true, position })
     },
     /** start a pirith: inside the open playlist when it is there, else from the full list */
     playPirith(pInd, position = 0) {
@@ -172,9 +182,10 @@ export const usePlayerStore = defineStore('player', {
       const list = this.playlists[n.plInd]?.list
       const lInd = list ? list.findIndex(e => e.pInd === n.pInd) : -1
       if (lInd < 0) return // current track was removed: let it finish, the old queue continues
-      queue = this.buildQueue(n.plInd, lInd, Math.min(n.rep, list[lInd].repeats))
-      this.now = { ...n, lInd, repeats: list[lInd].repeats, rep: queue[0].rep }
-      engine.setQueue(queue, 0, { keep: true })
+      const q = this.buildQueue(n.plInd, lInd, Math.min(n.rep, list[lInd].repeats))
+      queue = q.tracks
+      this.now = { ...n, lInd, repeats: list[lInd].repeats, rep: queue[q.index].rep }
+      engine.setQueue(queue, q.index, { keep: true })
     },
     onEngine(evt) {
       if (evt.type === 'state') {
