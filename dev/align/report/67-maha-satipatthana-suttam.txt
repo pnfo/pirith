@@ -1,208 +1,208 @@
 67-maha-satipatthana-suttam (metthananda)  mean confidence 0.84  low groups 0/207
-    group   1      3.00-    6.89  conf 0.85  Mahāsatipaṭṭhānasuttaṃ
-    group   2      9.67-   37.87  conf 0.83  Evaṃ me sutaṃ: ekaṃ samayaṃ bhagavā kurūsu viharat
-    group   3     40.50-   85.14  conf 0.90  Ekāyano ayaṃ bhikkhave maggo sattānaṃ visuddhiyā s
-    group   4     87.82-  101.11  conf 0.90  Vedanāsu vedanānupassī viharati ātāpī sampajāno sa
-    group   5    103.97-  116.68  conf 0.88  Citte cittānupassī viharati ātāpī sampajāno satimā
-    group   6    119.39-  131.91  conf 0.91  Dhammesu dhammānupassī viharati ātāpī sampajāno sa
-    group   7    134.66-  137.49  conf 0.90  Uddeso niṭṭhito.
-    group   8    140.39-  226.99  conf 0.93  Kathañca bhikkhave, bhikkhu kāye kāyānupassī vihar
-    group   9    229.44-  309.79  conf 0.93  Seyyathāpi bhikkhave, dakkho bhamakāro vā bhamakār
-    group  10    312.29-  329.88  conf 0.89  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  11    332.66-  349.79  conf 0.76  Samudayadhammānupassī vā kāyasmiṃ viharati, vayadh
-    group  12    352.77-  378.71  conf 0.90  Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti, 
-    group  13    381.79-  385.66  conf 0.72  Ānāpānapabbaṃ niṭṭhitaṃ.
-    group  14    388.49-  420.03  conf 0.94  Puna caparaṃ bhikkhave, bhikkhu gacchanto vā gacch
-    group  15    422.74-  457.00  conf 0.89  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  16    459.88-  484.58  conf 0.91  Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti, 
-    group  17    489.85-  493.54  conf 0.77  Iriyāpathapabbaṃ niṭṭhitaṃ.
-    group  18    496.30-  545.86  conf 0.90  Puna caparaṃ bhikkhave, bhikkhu abhikkante paṭikka
-    group  19    549.07-  583.33  conf 0.91  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  20    586.31-  604.17  conf 0.90  ‘Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti,
-    group  21    607.08-  614.49  conf 0.88  Evampi kho bhikkhave, bhikkhu kāye kāyānupassī vih
-    group  22    617.31-  620.91  conf 0.78  Sampajaññapabbaṃ niṭṭhitaṃ.
-    group  23    623.84-  640.03  conf 0.89  Puna caparaṃ bhikkhave, bhikkhu imameva kāyaṃ uddh
-    group  24    643.05-  678.43  conf 0.89  “Atthi imasmiṃ kāye kesā lomā nakhā dantā taco maṃ
-    group  25    681.37-  770.57  conf 0.91  Seyyathāpi bhikkhave, ubhato mukhā puṭoḷī pūrā nān
-    group  26    773.59-  832.55  conf 0.90  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  27    835.33-  840.00  conf 0.85  Paṭikkūlamanasikārapabbaṃ niṭṭhitaṃ.
-    group  28    845.08-  865.96  conf 0.91  Puna caparaṃ bhikkhave, bhikkhu imameva kāyaṃ yath
-    group  29    869.00-  907.88  conf 0.90  Seyyathāpi bhikkhave, dakkho goghātako vā goghātak
-    group  30    910.86-  945.24  conf 0.89  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  31    948.08-  964.95  conf 0.91  Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti, 
-    group  32    967.93-  975.32  conf 0.86  Evampi kho bhikkhave, bhikkhu kāye kāyānupassī vih
-    group  33    978.45-  982.82  conf 0.89  Dhātumanasikārapabbaṃ niṭṭhitaṃ.
-    group  34    985.50- 1017.75  conf 0.90  Puna caparaṃ bhikkhave, bhikkhu seyyathāpi passeyy
-    group  35   1020.97- 1054.91  conf 0.91  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  36   1058.16- 1074.89  conf 0.90  Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti, 
-    group  37   1077.93- 1085.43  conf 0.83  Evampi kho bhikkhave, bhikkhu kāye kāyānupassī vih
-    group  38   1088.70- 1091.55  conf 0.78  (paṭhamaṃ sīvathikaṃ)
-    group  39   1096.35- 1138.99  conf 0.92  Puna caparaṃ bhikkhave, bhikkhu seyyathāpi passeyy
-    group  40   1142.03- 1175.98  conf 0.89  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  41   1179.02- 1195.86  conf 0.90  Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti, 
-    group  42   1199.04- 1206.44  conf 0.82  Evampi kho bhikkhave, bhikkhu kāye kāyānupassī vih
-    group  43   1209.63- 1212.57  conf 0.71  (dutiyaṃ sīvathikaṃ)
-    group  44   1215.72- 1243.11  conf 0.92  Puna caparaṃ bhikkhave, bhikkhu seyyathāpi passeyy
-    group  45   1246.32- 1280.47  conf 0.92  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  46   1282.93- 1299.64  conf 0.92  Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti, 
-    group  47   1302.69- 1310.05  conf 0.85  Evampi kho bhikkhave, bhikkhu kāye kāyānupassī vih
-    group  48   1313.08- 1315.82  conf 0.71  (tatiyaṃ sīvathikaṃ)
-    group  49   1319.15- 1347.55  conf 0.93  Puna caparaṃ bhikkhave, bhikkhu seyyathāpi passeyy
-    group  50   1350.07- 1383.88  conf 0.89  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  51   1387.00- 1403.85  conf 0.91  ‘Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti,
-    group  52   1407.10- 1414.36  conf 0.77  Evampi kho bhikkhave, bhikkhu kāye kāyānupassī vih
-    group  53   1417.41- 1420.57  conf 0.67  (catutthaṃ sīvathikaṃ)
-    group  54   1425.73- 1453.99  conf 0.90  Puna caparaṃ bhikkhave, bhikkhu seyyathāpi passeyy
-    group  55   1457.16- 1492.08  conf 0.86  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  56   1495.17- 1511.88  conf 0.93  ‘Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti,
-    group  57   1515.00- 1522.41  conf 0.82  Evampi kho bhikkhave, bhikkhu kāye kāyānupassī vih
-    group  58   1525.59- 1528.62  conf 0.76  (pañcamaṃ sīvathikaṃ)
-    group  59   1532.00- 1589.12  conf 0.87  Puna caparaṃ bhikkhave, bhikkhu seyyathāpi passeyy
-    group  60   1592.45- 1625.91  conf 0.87  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  61   1629.17- 1653.30  conf 0.88  Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti, 
-    group  62   1656.66- 1659.51  conf 0.85  (chaṭṭhaṃ sīvathikaṃ)
-    group  63   1662.76- 1689.32  conf 0.92  Puna caparaṃ bhikkhave, bhikkhu seyyathāpi passeyy
-    group  64   1692.57- 1726.23  conf 0.89  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  65   1729.18- 1753.78  conf 0.89  ‘Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti,
-    group  66   1756.88- 1759.97  conf 0.72  (sattamaṃ sīvathikaṃ)
-    group  67   1763.12- 1789.68  conf 0.91  Puna caparaṃ bhikkhave, bhikkhu seyyathāpi passeyy
-    group  68   1792.85- 1826.71  conf 0.92  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  69   1829.49- 1854.36  conf 0.91  ‘Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti,
-    group  70   1857.54- 1860.47  conf 0.82  (aṭṭhamaṃ sīvathikaṃ)
-    group  71   1863.70- 1889.31  conf 0.91  Puna caparaṃ bhikkhave, bhikkhu seyyathāpi passeyy
-    group  72   1892.51- 1927.05  conf 0.89  Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahidd
-    group  73   1930.15- 1954.52  conf 0.88  ‘Atthi kāyo’ti vā panassa sati paccupaṭṭhitā hoti,
-    group  74   1957.74- 1960.74  conf 0.74  (navamaṃ sīvathikaṃ)
-    group  75   1964.06- 1968.38  conf 0.88  Cuddasa kāyānupassanā niṭṭhitā.
-    group  76   1971.53- 1974.31  conf 0.91  Vedanānupassanā
-    group  77   1977.61- 2015.10  conf 0.88  Kathañca bhikkhave, bhikkhu vedanāsu vedanānupassī
-    group  78   2018.40- 2086.39  conf 0.83  Sāmisaṃ vā sukhaṃ vedanaṃ vediyamāno sāmisaṃ sukha
-    group  79   2089.47- 2124.31  conf 0.93  Iti ajjhattaṃ vā vedanāsu vedanānupassī viharati, 
-    group  80   2127.42- 2152.34  conf 0.89  ‘Atthi vedanā’ti vā panassa sati paccupaṭṭhitā hot
-    group  81   2155.64- 2159.26  conf 0.83  Vedanānupassanā niṭṭhitā.
-    group  82   2162.60- 2165.02  conf 0.91  Cittānupassanā
-    group  83   2168.15- 2175.08  conf 0.85  Kathañca pana bhikkhave, bhikkhu citte cittānupass
-    group  84   2178.20- 2281.16  conf 0.79  Idha bhikkhave, bhikkhu sarāgaṃ vā cittaṃ sarāgaṃ 
-    group  85   2284.28- 2317.93  conf 0.86  Iti ajjhattaṃ vā citte cittānupassī viharati, bahi
-    group  86   2321.52- 2346.37  conf 0.92  Atthi cittanti vā panassa sati paccupaṭṭhitā hoti,
-    group  87   2349.56- 2353.17  conf 0.88  Cittānupassanā niṭṭhitā.
-    group  88   2356.29- 2358.91  conf 0.97  Dhammānupassanā
-    group  89   2361.98- 2369.49  conf 0.82  Kathañca pana bhikkhave, bhikkhu dhammesu dhammānu
-    group  90   2372.51- 2390.81  conf 0.88  Idha bhikkhave, bhikkhu dhammesu dhammānupassī vih
-    group  91   2393.83- 2442.40  conf 0.82  Idha bhikkhave, bhikkhu santaṃ vā ajjhattaṃ kāmacc
-    group  92   2445.49- 2487.77  conf 0.91  Santaṃ vā ajjhattaṃ byāpādaṃ ‘Atthi me ajjhattaṃ b
-    group  93   2490.93- 2534.31  conf 0.92  Santaṃ vā ajjhattaṃ thinamiddhaṃ ‘Atthi me ajjhatt
-    group  94   2537.58- 2585.76  conf 0.79  Santaṃ vā ajjhattaṃ uddhaccakukkuccaṃ ‘Atthi me aj
-    group  95   2588.64- 2630.98  conf 0.92  Santaṃ vā ajjhattaṃ vicikicchaṃ ‘Atthi me ajjhatta
-    group  96   2633.98- 2674.39  conf 0.93  Iti ajjhattaṃ vā dhammesu dhammānupassī viharati, 
-    group  97   2677.29- 2697.78  conf 0.88  Yāvadeva ñāṇamattāya patissatimattāya. Anissito ca
-    group  98   2701.01- 2704.48  conf 0.75  (nīvaraṇapabbaṃ niṭṭhitaṃ.)
-    group  99   2707.66- 2774.85  conf 0.88  Puna caparaṃ bhikkhave, bhikkhu dhammesu dhammānup
-    group 100   2777.91- 2812.62  conf 0.88  Iti ajjhattaṃ vā dhammesu dhammānupassī viharati, 
-    group 101   2815.76- 2832.67  conf 0.87  ‘Atthi dhammā’ti vā panassa sati paccupaṭṭhitā hot
-    group 102   2835.85- 2846.31  conf 0.82  Evampi kho bhikkhave, bhikkhu dhammesu dhammānupas
-    group 103   2849.48- 2852.84  conf 0.68  Khandhapabbaṃ niṭṭhitaṃ.
-    group 104   2856.02- 2879.63  conf 0.80  Puna caparaṃ bhikkhave, bhikkhu dhammesu dhammānup
-    group 105   2882.74- 2921.83  conf 0.88  Idha bhikkhave, bhikkhu cakkhuñca pajānāti, rūpe c
-    group 106   2924.84- 2953.24  conf 0.67  Sotañca pajānāti, sadde ca pajānāti, yañca tadubha
-    group 107   2956.13- 2991.87  conf 0.89  Ghānañca pajānāti, gandhe ca pajānāti, yañca tadub
-    group 108   2994.83- 3029.92  conf 0.89  Jivhañca pajānāti, rase ca pajānāti. Yañca tadubha
-    group 109   3032.93- 3068.40  conf 0.88  Kāyañca pajānāti, phoṭṭhabbo ca pajānāti, yañca ta
-    group 110   3071.46- 3106.33  conf 0.90  Manañca pajānāti, dhamme ca pajānāti, yañca tadubh
-    group 111   3109.38- 3144.24  conf 0.92  Iti ajjhattaṃ vā dhammesu dhammānupassī viharati, 
-    group 112   3147.37- 3163.91  conf 0.89  Atthi dhammāti vā panassa sati paccupaṭṭhitā hoti,
-    group 113   3166.78- 3179.27  conf 0.81  Evampi kho bhikkhave, bhikkhu dhammesu dhammānupas
-    group 114   3182.09- 3185.76  conf 0.81  Āyatanapabbaṃ niṭṭhitaṃ.
-    group 115   3188.87- 3208.08  conf 0.84  Puna caparaṃ bhikkhave, bhikkhu dhammesu dhammānup
-    group 116   3211.13- 3254.40  conf 0.86  Idha bhikkhave, bhikkhu santaṃ vā ajjhattaṃ satisa
-    group 117   3257.33- 3303.20  conf 0.79  Santaṃ vā ajjhattaṃ dhammavicayasambojjhaṅgaṃ atth
-    group 118   3306.32- 3348.80  conf 0.85  Santaṃ vā ajjhattaṃ viriyasambojjhaṅgaṃ atthi me a
-    group 119   3351.38- 3394.80  conf 0.87  Santaṃ vā ajjhattaṃ pītisambojjhaṅgaṃ ‘Atthi me aj
-    group 120   3397.75- 3443.98  conf 0.83  Santaṃ vā ajjhattaṃ passaddhisambojjhaṅgaṃ ‘Atthi 
-    group 121   3447.33- 3491.92  conf 0.87  Santaṃ vā ajjhattaṃ samādhisambojjhaṅgaṃ ‘Atthi me
-    group 122   3495.74- 3541.95  conf 0.87  Santaṃ vā ajjhattaṃ upekkhāsambojjhaṅgaṃ atthi me 
-    group 123   3545.56- 3563.88  conf 0.88  Iti ajjhattaṃ vā dhammesu dhammānupassī viharati, 
-    group 124   3566.91- 3583.59  conf 0.91  Samudayadhammānupassī vā dhammesu viharati, vayadh
-    group 125   3586.70- 3603.46  conf 0.91  ‘Atthi dhammā’ti vā panassa sati paccupaṭṭhitā hot
-    group 126   3606.65- 3617.47  conf 0.82  Evampi kho bhikkhave, bhikkhu dhammesu dhammānupas
-    group 127   3620.75- 3624.27  conf 0.74  Bojjhaṅgapabbaṃ niṭṭhitaṃ.
-    group 128   3627.39- 3631.69  conf 0.82  Paṭhamabhāṇavāraṃ niṭṭhitaṃ
-    group 129   3635.03- 3654.58  conf 0.88  Puna caparaṃ bhikkhave, bhikkhu dhammesu dhammānup
-    group 130   3657.58- 3683.40  conf 0.95  Idha bhikkhave, bhikkhu idaṃ dukkhanti yathābhūtaṃ
-    group 131   3686.67- 3723.63  conf 0.77  Katamañca bhikkhave, dukkhaṃ ariyasaccaṃ: jāti pi 
-    group 132   3726.93- 3751.95  conf 0.88  Katamā ca bhikkhave, jāti: yā tesaṃ tesaṃ sattānaṃ
-    group 133   3755.21- 3779.78  conf 0.83  Katamā ca bhikkhave, jarā: yā tesaṃ tesaṃ sattānaṃ
-    group 134   3782.96- 3812.98  conf 0.82  Katamañca bhikkhave, maraṇaṃ: yaṃ tesaṃ tesaṃ satt
-    group 135   3816.16- 3843.88  conf 0.85  Katamo ca bhikkhave, soko: yo kho bhikkhave, aññat
-    group 136   3846.96- 3876.80  conf 0.88  Katamo ca bhikkhave, paridevo: yo kho bhikkhave, a
-    group 137   3880.00- 3899.04  conf 0.74  Katamañca bhikkhave, dukkhaṃ: yaṃ kho bhikkhave, k
-    group 138   3902.38- 3923.59  conf 0.80  Katamañca bhikkhave, domanassaṃ: yaṃ kho bhikkhave
-    group 139   3927.01- 3954.86  conf 0.88  Katamo ca bhikkhave, upāyāso: yo kho bhikkhave, añ
-    group 140   3958.06- 4001.74  conf 0.87  Katamo ca bhikkhave, appiyehi sampayogo dukkho: id
-    group 141   4005.03- 4062.29  conf 0.91  Katamo ca bhikkhave, piyehi vippayogo dukkho: idha
-    group 142   4065.55- 4099.23  conf 0.74  Katamañca bhikkhave, yampicchaṃ na labhati tampi d
-    group 143   4102.64- 4129.51  conf 0.78  Jarā dhammānaṃ bhikkhave, sattānaṃ evaṃ icchā uppa
-    group 144   4133.17- 4160.17  conf 0.68  Byādhidhammānaṃ bhikkhave, sattānaṃ evaṃ icchā upp
-    group 145   4163.52- 4190.56  conf 0.73  Maraṇadhammānaṃ bhikkhave, sattānaṃ evaṃ icchā upp
-    group 146   4193.79- 4220.58  conf 0.71  Sokadhammānaṃ bhikkhave, sattānaṃ evaṃ icchā uppaj
-    group 147   4223.83- 4252.53  conf 0.76  Paridevadhammānaṃ bhikkhave, sattānaṃ evaṃ icchā u
-    group 148   4255.88- 4283.05  conf 0.69  Dukkhadhammānaṃ bhikkhave, sattānaṃ evaṃ icchā upp
-    group 149   4286.27- 4316.01  conf 0.69  Domanassadhammānaṃ bhikkhave, sattānaṃ evaṃ icchā 
-    group 150   4319.45- 4348.35  conf 0.72  Upāyāsadhammānaṃ bhikkhave, sattānaṃ evaṃ icchā up
-    group 151   4350.91- 4392.36  conf 0.86  Katame ca bhikkhave, saṅkhittena pañcupādānakkhand
-    group 152   4395.60- 4418.46  conf 0.82  Katamañca bhikkhave, dukkhasamudayo ariyasaccaṃ: y
-    group 153   4421.69- 4489.71  conf 0.81  Sā kho panesā bhikkhave, taṇhā kattha uppajjamānā 
-    group 154   4493.03- 4518.40  conf 0.76  Rūpā loke -pe- saddā loke -pe- gandhā loke -pe- ra
-    group 155   4521.63- 4549.40  conf 0.65  Cakkhuviññāṇaṃ loke -pe- sotaviññāṇaṃ -pe- ghānavi
-    group 156   4552.62- 4579.65  conf 0.62  Cakkhusamphasso -pe- sotasamphasso -pe- ghānasamph
-    group 157   4582.86- 4616.63  conf 0.73  Cakkhusamphassajā vedanā -pe- sotasamphassajā veda
-    group 158   4619.89- 4644.40  conf 0.69  Rūpasaññā -pe- saddasaññā -pe- gandhasaññā -pe- ra
-    group 159   4646.95- 4674.42  conf 0.67  Rūpasañcetanā -pe- saddasañcetanā -pe- gandhasañce
-    group 160   4677.49- 4702.57  conf 0.63  Rūpataṇhā -pe- saddataṇhā -pe- gandhataṇhā -pe- ra
-    group 161   4705.39- 4730.64  conf 0.68  Rūpavitakko -pe- saddavitakko -pe- gandhavitakko -
-    group 162   4733.76- 4759.09  conf 0.67  Rūpavicāro -pe- saddavicāro -pe- gandhavicāro -pe-
-    group 163   4762.16- 4768.31  conf 0.76  Idaṃ vuccati bhikkhave dukkhasamudayo ariyasaccaṃ.
-    group 164   4771.79- 4814.37  conf 0.88  Katamañca bhikkhave, dukkhanirodho ariyasaccaṃ? Yo
-    group 165   4817.63- 4855.96  conf 0.74  Kiñca loke piyarūpaṃ sātarūpaṃ? Cakkhu loke piyarū
-    group 166   4859.17- 4881.01  conf 0.68  Rūpā -pe- saddā -pe- gandhā -pe- rasā -pe- phoṭṭha
-    group 167   4884.04- 4911.11  conf 0.67  Cakkhuviññāṇaṃ -pe- sotaviññāṇaṃ -pe- ghānaviññāṇa
-    group 168   4914.31- 4941.45  conf 0.65  Cakkhusamphasso -pe- sotasamphasso -pe- ghānasamph
-    group 169   4944.78- 4978.67  conf 0.74  Cakkhusamphassajā vedanā -pe- sotasamphassajā veda
-    group 170   4981.77- 5006.07  conf 0.67  Rūpasaññā -pe- saddasaññā -pe- gandhasaññā -pe- ra
-    group 171   5009.61- 5034.40  conf 0.61  Rūpasañcetanā -pe- saddasañcetanā -pe- gandhasañce
-    group 172   5037.88- 5062.44  conf 0.67  Rūpataṇhā -pe- saddataṇhā -pe- gandhataṇhā -pe- ra
-    group 173   5065.95- 5091.80  conf 0.67  Rūpavitakko -pe- saddavitakko -pe- gandhavitakko -
-    group 174   5095.21- 5121.18  conf 0.67  Rūpavicāro -pe- saddavicāro -pe- gandhavicāro -pe-
-    group 175   5125.67- 5131.68  conf 0.73  Idaṃ vuccati bhikkhave, dukkhanirodho ariyasaccaṃ.
-    group 176   5135.33- 5166.69  conf 0.89  Katamañca bhikkhave, dukkhanirodhagāminī paṭipadā 
-    group 177   5169.54- 5193.26  conf 0.85  Katamā ca bhikkhave, sammādiṭṭhi? Yaṃ kho bhikkhav
-    group 178   5196.90- 5214.21  conf 0.79  Katamo ca bhikkhave, sammāsaṅkappo? Nekkhammasaṅka
-    group 179   5217.65- 5240.03  conf 0.94  Katamā ca bhikkhave, sammāvācā? Musāvādā veramaṇī,
-    group 180   5243.54- 5264.50  conf 0.92  Katamo ca bhikkhave, sammākammanto? Pāṇātipātā ver
-    group 181   5267.35- 5288.22  conf 0.88  Katamo ca bhikkhave, sammāājīvo? Idha bhikkhave, a
-    group 182   5292.26- 5373.11  conf 0.89  Katamo ca bhikkhave, sammāvāyāmo? Idha bhikkhave, 
-    group 183   5376.94- 5438.63  conf 0.89  Katamā ca bhikkhave, sammāsati? Idha bhikkhave, bh
-    group 184   5441.46- 5532.58  conf 0.89  Katamo ca bhikkhave, sammāsamādhi? Idha bhikkhave,
-    group 185   5536.07- 5544.64  conf 0.89  Idaṃ vuccati bhikkhave, dukkhanirodhagāminī paṭipa
-    group 186   5548.55- 5583.47  conf 0.91  Iti ajjhattaṃ vā dhammesu dhammānupassī viharati, 
-    group 187   5586.95- 5603.84  conf 0.91  Atthi dhammā’ti vā panassa sati paccupaṭṭhitā hoti
-    group 188   5607.46- 5617.03  conf 0.86  Evampi kho bhikkhave, bhikkhu dhammesu dhammānupas
-    group 189   5620.75- 5644.35  conf 0.87  Yo hi koci bhikkhave, ime cattāro satipaṭṭhāne eva
-    group 190   5647.97- 5675.48  conf 0.85  Tiṭṭhantu bhikkhave sattavassāni, yo hi koci bhikk
-    group 191   5679.21- 5707.33  conf 0.90  Tiṭṭhantu bhikkhave cha vassāni, yo hi koci bhikkh
-    group 192   5711.14- 5738.84  conf 0.90  Tiṭṭhantu bhikkhave pañca vassāni, yo hi koci bhik
-    group 193   5742.56- 5770.51  conf 0.91  Tiṭṭhantu bhikkhave cattāri vassāni, yo hi koci bh
-    group 194   5773.92- 5801.30  conf 0.92  Tiṭṭhantu bhikkhave tīṇi vassāni, yo hi koci bhikk
-    group 195   5804.93- 5832.47  conf 0.88  Tiṭṭhantu bhikkhave dve vassāni, yo hi koci bhikkh
-    group 196   5836.13- 5863.77  conf 0.89  Tiṭṭhantu bhikkhave ekaṃ vassaṃ, yo hi koci bhikkh
-    group 197   5867.28- 5894.14  conf 0.87  Tiṭṭhantu bhikkhave satta māsāni, yo hi koci bhikk
-    group 198   5897.61- 5924.43  conf 0.87  Tiṭṭhantu bhikkhave cha māsāni, yo hi koci bhikkha
-    group 199   5927.74- 5955.15  conf 0.90  Tiṭṭhantu bhikkhave pañca māsāni, yo hi koci bhikk
-    group 200   5958.53- 5985.50  conf 0.90  Tiṭṭhantu bhikkhave cattāri māsāni, yo hi koci bhi
-    group 201   5989.05- 6015.67  conf 0.90  Tiṭṭhantu bhikkhave tīṇi māsāni, yo hi koci bhikkh
-    group 202   6018.98- 6045.79  conf 0.91  Tiṭṭhantu bhikkhave dve māsāni, yo hi koci bhikkha
-    group 203   6049.40- 6075.91  conf 0.87  Tiṭṭhatu bhikkhave māso, yo hi koci bhikkhave, ime
-    group 204   6079.36- 6105.97  conf 0.88  Tiṭṭhantu bhikkhave aḍḍhamāso, yo hi koci bhikkhav
-    group 205   6109.40- 6141.29  conf 0.87  Ekāyano ayaṃ bhikkhave, maggo sattānaṃ visuddhiyā 
-    group 206   6144.81- 6154.12  conf 0.92  Idamavoca bhagavā. Attamanā te bhikkhū bhagavato b
-    group 207   6157.78- 6163.37  conf 0.82  Mahāsatipaṭṭhānasuttaṃ niṭṭhitaṃ navamaṃ.
+    group   1      0.40-    4.29  conf 0.84  Mahāsatipaṭṭhānasuttaṃ
+    group   2      5.29-   33.49  conf 0.79  Evaṃ me sutaṃ:
+    group   3     34.49-   79.13  conf 0.90  Ekāyano ayaṃ bhikkhave maggo
+    group   4     80.13-   93.42  conf 0.89  Vedanāsu vedanānupassī viharati
+    group   5     94.42-  107.13  conf 0.87  Citte cittānupassī viharati
+    group   6    108.13-  120.65  conf 0.91  Dhammesu dhammānupassī viharati
+    group   7    121.65-  124.48  conf 0.91  Uddeso niṭṭhito.
+    group   8    125.48-  212.08  conf 0.93  Kathañca bhikkhave,
+    group   9    213.08-  293.43  conf 0.93  Seyyathāpi bhikkhave,
+    group  10    294.43-  312.02  conf 0.89  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  11    313.02-  330.15  conf 0.78  Samudayadhammānupassī vā kāyasmiṃ viharati,
+    group  12    331.15-  357.09  conf 0.91  Atthi kāyo’ti vā panassa
+    group  13    358.09-  361.96  conf 0.75  Ānāpānapabbaṃ niṭṭhitaṃ.
+    group  14    362.96-  394.50  conf 0.94  Puna caparaṃ bhikkhave,
+    group  15    395.50-  429.76  conf 0.88  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  16    430.76-  455.46  conf 0.91  Atthi kāyo’ti vā panassa
+    group  17    456.46-  460.15  conf 0.75  Iriyāpathapabbaṃ niṭṭhitaṃ.
+    group  18    461.15-  510.71  conf 0.90  Puna caparaṃ bhikkhave,
+    group  19    511.71-  545.97  conf 0.90  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  20    546.97-  564.83  conf 0.91  ‘Atthi kāyo’ti vā panassa
+    group  21    565.83-  573.24  conf 0.87  Evampi kho bhikkhave,
+    group  22    574.24-  577.84  conf 0.78  Sampajaññapabbaṃ niṭṭhitaṃ.
+    group  23    578.84-  595.03  conf 0.89  Puna caparaṃ bhikkhave,
+    group  24    596.03-  631.41  conf 0.89  “Atthi imasmiṃ kāye
+    group  25    632.41-  721.61  conf 0.91  Seyyathāpi bhikkhave,
+    group  26    722.61-  781.57  conf 0.91  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  27    782.57-  787.24  conf 0.85  Paṭikkūlamanasikārapabbaṃ niṭṭhitaṃ.
+    group  28    788.24-  809.12  conf 0.90  Puna caparaṃ bhikkhave,
+    group  29    810.12-  849.00  conf 0.90  Seyyathāpi bhikkhave,
+    group  30    850.00-  884.38  conf 0.89  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  31    885.38-  902.25  conf 0.92  Atthi kāyo’ti vā panassa
+    group  32    903.25-  910.64  conf 0.86  Evampi kho bhikkhave,
+    group  33    911.64-  916.01  conf 0.84  Dhātumanasikārapabbaṃ niṭṭhitaṃ.
+    group  34    917.01-  949.26  conf 0.91  Puna caparaṃ bhikkhave,
+    group  35    950.26-  984.20  conf 0.91  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  36    985.20- 1001.93  conf 0.91  Atthi kāyo’ti vā panassa
+    group  37   1002.93- 1010.43  conf 0.83  Evampi kho bhikkhave,
+    group  38   1011.43- 1014.28  conf 0.77  (paṭhamaṃ sīvathikaṃ)
+    group  39   1015.28- 1057.92  conf 0.92  Puna caparaṃ bhikkhave,
+    group  40   1058.92- 1092.87  conf 0.89  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  41   1093.87- 1110.71  conf 0.91  Atthi kāyo’ti vā panassa
+    group  42   1111.71- 1119.11  conf 0.81  Evampi kho bhikkhave,
+    group  43   1120.11- 1123.05  conf 0.73  (dutiyaṃ sīvathikaṃ)
+    group  44   1124.05- 1151.44  conf 0.92  Puna caparaṃ bhikkhave,
+    group  45   1152.44- 1186.59  conf 0.91  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  46   1187.59- 1204.30  conf 0.91  Atthi kāyo’ti vā panassa
+    group  47   1205.30- 1212.66  conf 0.86  Evampi kho bhikkhave,
+    group  48   1213.66- 1216.40  conf 0.71  (tatiyaṃ sīvathikaṃ)
+    group  49   1217.40- 1245.80  conf 0.92  Puna caparaṃ bhikkhave,
+    group  50   1246.80- 1280.61  conf 0.89  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  51   1281.61- 1298.46  conf 0.91  ‘Atthi kāyo’ti vā panassa
+    group  52   1299.46- 1306.72  conf 0.79  Evampi kho bhikkhave,
+    group  53   1307.72- 1310.88  conf 0.71  (catutthaṃ sīvathikaṃ)
+    group  54   1311.88- 1340.14  conf 0.90  Puna caparaṃ bhikkhave,
+    group  55   1341.14- 1376.06  conf 0.84  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  56   1377.06- 1393.77  conf 0.92  ‘Atthi kāyo’ti vā panassa
+    group  57   1394.77- 1402.18  conf 0.83  Evampi kho bhikkhave,
+    group  58   1403.18- 1406.21  conf 0.77  (pañcamaṃ sīvathikaṃ)
+    group  59   1407.21- 1464.33  conf 0.87  Puna caparaṃ bhikkhave,
+    group  60   1465.33- 1498.79  conf 0.88  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  61   1499.79- 1523.92  conf 0.89  Atthi kāyo’ti vā panassa
+    group  62   1524.92- 1527.77  conf 0.82  (chaṭṭhaṃ sīvathikaṃ)
+    group  63   1528.77- 1555.33  conf 0.92  Puna caparaṃ bhikkhave,
+    group  64   1556.33- 1589.99  conf 0.89  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  65   1590.99- 1615.59  conf 0.88  ‘Atthi kāyo’ti vā panassa
+    group  66   1616.59- 1619.68  conf 0.71  (sattamaṃ sīvathikaṃ)
+    group  67   1620.68- 1647.24  conf 0.91  Puna caparaṃ bhikkhave,
+    group  68   1648.24- 1682.10  conf 0.91  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  69   1683.10- 1707.97  conf 0.91  ‘Atthi kāyo’ti vā panassa
+    group  70   1708.97- 1711.90  conf 0.86  (aṭṭhamaṃ sīvathikaṃ)
+    group  71   1712.90- 1738.51  conf 0.91  Puna caparaṃ bhikkhave,
+    group  72   1739.51- 1774.05  conf 0.90  Iti ajjhattaṃ vā kāye kāyānupassī viharati,
+    group  73   1775.05- 1799.42  conf 0.87  ‘Atthi kāyo’ti vā panassa
+    group  74   1800.42- 1803.42  conf 0.75  (navamaṃ sīvathikaṃ)
+    group  75   1804.42- 1808.74  conf 0.90  Cuddasa kāyānupassanā niṭṭhitā.
+    group  76   1809.74- 1812.52  conf 0.94  Vedanānupassanā
+    group  77   1813.52- 1851.01  conf 0.87  Kathañca bhikkhave,
+    group  78   1852.01- 1920.00  conf 0.88  Sāmisaṃ vā sukhaṃ vedanaṃ vediyamāno
+    group  79   1921.00- 1955.84  conf 0.92  Iti ajjhattaṃ vā vedanāsu vedanānupassī viharati,
+    group  80   1956.84- 1981.76  conf 0.90  ‘Atthi vedanā’ti vā panassa
+    group  81   1982.76- 1986.38  conf 0.81  Vedanānupassanā niṭṭhitā.
+    group  82   1987.38- 1989.80  conf 0.95  Cittānupassanā
+    group  83   1990.80- 1997.73  conf 0.86  Kathañca pana bhikkhave,
+    group  84   1998.73- 2101.69  conf 0.74  Idha bhikkhave, bhikkhu
+    group  85   2102.69- 2136.34  conf 0.89  Iti ajjhattaṃ vā citte cittānupassī viharati,
+    group  86   2137.34- 2162.19  conf 0.92  Atthi cittanti vā panassa
+    group  87   2163.19- 2166.80  conf 0.89  Cittānupassanā niṭṭhitā.
+    group  88   2167.80- 2170.42  conf 0.94  Dhammānupassanā
+    group  89   2171.42- 2178.93  conf 0.77  Kathañca pana bhikkhave,
+    group  90   2179.93- 2198.23  conf 0.88  Idha bhikkhave, bhikkhu
+    group  91   2199.23- 2247.80  conf 0.82  Idha bhikkhave, bhikkhu
+    group  92   2248.80- 2291.08  conf 0.90  Santaṃ vā ajjhattaṃ byāpādaṃ
+    group  93   2292.08- 2335.46  conf 0.92  Santaṃ vā ajjhattaṃ thinamiddhaṃ
+    group  94   2336.46- 2384.64  conf 0.81  Santaṃ vā ajjhattaṃ uddhaccakukkuccaṃ
+    group  95   2385.64- 2427.98  conf 0.92  Santaṃ vā ajjhattaṃ vicikicchaṃ
+    group  96   2428.98- 2469.39  conf 0.92  Iti ajjhattaṃ vā dhammesu dhammānupassī viharati,
+    group  97   2470.39- 2490.88  conf 0.88  Yāvadeva ñāṇamattāya patissatimattāya.
+    group  98   2491.88- 2495.35  conf 0.78  (nīvaraṇapabbaṃ niṭṭhitaṃ.)
+    group  99   2496.35- 2563.54  conf 0.88  Puna caparaṃ bhikkhave, bhikkhu
+    group 100   2564.54- 2599.25  conf 0.88  Iti ajjhattaṃ vā dhammesu dhammānupassī viharati,
+    group 101   2600.25- 2617.16  conf 0.87  ‘Atthi dhammā’ti vā panassa
+    group 102   2618.16- 2628.62  conf 0.82  Evampi kho bhikkhave,
+    group 103   2629.62- 2632.98  conf 0.65  Khandhapabbaṃ niṭṭhitaṃ.
+    group 104   2633.98- 2657.59  conf 0.79  Puna caparaṃ bhikkhave, bhikkhu
+    group 105   2658.59- 2697.68  conf 0.88  Idha bhikkhave, bhikkhu
+    group 106   2698.68- 2727.08  conf 0.68  Sotañca pajānāti, sadde ca pajānāti,
+    group 107   2728.08- 2763.82  conf 0.89  Ghānañca pajānāti, gandhe ca pajānāti,
+    group 108   2764.82- 2799.91  conf 0.89  Jivhañca pajānāti, rase ca pajānāti.
+    group 109   2800.91- 2836.38  conf 0.89  Kāyañca pajānāti, phoṭṭhabbo ca pajānāti,
+    group 110   2837.38- 2872.25  conf 0.89  Manañca pajānāti, dhamme ca pajānāti,
+    group 111   2873.25- 2908.11  conf 0.93  Iti ajjhattaṃ vā dhammesu dhammānupassī viharati,
+    group 112   2909.11- 2925.65  conf 0.90  Atthi dhammāti vā panassa
+    group 113   2926.65- 2939.14  conf 0.83  Evampi kho bhikkhave,
+    group 114   2940.14- 2943.81  conf 0.79  Āyatanapabbaṃ niṭṭhitaṃ.
+    group 115   2944.81- 2964.02  conf 0.83  Puna caparaṃ bhikkhave, bhikkhu
+    group 116   2965.02- 3008.29  conf 0.87  Idha bhikkhave, bhikkhu
+    group 117   3009.29- 3055.16  conf 0.78  Santaṃ vā ajjhattaṃ dhammavicayasambojjhaṅgaṃ
+    group 118   3056.16- 3098.64  conf 0.86  Santaṃ vā ajjhattaṃ viriyasambojjhaṅgaṃ
+    group 119   3099.64- 3143.06  conf 0.86  Santaṃ vā ajjhattaṃ pītisambojjhaṅgaṃ
+    group 120   3144.06- 3190.29  conf 0.87  Santaṃ vā ajjhattaṃ passaddhisambojjhaṅgaṃ
+    group 121   3191.29- 3235.88  conf 0.88  Santaṃ vā ajjhattaṃ samādhisambojjhaṅgaṃ
+    group 122   3236.88- 3283.09  conf 0.88  Santaṃ vā ajjhattaṃ upekkhāsambojjhaṅgaṃ
+    group 123   3284.09- 3302.41  conf 0.88  Iti ajjhattaṃ vā dhammesu dhammānupassī viharati,
+    group 124   3303.41- 3320.09  conf 0.88  Samudayadhammānupassī vā dhammesu viharati,
+    group 125   3321.09- 3337.85  conf 0.91  ‘Atthi dhammā’ti vā panassa
+    group 126   3338.85- 3349.67  conf 0.79  Evampi kho bhikkhave,
+    group 127   3350.67- 3354.19  conf 0.62  Bojjhaṅgapabbaṃ niṭṭhitaṃ.
+    group 128   3355.19- 3359.49  conf 0.82  Paṭhamabhāṇavāraṃ niṭṭhitaṃ
+    group 129   3360.49- 3380.04  conf 0.88  Puna caparaṃ bhikkhave,
+    group 130   3381.04- 3406.86  conf 0.94  Idha bhikkhave, bhikkhu
+    group 131   3407.86- 3444.82  conf 0.80  Katamañca bhikkhave, dukkhaṃ ariyasaccaṃ:
+    group 132   3445.82- 3470.84  conf 0.88  Katamā ca bhikkhave, jāti:
+    group 133   3471.84- 3496.41  conf 0.83  Katamā ca bhikkhave, jarā:
+    group 134   3497.41- 3527.43  conf 0.83  Katamañca bhikkhave, maraṇaṃ:
+    group 135   3528.43- 3556.15  conf 0.85  Katamo ca bhikkhave, soko:
+    group 136   3557.15- 3586.99  conf 0.87  Katamo ca bhikkhave, paridevo:
+    group 137   3587.99- 3607.03  conf 0.74  Katamañca bhikkhave, dukkhaṃ:
+    group 138   3608.03- 3629.24  conf 0.79  Katamañca bhikkhave, domanassaṃ:
+    group 139   3630.24- 3658.09  conf 0.88  Katamo ca bhikkhave, upāyāso:
+    group 140   3659.09- 3702.77  conf 0.87  Katamo ca bhikkhave, appiyehi sampayogo dukkho:
+    group 141   3703.77- 3761.03  conf 0.91  Katamo ca bhikkhave, piyehi vippayogo dukkho:
+    group 142   3762.03- 3795.71  conf 0.74  Katamañca bhikkhave, yampicchaṃ na labhati tampi d
+    group 143   3796.71- 3823.58  conf 0.78  Jarā dhammānaṃ bhikkhave, sattānaṃ
+    group 144   3824.58- 3851.58  conf 0.68  Byādhidhammānaṃ bhikkhave, sattānaṃ
+    group 145   3852.58- 3879.62  conf 0.75  Maraṇadhammānaṃ bhikkhave, sattānaṃ
+    group 146   3880.62- 3907.41  conf 0.71  Sokadhammānaṃ bhikkhave, sattānaṃ
+    group 147   3908.41- 3937.11  conf 0.75  Paridevadhammānaṃ bhikkhave, sattānaṃ
+    group 148   3938.11- 3965.28  conf 0.70  Dukkhadhammānaṃ bhikkhave, sattānaṃ
+    group 149   3966.28- 3996.02  conf 0.70  Domanassadhammānaṃ bhikkhave, sattānaṃ
+    group 150   3997.02- 4025.92  conf 0.72  Upāyāsadhammānaṃ bhikkhave, sattānaṃ
+    group 151   4026.92- 4068.37  conf 0.86  Katame ca bhikkhave, saṅkhittena pañcupādānakkhand
+    group 152   4069.37- 4092.23  conf 0.83  Katamañca bhikkhave, dukkhasamudayo ariyasaccaṃ:
+    group 153   4093.23- 4161.25  conf 0.80  Sā kho panesā bhikkhave, taṇhā
+    group 154   4162.25- 4187.62  conf 0.76  Rūpā loke -pe-
+    group 155   4188.62- 4216.39  conf 0.66  Cakkhuviññāṇaṃ loke -pe-
+    group 156   4217.39- 4244.42  conf 0.63  Cakkhusamphasso -pe-
+    group 157   4245.42- 4279.19  conf 0.72  Cakkhusamphassajā vedanā -pe-
+    group 158   4280.19- 4304.70  conf 0.69  Rūpasaññā -pe-
+    group 159   4305.70- 4333.17  conf 0.67  Rūpasañcetanā -pe-
+    group 160   4334.17- 4359.25  conf 0.63  Rūpataṇhā -pe-
+    group 161   4360.25- 4385.50  conf 0.68  Rūpavitakko -pe-
+    group 162   4386.50- 4411.83  conf 0.67  Rūpavicāro -pe-
+    group 163   4412.83- 4418.98  conf 0.73  Idaṃ vuccati bhikkhave dukkhasamudayo ariyasaccaṃ.
+    group 164   4419.98- 4462.56  conf 0.88  Katamañca bhikkhave, dukkhanirodho ariyasaccaṃ?
+    group 165   4463.56- 4501.89  conf 0.74  Kiñca loke piyarūpaṃ sātarūpaṃ?
+    group 166   4502.89- 4524.73  conf 0.68  Rūpā -pe-
+    group 167   4525.73- 4552.80  conf 0.66  Cakkhuviññāṇaṃ -pe-
+    group 168   4553.80- 4580.94  conf 0.64  Cakkhusamphasso -pe-
+    group 169   4581.94- 4615.83  conf 0.74  Cakkhusamphassajā vedanā -pe-
+    group 170   4616.83- 4641.13  conf 0.68  Rūpasaññā -pe-
+    group 171   4642.13- 4666.92  conf 0.61  Rūpasañcetanā -pe-
+    group 172   4667.92- 4692.48  conf 0.67  Rūpataṇhā -pe-
+    group 173   4693.48- 4719.33  conf 0.66  Rūpavitakko -pe-
+    group 174   4720.33- 4746.30  conf 0.66  Rūpavicāro -pe-
+    group 175   4747.30- 4753.31  conf 0.73  Idaṃ vuccati bhikkhave, dukkhanirodho ariyasaccaṃ.
+    group 176   4754.31- 4785.67  conf 0.90  Katamañca bhikkhave,
+    group 177   4786.67- 4810.39  conf 0.84  Katamā ca bhikkhave, sammādiṭṭhi?
+    group 178   4811.39- 4828.70  conf 0.78  Katamo ca bhikkhave, sammāsaṅkappo?
+    group 179   4829.70- 4852.08  conf 0.93  Katamā ca bhikkhave, sammāvācā?
+    group 180   4853.08- 4874.04  conf 0.92  Katamo ca bhikkhave, sammākammanto?
+    group 181   4875.04- 4895.91  conf 0.88  Katamo ca bhikkhave, sammāājīvo?
+    group 182   4896.91- 4977.76  conf 0.88  Katamo ca bhikkhave, sammāvāyāmo?
+    group 183   4978.76- 5040.45  conf 0.90  Katamā ca bhikkhave, sammāsati?
+    group 184   5041.45- 5132.57  conf 0.89  Katamo ca bhikkhave, sammāsamādhi?
+    group 185   5133.57- 5142.14  conf 0.89  Idaṃ vuccati bhikkhave,
+    group 186   5143.14- 5178.06  conf 0.91  Iti ajjhattaṃ vā dhammesu dhammānupassī viharati,
+    group 187   5179.06- 5195.95  conf 0.91  Atthi dhammā’ti vā panassa
+    group 188   5196.95- 5206.52  conf 0.85  Evampi kho bhikkhave,
+    group 189   5207.52- 5231.12  conf 0.87  Yo hi koci bhikkhave,
+    group 190   5232.12- 5259.63  conf 0.85  Tiṭṭhantu bhikkhave sattavassāni,
+    group 191   5260.63- 5288.75  conf 0.89  Tiṭṭhantu bhikkhave cha vassāni,
+    group 192   5289.75- 5317.45  conf 0.90  Tiṭṭhantu bhikkhave pañca vassāni,
+    group 193   5318.45- 5346.40  conf 0.92  Tiṭṭhantu bhikkhave cattāri vassāni,
+    group 194   5347.40- 5374.78  conf 0.92  Tiṭṭhantu bhikkhave tīṇi vassāni,
+    group 195   5375.78- 5403.32  conf 0.87  Tiṭṭhantu bhikkhave dve vassāni,
+    group 196   5404.32- 5431.96  conf 0.90  Tiṭṭhantu bhikkhave ekaṃ vassaṃ,
+    group 197   5432.96- 5459.82  conf 0.88  Tiṭṭhantu bhikkhave satta māsāni,
+    group 198   5460.82- 5487.64  conf 0.87  Tiṭṭhantu bhikkhave cha māsāni,
+    group 199   5488.64- 5516.05  conf 0.90  Tiṭṭhantu bhikkhave pañca māsāni,
+    group 200   5517.05- 5544.02  conf 0.91  Tiṭṭhantu bhikkhave cattāri māsāni,
+    group 201   5545.02- 5571.64  conf 0.90  Tiṭṭhantu bhikkhave tīṇi māsāni,
+    group 202   5572.64- 5599.45  conf 0.91  Tiṭṭhantu bhikkhave dve māsāni,
+    group 203   5600.45- 5626.96  conf 0.89  Tiṭṭhatu bhikkhave māso,
+    group 204   5627.96- 5654.57  conf 0.87  Tiṭṭhantu bhikkhave aḍḍhamāso,
+    group 205   5655.57- 5687.46  conf 0.87  Ekāyano ayaṃ bhikkhave, maggo
+    group 206   5688.46- 5697.77  conf 0.94  Idamavoca bhagavā.
+    group 207   5698.77- 5704.36  conf 0.86  Mahāsatipaṭṭhānasuttaṃ niṭṭhitaṃ navamaṃ.

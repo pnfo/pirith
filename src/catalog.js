@@ -117,8 +117,8 @@ export const piriths = [
   { ...P('65-ratanamali-yantra', 'රතනමාලී යන්ත්‍රය', 'රත්නමාලි ගාථා යන්ත්‍රය', 'Ratanamālī Yantra', ['Rathnamali Yanthraya', 'Rathnamali Gatha', 'Ratnamali Yantra'], 'The Garland of Jewels', 'gatha', '2:55'), rec: [['pitaka', '2:55']] },
   // source mp3 of pirith.org (AbhisambhidanaPiritha.mp3, Ven. Ayagama Suseela Thero): the talk at the start (110s) removed, played 1.1x faster
   { ...P('66-abhisambhidana-parittam', 'අභිසම්භිදාන පරිත්තං', 'අභිසම්භිදාන පිරිත', 'Abhisambhidāna Parittaṃ', ['Abisambidana Piritha', 'Abhisambhidana Piritha', 'Abisambidhana Piritha'], 'The Abhisambhidana Protection', 'paritta', '3:17'), rec: [['suseela', '3:17']] },
-  // text and labels of tipitaka.lk (dev/import-tipitaka.py 67 dn-2-7 dn-2-9 metthananda), the recording as it is there
-  { ...P('67-maha-satipatthana-suttam', 'මහා සතිපට්ඨාන සුත්තං', 'මහා සතිපට්ඨාන සූත්‍රය', 'Mahā Satipaṭṭhāna Suttaṃ', ['Maha Sathipattana Suthraya', 'Satipatthana Sutta', 'Sathipattana Suthraya'], 'The Great Discourse on the Foundations of Mindfulness', 'sutta', '1:42:46'), rec: [['metthananda', '1:42:46']] },
+  // Pali and recording of tipitaka.lk (dn-2-9), pauses between paragraphs cut to 1s: dev/satipatthana-audio.py
+  { ...P('67-maha-satipatthana-suttam', 'මහා සතිපට්ඨාන සුත්තං', 'මහා සතිපට්ඨාන සූත්‍රය', 'Mahā Satipaṭṭhāna Suttaṃ', ['Maha Sathipattana Suthraya', 'Satipatthana Sutta', 'Sathipattana Suthraya'], 'The Great Discourse on the Foundations of Mindfulness', 'sutta', '1:35:05'), rec: [['metthananda', '1:35:05']] },
 ]
 
 export const pirithById = Object.fromEntries(piriths.map((p, pInd) => [p.id, { ...p, pInd }]))

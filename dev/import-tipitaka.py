@@ -9,7 +9,11 @@ A sutta of tipitaka.lk with its chanting -> dev/data/N-combi.txt and dev/data/ti
 
 Every chanted paragraph becomes a group of one row: the Pali of the Buddha Jayanti text = its Sinhala translation.
 The paragraphs are matched to the label entries by the hash of the Pali text (audio_ph), so a text that was edited
-after the timing file was made is reported instead of going out of step. Paragraph numbers, bold marks and
+after the timing file was made is reported instead of going out of step.
+
+NOTE for 67 (Maha Satipatthana): this was only the starting point. Its combi and trans files were then cut into
+short phrases by hand (Sinhala after the text-apz translation), and its labels come from dev/satipatthana-audio.py.
+Running this again for 67 would overwrite that work. Paragraph numbers, bold marks and
 footnote marks are removed. Then: node dev/long-vowels.js on the combi file, dev/align for the word times.
 """
 import json, re, sqlite3, sys
