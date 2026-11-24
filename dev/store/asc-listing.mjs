@@ -1,5 +1,5 @@
 // The App Store listing of Pirith (lk.pitaka.pirith, app id 1503645003): makes sure there is an editable version
-// VERSION (default 3.0), puts the texts of store-text.mjs and the screenshots of screenshots.mjs (en) on it and
+// VERSION (default 3.1), puts the texts of store-text.mjs and the screenshots of screenshots.mjs (en) on it and
 // attaches the newest processed build of that version. Nothing is public until the version is sent for review
 // and approved:
 //   node dev/store/asc-listing.mjs             texts, screenshots and build
@@ -11,7 +11,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { apple } from './store-text.mjs'
 
-const APP = '1503645003', LOCALE = 'en-US', VERSION = process.env.VERSION || '3.0'
+const APP = '1503645003', LOCALE = 'en-US', VERSION = process.env.VERSION || '3.1'
 const DIR = join(dirname(fileURLToPath(import.meta.url)), 'build/en')
 // the store scales these two down for the smaller iPhones and iPads
 const SETS = [['APP_IPHONE_67', 'apple-iphone-6.9'], ['APP_IPAD_PRO_3GEN_129', 'apple-ipad-13']]

@@ -17,6 +17,7 @@ It has all the chants of the 'Piruwana Poth Wahanse' (The Book of Protection) an
 • Bojjhanga, Mora, Canda, Suriya, Khandha, Dhajagga and Angulimala Parittas
 • Dhammacakkappavattana, Maha Samaya, Girimananda, Isigili and Atanatiya Suttas
 • Jaya Mangala Gatha, Jinapanjara, Atavisi Piritha, Samantha Patthana and more
+• Seevali Piritha, Jalanandana Piritha and Ratanamali Yantra
 
 Suitable to be played and recited for:
 • Pregnant mothers seeking blessings
@@ -53,6 +54,7 @@ May this effort be a tribute to the venerable Nauyane Ariyadhamma Thero. If you 
  - බොජ්ඣංග, මෝර, චන්ද, සූරිය, ඛන්ධ, ධජග්ග, අංගුලිමාල පිරිත්
  - ධම්මචක්කප්පවත්තන, මහා සමය, ගිරිමානන්ද, ඉසිගිලි, ආටානාටිය සූත්‍ර
  - ජයමංගල ගාථා, ජිනපඤ්ජරය, අටවිසි පිරිත, සමන්ත පට්ඨානය ආදිය
+ - සීවලී පිරිත, ජලනන්දන පිරිත, රත්නමාලි ගාථා යන්ත්‍රය
 
 ගැබිණි මාතාවන්ට, ලෙඩ රෝග සෑදුනු අයට, විභාග වලට මුහුණ දෙන දරුවන්ට, ජීවිතයේ විශේෂ අවස්ථාවන්ට, බෝධි පූජා සහ පන්සල් නිවෙස් වල දිනපතා සජ්ඣායනා කිරීමට සුදුසුයි.
 
@@ -85,6 +87,7 @@ It has all the chants of the 'Piruwana Poth Wahanse' (The Book of Protection) an
 - Bojjhanga, Mora, Canda, Suriya, Khandha, Dhajagga and Angulimala Parittas
 - Dhammacakkappavattana, Maha Samaya, Girimananda, Isigili and Atanatiya Suttas
 - Jaya Mangala Gatha, Jinapanjara, Atavisi Piritha, Samantha Patthana and more
+- Seevali Piritha, Jalanandana Piritha and Ratanamali Yantra
 
 Features:
 - Meaning while you listen: Pali text and meaning side by side, in Sinhala or English. Tap any line to listen from there.
@@ -98,24 +101,23 @@ Features:
 The same chants are at https://pitaka.lk/pirith/
 
 Please share this app with your parents and elders as a gift of Dhamma (Dhammadana). May this effort be a tribute to the venerable Nauyane Ariyadhamma Thero.`,
-  whatsNew: `A new app, rebuilt from the ground up:
-- The Pali word being chanted is highlighted, with its meaning beside it
-- English meanings as well as Sinhala
-- Lock screen and Control Centre controls, and the next chant starts with the screen locked
-- Playback speed, sleep timer, search and dark mode
-- ${N} chants, with the Vasala, Saccavibhanga and Atanatiya suttas now with their text`,
+  whatsNew: `Three chants you asked for in your reviews:
+- Seevali Piritha
+- Jalanandana Piritha
+- Ratanamali Yantra
+With the Pali text, its meaning in Sinhala and English, and the word being chanted highlighted. ${N} chants in all.`,
   keywords: 'Pirith,Paritta,Buddhist,chanting,Pali,Sinhala,Sri Lanka,Ariyadhamma,sutta,Theravada,metta,Buddha',
 }
 
 export const releaseNotes = {
-  'en-US': `A new app, rebuilt:
-• The Pali word being chanted is highlighted, with its meaning beside it
-• English meanings as well as Sinhala
-• Controls on the lock screen and notification; the next chant starts with the screen off
-• Playback speed, sleep timer, search`,
-  'si-LK': `සම්පූර්ණයෙන් අලුත් කළ යෙදුමක්:
-• සජ්ඣායනා වන පාලි වචනය ඉස්මතු වේ, තේරුම ඒ ළඟම
-• ඉංග්‍රීසි තේරුම ද ඇත
-• lock screen සහ notification එකෙන් පාලනය; තිරය නිවී තිබියදීත් ඊළඟ පිරිත ඇරඹේ
-• වේගය, sleep timer, සෙවුම`,
+  'en-US': `Three chants you asked for in your reviews:
+• Seevali Piritha
+• Jalanandana Piritha
+• Ratanamali Yantra
+With the Pali text, its meaning and the chanted word highlighted.`,
+  'si-LK': `ඔබ ඉල්ලූ පිරිත් තුනක් එක් කළෙමු:
+• සීවලී පිරිත
+• ජලනන්දන පිරිත
+• රත්නමාලි ගාථා යන්ත්‍රය
+පාලි පෙළ, තේරුම සහ සජ්ඣායනා වන වචනය ඉස්මතු වීම සමඟ.`,
 }

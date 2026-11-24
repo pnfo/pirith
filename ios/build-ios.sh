@@ -9,7 +9,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 TEAM_ID=${TEAM_ID:-4456F3J27A}
-VERSION=${VERSION:-3.0}
+VERSION=${VERSION:-3.1}
 BUILD=${BUILD:-$(date +%y%m%d%H%M)}
 export TEAM_ID VERSION BUILD
 WHAT=${1:-sim}
