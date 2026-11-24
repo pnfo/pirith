@@ -478,5 +478,38 @@
    "p": "1. හෙතුපච්චයො 2. ආරම්මණපච්චයො 3. අධිපතිපච්චයො 4. අන්තරපච්චයො 5. සමනන්තරපච්චයො 6. සහජාතපච්චයො",
    "e": "1. Root condition 2. Object condition 3. Predominance condition 4. Proximity condition 5. Contiguity condition 6. Conascence condition"
   }
+ },
+ "63-jalanandana-parittam": {
+  "groups": 7,
+  "eng": true,
+  "timing": {
+   "pitaka": "word"
+  },
+  "intro": {
+   "p": "පාරමීබලයුත්තේහි ජලනන්දන මුත්තමං අනෝමානී ජලං තීරේ උත්තමං පත්තචීවරේ පාරමී තේ ජලං හෝති සර්ව බන්ධන ඡේදනං ආනන්දෝති මහාථේරං උත්තමං ධම්මභාණ්ඩකං යේන",
+   "e": "is the supreme Jalanandana, endowed with the power of the perfections. The water at the bank of the Anoma river, the supreme bowl and robes:"
+  }
+ },
+ "64-seevali-parittam": {
+  "groups": 25,
+  "eng": true,
+  "timing": {
+   "pitaka": "word"
+  },
+  "intro": {
+   "p": "සීවලී ගුණතේජේන පරිත්තං තං භණාමහේ න ජාලීති ති ජාලිතා මි ආ ඊ ඌ ආම් ඉ ස්වාහා බුද්ධසාමි බුද්ධසත්‍යාම් පදුමුත්තරෝ නාම ජිනෝ සබ්බධම්මේසු චක්ඛුමා ඉත",
+   "e": "we recite that protection, endowed with the power of the virtues of the Arahant Sivali. (a mantra passage) (a mantra passage) The Buddha nam"
+  }
+ },
+ "65-ratanamali-yantra": {
+  "groups": 3,
+  "eng": true,
+  "timing": {
+   "pitaka": "word"
+  },
+  "intro": {
+   "p": "සං ණීත සාතං සුචිසාර ධී සං සං ධීරකං සොණ්ණ තනූ පලා සං සං ලාප දේසිං පණමේභි සා සං සං සාභිගං කේවල මෝහ නා සං සං නාහකං මාර රණේ විසේ සං සං සේවිතං දා",
+   "e": "whose pure wisdom spreads wide, steadfast, like a plate of gold, ever radiant in body, who taught the true Dhamma: bowing low, I worship my "
+  }
  }
 }

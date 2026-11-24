@@ -1,0 +1,5 @@
+65-ratanamali-yantra (pitaka)  FULL alignment (labels made from the audio)
+audio 175s, text ends at 173s, words placed 100%, mean confidence 0.71, low groups 0/3
+    group   1      0.00-   62.98  conf 0.73  Saṃ sāra sārogha vinīta ṇī saṃ
+    group   2     62.98-  119.52  conf 0.74  Saṃ sābhigaṃ kevala moha nā saṃ
+    group   3    119.52-  173.77  conf 0.65  Saṃ dāsagaṃ nāsita pāpa nā saṃ

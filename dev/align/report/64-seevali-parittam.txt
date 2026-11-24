@@ -1,0 +1,27 @@
+64-seevali-parittam (pirithorg)  FULL alignment (labels made from the audio)
+audio 615s, text ends at 612s, words placed 100%, mean confidence 0.73, low groups 0/25
+    group   1      0.00-   28.54  conf 0.73  Pūrentā pāramī sabbe sabbe paccekanāyakā
+    group   2     28.54-   51.55  conf 0.62  Na jālīti ti jālitā mi ā ī ū ām i svāhā
+    group   3     51.55-   75.67  conf 0.72  Padumuttaro nāma jino sabbadhammesu cakkhumā
+    group   4     75.67-  113.23  conf 0.68  Sīvalī ca mahāthero so raho paccayādinaṃ
+    group   5    113.23-  139.55  conf 0.70  Nāsaṃ sīmo ca me sīsaṃ nānājālīti sañjaliṃ
+    group   6    139.55-  164.77  conf 0.70  Sattāhaṃ dvāramūḷhohaṃ mahādukkhasamappito
+    group   7    164.77-  188.49  conf 0.68  Kesesu chijjamānesu arahattamapāpuṇiṃ
+    group   8    188.49-  210.08  conf 0.72  Padumuttaranāmañca vipassiñca vināyakaṃ
+    group   9    210.08-  235.30  conf 0.71  Tato tesaṃ visesena kammānaṃ vipuluttamaṃ
+    group  10    235.30-  258.57  conf 0.79  Tadā devopanītehi mamatthāya mahāmati
+    group  11    258.57-  283.79  conf 0.77  Upaṭṭhito mayā buddho gantvā revatamaddasa
+    group  12    283.79-  305.56  conf 0.75  Revataṃ dassanatthāya yadā yāti vināyako
+    group  13    305.56-  329.58  conf 0.73  Lābhīnaṃ sīvalī aggo mama sissesu bhikkhavo
+    group  14    329.58-  353.89  conf 0.71  Kilesā jhāpitā mayhaṃ bhavā sabbe samūhatā
+    group  15    353.89-  379.05  conf 0.77  Svāgataṃ vata me āsi buddhaseṭṭhassa santikaṃ
+    group  16    379.05-  402.43  conf 0.68  Paṭisambhidā catasso ca vimokkhāpi ca aṭṭhamo
+    group  17    402.43-  426.56  conf 0.82  Buddhaputto mahāthero sīvalī jinasāvako
+    group  18    426.56-  450.70  conf 0.76  Rakkhantā sīlatejena dhanavanto yasassino
+    group  19    450.70-  473.94  conf 0.80  Kappaṭṭhāyīti buddhassa bodhimūle nisīdayi
+    group  20    473.94-  496.93  conf 0.76  Dasapāramitappatto pabbajī jinasāsane
+    group  21    496.93-  518.80  conf 0.77  Mahāsāvakā asītiṃsu puṇṇatthero yasassi so
+    group  22    518.80-  543.48  conf 0.65  Evaṃ acintiyā buddhā buddhadhammā acintiyā
+    group  23    543.48-  566.54  conf 0.76  Tesaṃ saccena sīlena khantimettabalena ca
+    group  24    566.54-  588.85  conf 0.73  Tesaṃ saccena sīlena khantimettabalena ca
+    group  25    588.85-  613.17  conf 0.75  Tesaṃ saccena sīlena khantimettabalena ca

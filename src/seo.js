@@ -60,7 +60,7 @@ export function headFor(route) {
       head.description = clip(`${p.roman} – ${p.en}. Read the full Pali text with ${intro ? 'line by line English meaning' : 'audio'} and listen to the chanting by ${who.en}. ${intro?.e || ''}`, 230)
     } else {
       head.title = `${p.pop} - ${sg} | පාලි පෙළ, සිංහල තේරුම සහ හඬ`
-      head.description = clip(`${p.pop} (${p.si}) ${intro ? 'සම්පූර්ණ පාලි පෙළ සිංහල තේරුම සමඟ කියවන්න.' : ''} ${who.si}ගේ සජ්ඣායනය අසන්න. ${sg} lyrics, meaning, audio. ${intro?.p || ''}`, 230)
+      head.description = clip(`${p.pop} (${p.si}) ${intro ? 'සම්පූර්ණ පාලි පෙළ සිංහල තේරුම සමඟ කියවන්න.' : ''} ${who.siBy || who.si + 'ගේ'} සජ්ඣායනය අසන්න. ${sg} lyrics, meaning, audio. ${intro?.p || ''}`, 230)
     }
     head.type = 'article'
     head.jsonld.push({

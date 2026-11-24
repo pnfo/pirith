@@ -29,6 +29,14 @@ export const speakers = {
     en: 'Nauyane Ariyadhamma Thero',
     artwork: [128, 256, 512], // public/artwork/<speaker>-<size>.png
   },
+  // chants from other sources where the chanting monk is not named (the recordings are of pirith.org).
+  // artwork: a Dhammacakka, dev/store/dhammachakka.mjs. siBy: "<whose> සජ්ඣායනය" when ගේ does not fit
+  pitaka: {
+    si: 'pitaka.lk',
+    en: 'pitaka.lk',
+    siBy: 'pitaka.lk වෙබ් අඩවියේ',
+    artwork: [128, 256, 512],
+  },
 }
 
 export const categories = {
@@ -88,6 +96,12 @@ export const piriths = [
   P('60-dasa-disa-parittam', 'දස දිසා පරිත්තං', 'දස දිසා පිරිත', 'Dasa Disā Parittaṃ', ['Dasa Disa Piritha'], 'Protection of the Ten Directions', 'paritta', '1:30'),
   P('61-bojjhanga-parittam', 'බොජ්ඣංග පරිත්තං', 'බොජ්ඣංග පිරිත', 'Bojjhaṅga Parittaṃ', ['Bojjanga Piritha'], 'The Factors of Enlightenment Protection', 'paritta', '3:18'),
   P('62-samantha-pattana', 'සමන්ත පට්ඨානය', 'සමන්ත පට්ඨාන සූත්‍රය', 'Samanta Paṭṭhānaṃ', ['Samantha Pattana Suthraya', 'Pattana Suthraya', 'Pattana Piritha', 'Pattanaya'], 'The Great Book of Conditional Relations', 'sutta', '40:48'),
+  // source mp3 of pirith.org: the talk at the start (21.5s) removed and played 1.1x faster to match the other chants
+  { ...P('63-jalanandana-parittam', 'ජලනන්දන පරිත්තං', 'ජලනන්දන පිරිත', 'Jalanandana Parittaṃ', ['Jalanandana Piritha', 'Jala Nandana Piritha'], 'The Jalanandana Protection', 'paritta', '2:48'), rec: [['pitaka', '2:48']] },
+  // source mp3 of pirith.org (SeevaliePiritha.mp3): the talk at the start (48.7s) removed, played 1.1x faster
+  { ...P('64-seevali-parittam', 'සීවලී පරිත්තං', 'සීවලී පිරිත', 'Sīvalī Parittaṃ', ['Seevali Piritha', 'Sivali Piritha', 'Seewali Piritha'], 'The Sivali Protection', 'paritta', '10:15'), rec: [['pitaka', '10:15']] },
+  // source mp3 of pirith.org (RathaMaleeYanthra.mp3): the talk at the start (81.8s) and the spoken wish at the end removed, played 1.1x faster
+  { ...P('65-ratanamali-yantra', 'රතනමාලී යන්ත්‍රය', 'රත්නමාලි ගාථා යන්ත්‍රය', 'Ratanamālī Yantra', ['Rathnamali Yanthraya', 'Rathnamali Gatha', 'Ratnamali Yantra'], 'The Garland of Jewels', 'gatha', '2:55'), rec: [['pitaka', '2:55']] },
 ]
 
 export const pirithById = Object.fromEntries(piriths.map((p, pInd) => [p.id, { ...p, pInd }]))

@@ -1,0 +1,9 @@
+63-jalanandana-parittam (pirithorg)  FULL alignment (labels made from the audio)
+audio 168s, text ends at 165s, words placed 100%, mean confidence 0.68, low groups 0/7
+    group   1      0.00-   21.73  conf 0.61  Catuvīsati buddhoti yo bhavissati uttamaṃ
+    group   2     21.73-   45.29  conf 0.65  Anomānī jalaṃ tīre uttamaṃ pattacīvare
+    group   3     45.29-   69.32  conf 0.61  Ānandoti mahātheraṃ uttamaṃ dhammabhāṇḍakaṃ
+    group   4     69.32-   92.84  conf 0.72  Iti śrī lokabuddhehi yena dhammānu bhāvato
+    group   5     92.84-  116.59  conf 0.76  Munindo hoti namo buddhā mārasenā pamaddati
+    group   6    116.59-  140.49  conf 0.65  Pāramitā guṇā hoti so bhavissati uttamaṃ
+    group   7    140.49-  166.00  conf 0.70  Sayāno vā sahassāni uttamaṃ guṇa puggalaṃ
