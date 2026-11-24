@@ -1,0 +1,10 @@
+66-abhisambhidana-parittam (pitaka)  FULL alignment (labels made from the audio)
+audio 197s, text ends at 194s, words placed 100%, mean confidence 0.66, low groups 0/8
+    group   1      0.00-   16.29  conf 0.64  Namo sammā sambuddhe
+    group   2     16.29-   33.00  conf 0.49  Namo pacceka sambuddhe
+    group   3     33.00-   49.03  conf 0.55  Namo ānanda thero
+    group   4     49.03-   66.12  conf 0.58  Namo kassapa mahāthero
+    group   5     66.12-   83.33  conf 0.76  Namo sīvalī mahāthero
+    group   6     83.33-  101.49  conf 0.68  Namo sāriputta moggallāne
+    group   7    101.49-  119.18  conf 0.75  Namo aṃgulimāla mahāthero
+    group   8    119.18-  194.71  conf 0.70  Namo sattatiṃsa bodhipakkhiyā dhammā

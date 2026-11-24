@@ -494,7 +494,7 @@
   "groups": 25,
   "eng": true,
   "timing": {
-   "pitaka": "word"
+   "suseela": "word"
   },
   "intro": {
    "p": "සීවලී ගුණතේජේන පරිත්තං තං භණාමහේ න ජාලීති ති ජාලිතා මි ආ ඊ ඌ ආම් ඉ ස්වාහා බුද්ධසාමි බුද්ධසත්‍යාම් පදුමුත්තරෝ නාම ජිනෝ සබ්බධම්මේසු චක්ඛුමා ඉත",
@@ -510,6 +510,28 @@
   "intro": {
    "p": "සං ණීත සාතං සුචිසාර ධී සං සං ධීරකං සොණ්ණ තනූ පලා සං සං ලාප දේසිං පණමේභි සා සං සං සාභිගං කේවල මෝහ නා සං සං නාහකං මාර රණේ විසේ සං සං සේවිතං දා",
    "e": "whose pure wisdom spreads wide, steadfast, like a plate of gold, ever radiant in body, who taught the true Dhamma: bowing low, I worship my "
+  }
+ },
+ "66-abhisambhidana-parittam": {
+  "groups": 8,
+  "eng": true,
+  "timing": {
+   "suseela": "word"
+  },
+  "intro": {
+   "p": "යුත්තේ යුත්තේ පජ්ජලති පජ්ජලති තිහුම් තිහුම් ලූහු ලූහු පරමේස්වාහා නමෝ පච්චේක සම්බුද්ධේ යුත්තේ යුත්තේ පජ්ජලති පජ්ජලති තිහුම් තිහුම් ලූහු ලූහු ",
+   "e": "(a mantra passage) Homage to the Pacceka Buddhas! (a mantra passage) Homage to the elder Ananda! (a mantra passage) Homage to the great elde"
+  }
+ },
+ "67-maha-satipatthana-suttam": {
+  "groups": 207,
+  "eng": true,
+  "timing": {
+   "metthananda": "word"
+  },
+  "intro": {
+   "p": "ඒවං මේ සුතං: ඒකං සමයං භගවා කුරූසු විහරති කම්මාසදම්මං නාම කුරූනං නිගමෝ. තත්‍ර ඛෝ භගවා භික්ඛූ ආමන්තේසි ‘භික්ඛවෝ’ති. ‘භදන්තේ’ති තේ භික්ඛූ භගවතෝ",
+   "e": "Thus have I heard. At one time the Blessed One was living among the Kurus, at a market town of the Kurus named Kammasadamma. There the Bless"
   }
  }
 }

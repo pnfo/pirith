@@ -26,6 +26,7 @@ export default {
     dismiss: 'Dismiss',
     search: 'Search a chant… (e.g. ratana, metta)',
     all: 'All',
+    fromAll: 'Other chants, not in this playlist',
     noResults: 'No matching chant found.',
     repeats: 'Repeats',
     addToPlaylist: 'Add to playlist',

@@ -114,7 +114,11 @@ let dragging = false, timer = 0
 const tick = () => { if (!dragging) position.value = store.now?.idle ? 0 : engine.position() }
 function onDrag(e) { dragging = true; position.value = Number(e.target.value) }
 function onSeek(e) { dragging = false; store.seek(Number(e.target.value)) }
-const fmt = (s) => { s = Math.max(0, Math.floor(s)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}` }
+const fmt = (s) => { // 2:05, and 1:02:05 from an hour on
+  s = Math.max(0, Math.floor(s))
+  const h = Math.floor(s / 3600), m = Math.floor(s / 60) % 60, ss = String(s % 60).padStart(2, '0')
+  return h ? `${h}:${String(m).padStart(2, '0')}:${ss}` : `${m}:${ss}`
+}
 
 // sleep timer display
 const clock = ref(Date.now())

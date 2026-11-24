@@ -37,6 +37,19 @@ export const speakers = {
     siBy: 'pitaka.lk වෙබ් අඩවියේ',
     artwork: [128, 256, 512],
   },
+  // art: these speakers use the artwork files of another one (the Dhammacakka)
+  suseela: {
+    si: 'අයගම සුසීල හිමි',
+    en: 'Ven. Ayagama Suseela Thero',
+    art: 'pitaka',
+    artwork: [128, 256, 512],
+  },
+  metthananda: {
+    si: 'මෙත්තානන්ද හිමි',
+    en: 'Ven. Metthananda Thero',
+    art: 'pitaka',
+    artwork: [128, 256, 512],
+  },
 }
 
 export const categories = {
@@ -98,10 +111,14 @@ export const piriths = [
   P('62-samantha-pattana', 'සමන්ත පට්ඨානය', 'සමන්ත පට්ඨාන සූත්‍රය', 'Samanta Paṭṭhānaṃ', ['Samantha Pattana Suthraya', 'Pattana Suthraya', 'Pattana Piritha', 'Pattanaya'], 'The Great Book of Conditional Relations', 'sutta', '40:48'),
   // source mp3 of pirith.org: the talk at the start (21.5s) removed and played 1.1x faster to match the other chants
   { ...P('63-jalanandana-parittam', 'ජලනන්දන පරිත්තං', 'ජලනන්දන පිරිත', 'Jalanandana Parittaṃ', ['Jalanandana Piritha', 'Jala Nandana Piritha'], 'The Jalanandana Protection', 'paritta', '2:48'), rec: [['pitaka', '2:48']] },
-  // source mp3 of pirith.org (SeevaliePiritha.mp3): the talk at the start (48.7s) removed, played 1.1x faster
-  { ...P('64-seevali-parittam', 'සීවලී පරිත්තං', 'සීවලී පිරිත', 'Sīvalī Parittaṃ', ['Seevali Piritha', 'Sivali Piritha', 'Seewali Piritha'], 'The Sivali Protection', 'paritta', '10:15'), rec: [['pitaka', '10:15']] },
+  // source mp3 of pirith.org (SeevaliePiritha.mp3, Ven. Ayagama Suseela Thero): the talk at the start (48.7s) removed, played 1.1x faster
+  { ...P('64-seevali-parittam', 'සීවලී පරිත්තං', 'සීවලී පිරිත', 'Sīvalī Parittaṃ', ['Seevali Piritha', 'Sivali Piritha', 'Seewali Piritha'], 'The Sivali Protection', 'paritta', '10:15'), rec: [['suseela', '10:15']] },
   // source mp3 of pirith.org (RathaMaleeYanthra.mp3): the talk at the start (81.8s) and the spoken wish at the end removed, played 1.1x faster
   { ...P('65-ratanamali-yantra', 'රතනමාලී යන්ත්‍රය', 'රත්නමාලි ගාථා යන්ත්‍රය', 'Ratanamālī Yantra', ['Rathnamali Yanthraya', 'Rathnamali Gatha', 'Ratnamali Yantra'], 'The Garland of Jewels', 'gatha', '2:55'), rec: [['pitaka', '2:55']] },
+  // source mp3 of pirith.org (AbhisambhidanaPiritha.mp3, Ven. Ayagama Suseela Thero): the talk at the start (110s) removed, played 1.1x faster
+  { ...P('66-abhisambhidana-parittam', 'අභිසම්භිදාන පරිත්තං', 'අභිසම්භිදාන පිරිත', 'Abhisambhidāna Parittaṃ', ['Abisambidana Piritha', 'Abhisambhidana Piritha', 'Abisambidhana Piritha'], 'The Abhisambhidana Protection', 'paritta', '3:17'), rec: [['suseela', '3:17']] },
+  // text and labels of tipitaka.lk (dev/import-tipitaka.py 67 dn-2-7 dn-2-9 metthananda), the recording as it is there
+  { ...P('67-maha-satipatthana-suttam', 'මහා සතිපට්ඨාන සුත්තං', 'මහා සතිපට්ඨාන සූත්‍රය', 'Mahā Satipaṭṭhāna Suttaṃ', ['Maha Sathipattana Suthraya', 'Satipatthana Sutta', 'Sathipattana Suthraya'], 'The Great Discourse on the Foundations of Mindfulness', 'sutta', '1:42:46'), rec: [['metthananda', '1:42:46']] },
 ]
 
 export const pirithById = Object.fromEntries(piriths.map((p, pInd) => [p.id, { ...p, pInd }]))

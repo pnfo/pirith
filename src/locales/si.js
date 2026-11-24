@@ -26,6 +26,7 @@ export default {
     dismiss: 'වසන්න',
     search: 'පිරිතක් සොයන්න… (උදා: රතන, karaniya)',
     all: 'සියල්ල',
+    fromAll: 'මෙම ලැයිස්තුවේ නැති අනෙක් පිරිත්',
     noResults: 'ගැළපෙන පිරිතක් හමු නොවීය.',
     repeats: 'නැවත වාදන වාර',
     addToPlaylist: 'ලැයිස්තුවකට එක් කරන්න',

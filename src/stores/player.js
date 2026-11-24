@@ -113,7 +113,7 @@ export const usePlayerStore = defineStore('player', {
         artist: who.en,
         album: 'පිරිත් · Pirith',
         artwork: who.artwork.map(size => ({
-          src: (__APP__ ? '' : assetUrl('')) + `artwork/${rec.speaker}-${size}.png`, sizes: `${size}x${size}`, type: 'image/png',
+          src: (__APP__ ? '' : assetUrl('')) + `artwork/${who.art || rec.speaker}-${size}.png`, sizes: `${size}x${size}`, type: 'image/png',
         })),
       }
     },

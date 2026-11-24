@@ -84,7 +84,27 @@
       </li>
     </ol>
 
-    <p v-if="!rows.length" class="text-center text-muted dark:text-muted-dark py-8 px-4">
+    <!-- a search inside a playlist also finds the chants that are not in it -->
+    <template v-if="others.length">
+      <h2 class="mt-4 px-3 text-sm font-bold text-muted dark:text-muted-dark">{{ t('home.fromAll') }}</h2>
+      <ol class="mt-1 px-2 space-y-1">
+        <li v-for="row in others" :key="row.item.pInd" class="flex items-center rounded-lg border shadow-sm bg-surface border-line dark:bg-surface-dark-alt/60 dark:border-line-dark">
+          <button @click="store.togglePirith(row.item.pInd)" :aria-label="t(isPlaying(row.item.pInd) ? 'home.pause' : 'home.play') + ': ' + row.title"
+            class="m-1.5 w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center bg-primary-light text-primary dark:bg-surface-dark dark:text-main-dark">
+            <component :is="isPlaying(row.item.pInd) ? PauseIcon : PlayIcon" class="w-5 h-5" :class="isPlaying(row.item.pInd) ? '' : 'ml-0.5'" />
+          </button>
+          <router-link :to="to('pirith', { id: row.p.id })" class="flex-grow min-w-0 py-2 pr-1">
+            <span class="block text-lg leading-tight truncate">{{ row.title }}</span>
+            <span class="block text-sm text-muted dark:text-muted-dark truncate">{{ row.sub }}</span>
+          </router-link>
+          <span class="text-xs text-muted dark:text-muted-dark font-mono mr-1">{{ row.dur }}</span>
+          <button @click="addTo(store.plInd, row.item.pInd)" :aria-label="t('home.addToPlaylist') + ': ' + row.title" :title="t('home.addToPlaylist')"
+            class="p-2 rounded-full text-muted hover:bg-black/5 no-print dark:text-muted-dark dark:hover:bg-white/10"><ListPlusIcon class="w-5 h-5" /></button>
+        </li>
+      </ol>
+    </template>
+
+    <p v-if="!rows.length && !others.length" class="text-center text-muted dark:text-muted-dark py-8 px-4">
       {{ store.curPl.list.length ? t('home.noResults') : t('home.emptyPlaylist') }}
     </p>
     <div v-if="toast" class="fixed left-1/2 -translate-x-1/2 z-50 bg-main text-white text-sm px-4 py-2 rounded-full shadow-lg" :style="{ bottom: 'calc(var(--player-h) + 1rem)' }">{{ toast }}</div>
@@ -130,17 +150,22 @@ const catChips = computed(() => [
 const plain = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[‍‌]/g, '')
 const haystack = piriths.map(p => plain([p.si, p.pop, p.roman, p.en, ...p.sg, p.id].join(' | ')))
 
-const rows = computed(() => {
+const rowsOf = (list, q) => list
+  .map((item, lInd) => ({ item, lInd, p: piriths[item.pInd] }))
+  .filter(({ item, p }) => (cat.value === 'all' || p.cat === cat.value) && (!q || haystack[item.pInd].includes(q)))
+  .map(row => ({
+    ...row,
+    title: titleOf(row.p, locale.value),
+    sub: locale.value === 'en' ? row.p.en : (row.p.pop !== row.p.si ? `${row.p.pop} · ${row.p.sg[0]}` : row.p.sg[0]),
+    dur: recordingOf(row.p, store.speaker).dur,
+  }))
+const rows = computed(() => rowsOf(store.curPl.list, plain(query.value.trim())))
+// searching inside a playlist: the matching chants of the whole list that are not in it
+const others = computed(() => {
   const q = plain(query.value.trim())
-  return store.curPl.list
-    .map((item, lInd) => ({ item, lInd, p: piriths[item.pInd] }))
-    .filter(({ item, p }) => (cat.value === 'all' || p.cat === cat.value) && (!q || haystack[item.pInd].includes(q)))
-    .map(row => ({
-      ...row,
-      title: titleOf(row.p, locale.value),
-      sub: locale.value === 'en' ? row.p.en : (row.p.pop !== row.p.si ? `${row.p.pop} · ${row.p.sg[0]}` : row.p.sg[0]),
-      dur: recordingOf(row.p, store.speaker).dur,
-    }))
+  if (!q || store.plInd === 0) return []
+  const have = new Set(store.curPl.list.map(e => e.pInd))
+  return rowsOf(store.playlists[0].list, q).filter(row => !have.has(row.item.pInd))
 })
 const otherPlaylists = computed(() => store.playlists.slice(1))
 
